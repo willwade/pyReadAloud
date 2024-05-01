@@ -53,6 +53,8 @@ class SettingsDialog(QDialog):
         self.credentials_label.setTextFormat(Qt.RichText)
         self.credentials_label.setText('<a href="file:///{}">Manage credentials in credentials.json</a>'.format(os.path.abspath('credentials.json')))
         layout.addWidget(self.credentials_label)
+        # dont show that text if SAPI is set.. which it should be by default
+        self.credentials_label.setVisible(self.engineCombo.currentText() != 'System Voice (SAPI)')
         
         # Color picker for highlight color
         self.colorButton = QPushButton(f'Choose Highlight Color (Current: {self.parent.highlight_color.name()})', self)
