@@ -4,3 +4,4 @@ pyinstaller==6.1.0
 pyttsx3==2.90
 #TTS-Wrapper==0.8.0
 TTS-Wrapper[google,microsoft,sapi,watson,polly]
+boto3
