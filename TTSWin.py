@@ -9,9 +9,6 @@ import wave
 import pyaudio
 import json
 
-def load_voices_from_json(engine_name):
-    with open(f"{engine_name}_voices.json", 'r') as file:
-        return json.load(file)
 
 class SettingsDialog(QDialog):
     def __init__(self, parent=None):
@@ -20,11 +17,10 @@ class SettingsDialog(QDialog):
         self.credentials = self.load_credentials()
         self.engine = pyttsx3.init()  # Default to system TTS engine
         self.initUI()
+        self.load_and_apply_settings()
 
     def initUI(self):
         layout = QVBoxLayout()
-        
-        # Engine selection combo box
         self.engineCombo = QComboBox()
         self.engineCombo.addItems(['System Voice (SAPI)', 'Polly', 'Google', 'Azure', 'Watson'])
         self.engineCombo.currentIndexChanged.connect(self.on_engine_change)
@@ -33,97 +29,126 @@ class SettingsDialog(QDialog):
 
         # Voice selection combo box
         self.voiceCombo = QComboBox()
-        self.update_voice_list()  # Populate voices for pyttsx3
         layout.addWidget(QLabel("Select Voice:"))
         layout.addWidget(self.voiceCombo)
-
-        # Speech rate slider
+    
         self.rateSlider = QSlider(Qt.Horizontal)
         self.rateSlider.setMinimum(50)
         self.rateSlider.setMaximum(400)
-        self.rateSlider.setValue(self.engine.getProperty('rate'))
-        self.rateSlider.setTickInterval(10)
-        self.rateSlider.setTickPosition(QSlider.TicksBelow)
         layout.addWidget(QLabel("Set Speech Rate:"))
         layout.addWidget(self.rateSlider)
-
-        # Credentials inputs for TTS services
-        self.credentials_label = QLabel("Manage credentials in credentials.json")
+    
+        self.colorButton = QPushButton('Choose Highlight Color')
+        self.colorButton.clicked.connect(self.choose_color)
+        layout.addWidget(self.colorButton)
+    
+        self.credentials_label = QLabel()
         self.credentials_label.setOpenExternalLinks(True)
         self.credentials_label.setTextFormat(Qt.RichText)
         self.credentials_label.setText('<a href="file:///{}">Manage credentials in credentials.json</a>'.format(os.path.abspath('credentials.json')))
         layout.addWidget(self.credentials_label)
-        # dont show that text if SAPI is set.. which it should be by default
-        self.credentials_label.setVisible(self.engineCombo.currentText() != 'System Voice (SAPI)')
-        
-        # Color picker for highlight color
-        self.colorButton = QPushButton(f'Choose Highlight Color (Current: {self.parent.highlight_color.name()})', self)
-        self.colorButton.clicked.connect(self.choose_color)
-        layout.addWidget(self.colorButton)
-
-
-        # Save button
+    
         saveButton = QPushButton('Save Settings')
         saveButton.clicked.connect(self.save_settings)
         layout.addWidget(saveButton)
-
+    
         self.setLayout(layout)
+
+    def load_credentials(self):
+        # Load credentials from a JSON file
+        try:
+            with open("credentials.json", "r") as file:
+                return json.load(file)
+        except FileNotFoundError:
+            return {}  # Return an empty dict if the file does not exist
+
+    def on_engine_change(self, index):
+        engine_choice = self.engineCombo.currentText()
+        if engine_choice == "System Voice (SAPI)":
+            self.update_voice_list()  # This updates the list for the system voices
+            self.credentials_label.setVisible(False)  # Hide credentials info for SAPI
+        else:
+            self.load_and_display_voices(engine_choice)  # Load voices from JSON for other engines
+            self.credentials_label.setVisible(True)  # Show credentials info for cloud-based services
+        
+    def load_and_display_voices(self, engine_name):
+        voices = self.load_voices_from_json(engine_name.lower())  # Make sure JSON files are named accordingly
+        self.voiceCombo.clear()
+        for voice in voices:
+            self.voiceCombo.addItem(voice['name'], voice)  # You may need to adjust what data is stored based on your needs
+    
 
     def choose_color(self):
         color = QColorDialog.getColor(self.parent.highlight_color)
         if color.isValid():
             self.parent.highlight_color = color
             self.colorButton.setText(f'Choose Highlight Color (Current: {color.name()})')
-            
+
+    def load_and_apply_settings(self):
+        # Load settings from a file and apply them to the UI
+        settings = self.load_settings_from_file()
+        self.apply_common_settings(settings)
+        self.apply_specific_settings(settings)
+
+    def apply_common_settings(self, settings):
+        # Apply common settings like speech rate and highlight color
+        self.rateSlider.setValue(settings.get("speech_rate", 200))  # Default to 200 if not set
+        color_name = settings.get("highlight_color", "#FFFF00")  # Default color
+        self.parent.highlight_color = QColor(color_name)
+        self.colorButton.setText(f'Choose Highlight Color (Current: {color_name})')
+
+    def apply_specific_settings(self, settings=None):
+        if settings is None:
+            settings = self.load_settings_from_file()
+        engine_choice = settings.get("tts_engine", "System Voice (SAPI)")
+        self.engineCombo.setCurrentIndex(self.engineCombo.findText(engine_choice))
+    
+        if engine_choice == "System Voice (SAPI)":
+            self.update_voice_list()
+            self.credentials_label.setVisible(False)
+        else:
+            # Load and display voices for selected TTS-Wrapper engine
+            voices = self.load_voices_from_json(engine_choice.lower())
+            self.voiceCombo.clear()
+            for voice in voices:
+                self.voiceCombo.addItem(voice['name'], voice)
+            self.credentials_label.setVisible(True)
+
+    def load_voices_from_json(self, engine_name):
+        try:
+            with open(f"{engine_name}_voices.json", "r") as file:
+                return json.load(file)
+        except FileNotFoundError:
+            return []
+
+    def save_settings(self):
+        # Save settings based on the current state of the UI elements
+        settings = {
+            "tts_engine": self.engineCombo.currentText(),
+            "voice_name": self.voiceCombo.currentData(),
+            "speech_rate": self.rateSlider.value(),
+            "highlight_color": self.parent.highlight_color.name()
+        }
+        self.save_settings_to_file(settings)
+        self.accept()
+
+    def save_settings_to_file(self, settings):
+        with open('settings.json', 'w') as f:
+            json.dump(settings, f)
+
+    def load_settings_from_file(self):
+        try:
+            with open('settings.json', 'r') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return {}  # Return an empty dict if the file does not exist
+
     def update_voice_list(self):
+        # Assuming voice list update for pyttsx3
         self.voiceCombo.clear()
         voices = self.engine.getProperty('voices')
         for voice in voices:
             self.voiceCombo.addItem(voice.name, voice.id)
-
-    def on_engine_change(self, index):
-        engine_choice = self.engineCombo.currentText()
-        if engine_choice == 'System Voice (SAPI)':
-            self.engine = pyttsx3.init()
-            self.update_voice_list()
-            self.credentials_label.setVisible(False)
-        else:
-            self.credentials_label.setVisible(True)
-            # Load voices from JSON for selected TTS engine
-            voices = load_voices_from_json(engine_choice.lower())
-            self.voiceCombo.clear()
-            for voice in voices:
-                self.voiceCombo.addItem(voice['name'], voice)
-
-    def load_credentials(self):
-        with open("credentials.json", "r") as file:
-            return json.load(file)
-            
-    def save_settings(self):
-        engine_choice = self.engineCombo.currentText()
-        if engine_choice == 'System Voice (SAPI)':
-            selected_voice_id = self.voiceCombo.currentData()
-            # System voice settings
-            self.parent.engine.setProperty('voice', selected_voice['id'])
-            self.parent.engine.setProperty('rate', self.rateSlider.value())
-            self.parent.tts_type = 'system'
-        else:
-            creds = self.credentials[engine_choice.replace(" ", "")]
-            if engine_choice == 'Polly':
-                client = PollyClient(credentials=(creds['region'], creds['aws_key_id'], creds['aws_access_key']))
-                self.parent.engine = PollyTTS(client=client)
-            elif engine_choice == 'Google':
-                client = GoogleClient(credentials=creds['creds_path'])
-                self.parent.engine = GoogleTTS(client=client)
-            elif engine_choice == 'Azure':
-                client = MicrosoftClient(credentials=creds['TOKEN'], region=creds['region'])
-                self.parent.engine = AzureTTS(client=client)
-            elif engine_choice == 'Watson':
-                client = WatsonClient(credentials=(creds['API_KEY'], creds['API_URL']))
-                self.parent.engine = WatsonTTS(client=client)
-            self.parent.tts_type = 'wrapper'
-        self.accept()
-
 
 class SpeechThread(QThread):
     finished = pyqtSignal()
