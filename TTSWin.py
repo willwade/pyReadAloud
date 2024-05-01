@@ -15,8 +15,11 @@ class VoiceManager():
         self.configManager = configManager
         self.engine = None
         self.engine_type = 'system'  # Default engine type
-        self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
-
+        try:
+            self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
+        except Exception as e:
+            print(f"Failed to initialize engine: {e}")
+            
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
         if engine_type == 'system':
@@ -39,16 +42,15 @@ class VoiceManager():
         else:
             return self.load_voices_from_service(engine_type)
             
-    def run(self):
-        if self.tts_type == 'system':
+    def speak(self, text):
+        if self.engine_type == 'system':
             # Using pyttsx3
-            self.engine.say(self.text)
+            self.engine.say(text)
             self.engine.runAndWait()
-        elif self.tts_type == 'wrapper':
+        elif self.engine_type == 'wrapper':
             # Using TTS-Wrapper
             audio_bytes = self.engine.synth_to_bytes(self.text, format='wav')
             self.play_audio(audio_bytes)
-        self.finished.emit()
 
     def play_audio(self, audio_bytes):
         # Play audio from bytes
@@ -62,12 +64,6 @@ class VoiceManager():
         stream.close()
         p.terminate()
 
-    def speak(self, text):
-        if self.engine_type == 'system':
-            self.ttsx_engine.say(text)
-            self.ttsx_engine.runAndWait()
-        else:
-            self.engine.speak(text)  # Ensure that the speak method is implemented in each TTS engine wrapper
 
     def shutdown(self):
         if self.engine_type == 'system' and self.ttsx_engine:
