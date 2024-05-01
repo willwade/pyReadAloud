@@ -1,3 +1,4 @@
+import os
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor
@@ -46,9 +47,11 @@ class SettingsDialog(QDialog):
         layout.addWidget(self.rateSlider)
 
         # Credentials inputs for TTS services
-        self.credentialsInput = QLineEdit()
-        layout.addWidget(QLabel("Enter Credentials:"))
-        layout.addWidget(self.credentialsInput)
+        credentials_label = QLabel("Manage credentials in credentials.json")
+        credentials_label.setOpenExternalLinks(True)
+        credentials_label.setTextFormat(Qt.RichText)
+        credentials_label.setText('<a href="file:///{}">Manage credentials in credentials.json</a>'.format(os.path.abspath('credentials.json')))
+        layout.addWidget(credentials_label)
         
         # Color picker for highlight color
         self.colorButton = QPushButton(f'Choose Highlight Color (Current: {self.parent.highlight_color.name()})', self)
@@ -89,32 +92,34 @@ class SettingsDialog(QDialog):
             for voice in voices:
                 self.voiceCombo.addItem(voice['name'], voice)
 
-
+    def load_credentials(self):
+        with open("credentials.json", "r") as file:
+            return json.load(file)
+            
     def save_settings(self):
         engine_choice = self.engineCombo.currentText()
-        selected_voice = self.voiceCombo.currentData()
-    
         if engine_choice == 'System Voice (SAPI)':
+            selected_voice_id = self.voiceCombo.currentData()
+            # System voice settings
             self.parent.engine.setProperty('voice', selected_voice['id'])
             self.parent.engine.setProperty('rate', self.rateSlider.value())
             self.parent.tts_type = 'system'
         else:
-            creds = self.credentialsInput.text().split(',')
+            creds = self.credentials[engine_choice.replace(" ", "")]
             if engine_choice == 'Polly':
-                client = PollyClient(credentials=(creds[0], creds[1], creds[2]))
-                self.parent.engine = PollyTTS(client=client, voice=selected_voice['name'], lang=selected_voice['languageCodes'][0])
+                client = PollyClient(credentials=(creds['region'], creds['aws_key_id'], creds['aws_access_key']))
+                self.parent.engine = PollyTTS(client=client)
             elif engine_choice == 'Google':
-                client = GoogleClient(credentials=creds[0])
-                self.parent.engine = GoogleTTS(client=client, voice=selected_voice['name'], lang=selected_voice['languageCodes'][0])
+                client = GoogleClient(credentials=creds['creds_path'])
+                self.parent.engine = GoogleTTS(client=client)
             elif engine_choice == 'Azure':
-                client = MicrosoftClient(credentials=creds[0], region=creds[1])
-                self.parent.engine = AzureTTS(client=client, voice=selected_voice['name'], lang=selected_voice['languageCodes'][0])
+                client = MicrosoftClient(credentials=creds['TOKEN'], region=creds['region'])
+                self.parent.engine = AzureTTS(client=client)
             elif engine_choice == 'Watson':
-                client = WatsonClient(credentials=(creds[0], creds[1]))
-                self.parent.engine = WatsonTTS(client=client, voice=selected_voice['name'], lang=selected_voice['languageCodes'][0])
+                client = WatsonClient(credentials=(creds['API_KEY'], creds['API_URL']))
+                self.parent.engine = WatsonTTS(client=client)
             self.parent.tts_type = 'wrapper'
         self.accept()
-
 
 
 class SpeechThread(QThread):
