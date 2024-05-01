@@ -17,6 +17,7 @@ class SettingsDialog(QDialog):
     def __init__(self, parent=None):
         super(SettingsDialog, self).__init__(parent)
         self.parent = parent
+        self.credentials = self.load_credentials()
         self.engine = pyttsx3.init()  # Default to system TTS engine
         self.initUI()
 
@@ -47,11 +48,11 @@ class SettingsDialog(QDialog):
         layout.addWidget(self.rateSlider)
 
         # Credentials inputs for TTS services
-        credentials_label = QLabel("Manage credentials in credentials.json")
-        credentials_label.setOpenExternalLinks(True)
-        credentials_label.setTextFormat(Qt.RichText)
-        credentials_label.setText('<a href="file:///{}">Manage credentials in credentials.json</a>'.format(os.path.abspath('credentials.json')))
-        layout.addWidget(credentials_label)
+        self.credentials_label = QLabel("Manage credentials in credentials.json")
+        self.credentials_label.setOpenExternalLinks(True)
+        self.credentials_label.setTextFormat(Qt.RichText)
+        self.credentials_label.setText('<a href="file:///{}">Manage credentials in credentials.json</a>'.format(os.path.abspath('credentials.json')))
+        layout.addWidget(self.credentials_label)
         
         # Color picker for highlight color
         self.colorButton = QPushButton(f'Choose Highlight Color (Current: {self.parent.highlight_color.name()})', self)
@@ -83,9 +84,9 @@ class SettingsDialog(QDialog):
         if engine_choice == 'System Voice (SAPI)':
             self.engine = pyttsx3.init()
             self.update_voice_list()
-            self.credentialsInput.setDisabled(True)
+            self.credentials_label.setVisible(False)
         else:
-            self.credentialsInput.setEnabled(True)
+            self.credentials_label.setVisible(True)
             # Load voices from JSON for selected TTS engine
             voices = load_voices_from_json(engine_choice.lower())
             self.voiceCombo.clear()
