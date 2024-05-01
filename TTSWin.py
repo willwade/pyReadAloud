@@ -185,11 +185,10 @@ class SpeechThread(QThread):
 class TextToSpeechApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.engine = pyttsx3.init()
-        self.tts_type = 'system'  # Default to system type
         self.highlight_color = QColor('yellow')
         self.initUI()        
         self.apply_settings(self.load_settings_from_file())
+        
 
     def initUI(self):
         self.setWindowTitle('Text-to-Speech App')
@@ -238,13 +237,10 @@ class TextToSpeechApp(QMainWindow):
             return {}  # Ret
 
     def apply_settings(self, settings):
-        # Default to system type if no type is specified
-        self.tts_type = settings.get('tts_type', 'system')
-        # Apply highlight color
-        color_hex = settings.get('highlight_color', '#FFFF00')  # Default yellow
-        self.highlight_color = QColor(color_hex)
+        self.tts_type = settings.get('tts_engine', 'system')
+        print(settings)
+        self.highlight_color = QColor(settings.get('highlight_color', '#FFFF00'))
     
-        # Initialize the TTS engine according to the type
         if self.tts_type == 'system':
             self.engine = pyttsx3.init()
             voice_id = settings.get('voice_name')
@@ -253,10 +249,30 @@ class TextToSpeechApp(QMainWindow):
             rate = settings.get('speech_rate', 200)
             self.engine.setProperty('rate', rate)
         else:
-            self.tts_type = 'wrapper'
-            self.engine = tts_type
-    
+            # Initialize appropriate TTS engine based on type
+            self.initialize_tts_engine(settings)
 
+    def initialize_tts_engine(self, settings):
+        if self.tts_type == 'Google':
+            # Example to initialize Google TTS
+            client = GoogleClient(credentials='path/to/creds.json')  # Assuming credentials management is handled
+            self.engine = GoogleTTS(client=client)
+        elif self.tts_type == 'Polly':
+            # Initialize Polly TTS
+            client = PollyClient(credentials=('region', 'aws_key_id', 'aws_access_key'))
+            self.engine = PollyTTS(client=client)
+        elif self.tts_type == 'Azure':
+            # Initialize Azure TTS
+            client = MicrosoftClient(credentials='TOKEN', region='brazilsouth')
+            self.engine = AzureTTS(client=client)
+        elif self.tts_type == 'Watson':
+            # Initialize Watson TTS
+            client = WatsonClient(credentials=('API_KEY', 'API_URL'))
+            self.engine = WatsonTTS(client=client)
+        else:
+            # Log an error or handle unsupported engine types
+            print(f"Unsupported TTS engine type: {self.tts_type}")
+            
     def read_text(self):
         text = self.textEdit.toPlainText()
         cursor = self.textEdit.textCursor()
@@ -284,8 +300,8 @@ class TextToSpeechApp(QMainWindow):
         cursor.setCharFormat(format)
 
     def start_speech_thread(self, text):
-        print(self.engine)
-        print(self.tts_type)
+        print(f"Engine Type: {self.engine}")
+        print(f"TTS Type: {self.tts_type}")
         self.thread = SpeechThread(text, self.engine, self.tts_type)
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
