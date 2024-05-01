@@ -188,7 +188,8 @@ class TextToSpeechApp(QMainWindow):
         self.engine = pyttsx3.init()
         self.tts_type = 'system'  # Default to system type
         self.highlight_color = QColor('yellow')
-        self.initUI()
+        self.initUI()        
+        self.apply_settings(self.load_settings_from_file())
 
     def initUI(self):
         self.setWindowTitle('Text-to-Speech App')
@@ -229,6 +230,32 @@ class TextToSpeechApp(QMainWindow):
 
         self.show()
 
+    def load_settings_from_file(self):
+        try:
+            with open('settings.json', 'r') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return {}  # Ret
+
+    def apply_settings(self, settings):
+        # Default to system type if no type is specified
+        self.tts_type = settings.get('tts_type', 'system')
+        # Apply highlight color
+        color_hex = settings.get('highlight_color', '#FFFF00')  # Default yellow
+        self.highlight_color = QColor(color_hex)
+    
+        # Initialize the TTS engine according to the type
+        if self.tts_type == 'system':
+            self.engine = pyttsx3.init()
+            voice_id = settings.get('voice_name')
+            if voice_id:
+                self.engine.setProperty('voice', voice_id)
+            rate = settings.get('speech_rate', 200)
+            self.engine.setProperty('rate', rate)
+        else:
+            self.tts_type = 'wrapper'
+            self.engine = tts_type
+    
 
     def read_text(self):
         text = self.textEdit.toPlainText()
@@ -257,6 +284,8 @@ class TextToSpeechApp(QMainWindow):
         cursor.setCharFormat(format)
 
     def start_speech_thread(self, text):
+        print(self.engine)
+        print(self.tts_type)
         self.thread = SpeechThread(text, self.engine, self.tts_type)
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
