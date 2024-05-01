@@ -9,16 +9,15 @@ import wave
 import pyaudio
 import json
 
+
+
         
 class VoiceManager():
     def __init__(self, configManager):
         self.configManager = configManager
         self.engine = None
         self.engine_type = 'system'  # Default engine type
-        try:
-            self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
-        except Exception as e:
-            print(f"Failed to initialize engine: {e}")
+        self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
             
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
@@ -36,7 +35,7 @@ class VoiceManager():
             print(f"Unsupported TTS engine type: {engine_type}")
 
     def get_voices(self, engine_type):
-        if engine_type == 'system':
+        if engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
             return [{'name': voice.name, 'id': voice.id} for voice in voices]
         else:
