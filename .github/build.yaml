@@ -27,6 +27,7 @@ jobs:
       - name: Create credentials file
         run: |
           echo '${{ secrets.CREDENTIALS_FILE_CONTENT }}' > credentials.json
+          echo '${{ secrets.GOOGLE_KEY }}' > ttsandtranslate-7dd2e2d80d42.json
 
       - name: Run PyInstaller
         run: |
