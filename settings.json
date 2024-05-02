@@ -1,1 +1,15 @@
-{"tts_engine": "Azure", "voice_name": {"country": "en-GB", "name": "en-GB-LibbyNeural"}, "speech_rate": 200, "highlight_color": "#ffff00"}
+{
+    "tts_engine": "Azure",
+    "voice_details": {
+        "details": {
+            "country": "af-ZA",
+            "name": "af-ZA-WillemNeural",
+            "nicename": "Willem (af-ZA)"
+        },
+        "id": "af-ZA-WillemNeural",
+        "lang": "af-ZA",
+        "name": "Willem (af-ZA)"
+    },
+    "speech_rate": 200,
+    "highlight_color": "#ffff00"
+}

@@ -16,7 +16,8 @@ logging.basicConfig(level=logging.DEBUG,format='%(name)s - %(levelname)s - %(mes
         
 class VoiceManager(QObject):
     wordSpoken = pyqtSignal(int, int)  # Emit the start and end indices of the spoken word
-
+    speakCompleted = pyqtSignal(str) 
+    
     def __init__(self, configManager):
         super(VoiceManager, self).__init__()
         self.configManager = configManager
@@ -26,47 +27,49 @@ class VoiceManager(QObject):
         self.setup_callbacks()
 
     def setup_callbacks(self):
-        if self.engine_type == 'system':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             self.ttsx_engine.connect('started-word', self.on_word)
     
     def on_word(self, name, location, length):
         self.wordSpoken.emit(location, location + length)
 
-    def speak_threaded(self, text):
-        logging.debug(f"[speak in voicem] speak called  {text}")
-        if self.engine_type == 'system':
-            logging.debug(f"[speak with system] speaking with timinhg {text}")
-            self.ttsx_engine.say(text)
-            self.ttsx_engine.startLoop(False)  # Start in non-blocking mode
+    def speak_threaded(self, word):
+        logging.debug(f"[speak in voicem] speak called  {word} with {self.engine_type}")
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
+            logging.debug(f"[speak with system] speaking with timinhg {word}")
+            self.ttsx_engine.say(word)
+            self.ttsx_engine.runAndWait()
+            self.speakCompleted.emit(word)  # Emit after speaking
+            self.ttsx_engine.startLoop(False)  # Start in non-blocking mode - nut using??
         else:
-            logging.debug(f"[speak with wrapper] speaking with timinhg {text}")
-            self.speak_with_timing(text)
+            try:
+                logging.debug(f"[speak with wrapper] speaking with timing {word}")
+                audio_bytes = self.engine.synth_to_bytes(self.engine.ssml.add(word), format='wav')
+                self.play_audio(audio_bytes)
+                self.speakCompleted.emit(word)  # Emit after audio played
+            except Exception as e:
+                logging.error(f"Error in synthesizing or playing audio: {e}")
+                self.speakCompleted.emit(word)  # Still emit to continue the process
 
     def speak_with_timing(self, text):
-        logging.debug(f"[speak with timing] speaking with timinhg {text}")
         words = text.split()
-        position = 0  # This variable will be modified inside emit_word_timing
-        durations = [len(word) / 5.0 for word in words]  # Estimate 0.2 seconds per character
+        durations = [len(word) / 5.0 for word in words]  # Adjust time per character if necessary
     
-        def emit_word_timing():
-            nonlocal position
-            if not words:
-                logging.debug("[emit_word_timing] No more words to process.")
-                return
-            duration = durations.pop(0)
-            word = words.pop(0)
-            start = position
-            end = start + len(word)
-            logging.debug(f"[emit_word_timing] Emitting word: {word}, Start: {start}, End: {end}, Duration: {duration}")
-            self.wordSpoken.emit(start, end)
-            self.speak(word)
-            position = end + 1  # Update position for the next word
-            QTimer.singleShot(int(duration * 1000), emit_word_timing)
-
-        emit_word_timing()
+        def speak_next_word(index=0):
+            if index < len(words):
+                word = words[index]
+                duration = durations[index]
+                start = sum(len(w) + 1 for w in words[:index])  # calculate start index
+                end = start + len(word)
+                logging.debug(f"Emitting word: {word}, Start: {start}, End: {end}, Duration: {duration}")
+                self.wordSpoken.emit(start, end)
+                self.speak_threaded(word)
+                QTimer.singleShot(int(duration * 1000), lambda: speak_next_word(index + 1))
+    
+        speak_next_word()  # Start the recursive timing
 
     def stop_speak(self):
-        if self.engine_type == 'system':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             self.ttsx_engine.endLoop()     
             
     def init_engine(self, engine_type='system'):
@@ -74,6 +77,8 @@ class VoiceManager(QObject):
         voice_details = self.configManager.settings.get('voice_details', {})
         voice_name = voice_details.get('id')
         lang = voice_details.get('lang')
+        logging.debug(f"Voice details retrieved: {voice_details}")
+        logging.debug(f"Voice name: {voice_name}, Language: {lang}")
         if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             self.engine = self.ttsx_engine
             self.engine.setProperty('voice_id', self.configManager.settings.get('voice_name'))
@@ -91,14 +96,14 @@ class VoiceManager(QObject):
 
         
     def get_voices(self, engine_type):
-        if engine_type == 'System Voice (SAPI)':
+        if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
             return [{'name': voice.name, 'nicename': voice.name, 'id': voice.id} for voice in voices]
         else:
             return self.load_voices_from_service(engine_type)
 
     def get_lang_for_voice_id(self, engine_type, voice_id):
-        if engine_type == 'System Voice (SAPI)':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             # For SAPI, language code is not directly available; you might infer or return a default
             voices = self.ttsx_engine.getProperty('voices')
             for voice in voices:
@@ -117,7 +122,7 @@ class VoiceManager(QObject):
             
     def speak(self, text):
         logging.debug(f"[speak] calling speak speak - the final one.. {text} with {self.engine_type}")
-        if self.engine_type == 'system':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             # Using pyttsx3
             self.engine.say(text)
             self.engine.runAndWait()
@@ -145,7 +150,7 @@ class VoiceManager(QObject):
 
 
     def shutdown(self):
-        if self.engine_type == 'system' and self.ttsx_engine:
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' and self.ttsx_engine:
             self.ttsx_engine.stop()
 
     def load_voices_from_service(self, engine_name):
@@ -165,7 +170,7 @@ class ConfigManager():
     def __init__(self):
         self.credentials = self.load_credentials()
         self.settings = self.load_settings_from_file()  # Load settings immediately or load when needed
-        
+
     def load_credentials(self):
         # Load credentials from a JSON file
         try:
@@ -173,20 +178,22 @@ class ConfigManager():
                 return json.load(file)
         except FileNotFoundError:
             return {}  # Return an empty dict if the file does not exist
-
-    def save_settings_to_file(self, settings):
-        with open('settings.json', 'w') as f:
-            json.dump(settings, f)
-         
+ 
     def load_settings_from_file(self):
         try:
             with open('settings.json', 'r') as f:
                 settings = json.load(f)
+            logging.debug(f"Settings loaded from file: {settings}")
             return settings
         except FileNotFoundError:
-            return {}  # Return an empty dict if the file does not exist
-        except json.JSONDecodeError:
-            return {}
+            logging.debug("Settings file not found, returning default settings.")
+            return {}  # Return default settings if file is missing
+
+    def save_settings_to_file(self, settings):
+        logging.debug(f"Saving settings to file: {settings}")
+        with open('settings.json', 'w') as f:
+            json.dump(settings, f, ensure_ascii=True, indent=4)
+        self.settings = settings  # Update the internal state to the new settings
 
 
 class SettingsDialog(QDialog):
@@ -236,6 +243,14 @@ class SettingsDialog(QDialog):
         if settings:
             self.apply_settings(settings)
 
+
+    def find_voice_index_by_id(self, voice_id):
+        for index in range(self.voiceCombo.count()):
+            if self.voiceCombo.itemData(index).get('id') == voice_id:
+                return index
+        return -1
+    
+
     def apply_settings(self, settings):
         # Set the engine type
         engine_type = settings.get("tts_engine", "System Voice (SAPI)")
@@ -243,10 +258,14 @@ class SettingsDialog(QDialog):
         self.on_engine_change(None)  # Update the voices based on the selected engine
 
         # Set the selected voice
-        voice_id = settings.get("voice_name")
-        index = self.voiceCombo.findData(voice_id)
+        voice_details = settings.get("voice_details", {})
+        voice_id = voice_details.get('id')
+        index = self.find_voice_index_by_id(voice_id)
         if index != -1:
             self.voiceCombo.setCurrentIndex(index)
+        else:
+            logging.debug(f"Voice ID {voice_id} not found in the voice list.")
+
 
         # Set the speech rate
         rate = settings.get("speech_rate", 200)
@@ -277,7 +296,10 @@ class SettingsDialog(QDialog):
             "speech_rate": self.rateSlider.value(),
             "highlight_color": self.colorButton.styleSheet().split("background-color: ")[1].split(";")[0]
         }
+        logging.debug(f"Settings before saving: {settings}")
         self.voiceManager.configManager.save_settings_to_file(settings)
+        test_settings = self.voiceManager.configManager.load_settings_from_file()
+        logging.debug(f"Settings immediately after saving: {test_settings}")
         self.accept()
 
     def choose_color(self):
@@ -309,6 +331,7 @@ class TextToSpeechApp(QMainWindow):
         self.voiceManager = VoiceManager(configManager)
         self.voiceManager.init_engine(self.settings.get('tts_engine', 'system'))
         self.voiceManager.wordSpoken.connect(self.highlight_text)
+        self.voiceManager.speakCompleted.connect(self.on_speak_completed)
         self.initUI()
         self.apply_settings(self.settings)
 
@@ -419,7 +442,13 @@ class TextToSpeechApp(QMainWindow):
         except Exception as e:
             logging.debug(f"Error highlighting text: {e}")
 
-
+    def on_speak_completed(self, word):
+        logging.debug(f"[on speak completed] Finished speaking: {word}")
+        # Logic to decide the next word to speak
+        # next_word = self.get_next_word()
+#         if next_word:
+#             self.voiceManager.speak(next_word)
+            
     def closeEvent(self, event):
         self.voiceManager.stop_speak()
         self.voiceManager.shutdown()
@@ -434,9 +463,11 @@ class TextToSpeechApp(QMainWindow):
     def open_settings(self):
         dialog = SettingsDialog(self, self.voiceManager)
         if dialog.exec_():
-            # When settings window is shut - reload it and apply settings
-            self.settings = self.configManager.load_settings_from_file()
+            self.settings = self.voiceManager.configManager.load_settings_from_file()
+            logging.debug(f"Settings after reopening settings dialog: {self.settings}")
             self.apply_settings(self.settings)
+            self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'))
+            #self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'), self.settings)
 
 
 def main():
