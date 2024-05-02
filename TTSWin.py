@@ -387,7 +387,7 @@ class TextToSpeechApp(QMainWindow):
 
 
 def main():
-    QLoggingCategory.setFilterRules('qt.fonts=false')
+
     configManager = ConfigManager()
     app = QApplication(sys.argv)
     # Set font substitutions
