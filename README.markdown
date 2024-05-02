@@ -8,7 +8,7 @@ A small  app that reads words, sentences or paragraphs aloud
 ```
 # tested on py 3.11.4
 pip install -r requirements.txt
-python TTSWin.py
+python pyRreadAloud.py
 ```
 
 **Creating Voice JSON files**
@@ -19,9 +19,8 @@ First edit the `.env` file in tools with your various API keys
 # tested on py 3.11.4
 cd tools
 pip install -r requirements.txt
-python getMicrosoftVoices.py 
+python getAllVoiceJSONFiles.py 
 ```
-etc..
 
 ## License
 
