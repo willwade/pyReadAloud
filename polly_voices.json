@@ -1,386 +1,482 @@
 [
   {
     "name": "Isabelle",
-    "country": "Belgian French"
+    "country": "Belgian French",
+    "nicename": "Isabelle (Belgian French)"
   },
   {
     "name": "Danielle",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Danielle (US English)"
   },
   {
     "name": "Gregory",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Gregory (US English)"
   },
   {
     "name": "Burcu",
-    "country": "Turkish"
+    "country": "Turkish",
+    "nicename": "Burcu (Turkish)"
   },
   {
     "name": "Kevin",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Kevin (US English)"
   },
   {
     "name": "Filiz",
-    "country": "Turkish"
+    "country": "Turkish",
+    "nicename": "Filiz (Turkish)"
   },
   {
     "name": "Elin",
-    "country": "Swedish"
+    "country": "Swedish",
+    "nicename": "Elin (Swedish)"
   },
   {
     "name": "Astrid",
-    "country": "Swedish"
+    "country": "Swedish",
+    "nicename": "Astrid (Swedish)"
   },
   {
     "name": "Tatyana",
-    "country": "Russian"
+    "country": "Russian",
+    "nicename": "Tatyana (Russian)"
   },
   {
     "name": "Maxim",
-    "country": "Russian"
+    "country": "Russian",
+    "nicename": "Maxim (Russian)"
   },
   {
     "name": "Carmen",
-    "country": "Romanian"
+    "country": "Romanian",
+    "nicename": "Carmen (Romanian)"
   },
   {
     "name": "Ines",
-    "country": "Portuguese"
+    "country": "Portuguese",
+    "nicename": "Ines (Portuguese)"
   },
   {
     "name": "Cristiano",
-    "country": "Portuguese"
+    "country": "Portuguese",
+    "nicename": "Cristiano (Portuguese)"
   },
   {
     "name": "Vitoria",
-    "country": "Brazilian Portuguese"
+    "country": "Brazilian Portuguese",
+    "nicename": "Vitoria (Brazilian Portuguese)"
   },
   {
     "name": "Ricardo",
-    "country": "Brazilian Portuguese"
+    "country": "Brazilian Portuguese",
+    "nicename": "Ricardo (Brazilian Portuguese)"
   },
   {
     "name": "Camila",
-    "country": "Brazilian Portuguese"
+    "country": "Brazilian Portuguese",
+    "nicename": "Camila (Brazilian Portuguese)"
   },
   {
     "name": "Maja",
-    "country": "Polish"
+    "country": "Polish",
+    "nicename": "Maja (Polish)"
   },
   {
     "name": "Jan",
-    "country": "Polish"
+    "country": "Polish",
+    "nicename": "Jan (Polish)"
   },
   {
     "name": "Jacek",
-    "country": "Polish"
+    "country": "Polish",
+    "nicename": "Jacek (Polish)"
   },
   {
     "name": "Ewa",
-    "country": "Polish"
+    "country": "Polish",
+    "nicename": "Ewa (Polish)"
   },
   {
     "name": "Ola",
-    "country": "Polish"
+    "country": "Polish",
+    "nicename": "Ola (Polish)"
   },
   {
     "name": "Lisa",
-    "country": "Belgian Dutch"
+    "country": "Belgian Dutch",
+    "nicename": "Lisa (Belgian Dutch)"
   },
   {
     "name": "Ruben",
-    "country": "Dutch"
+    "country": "Dutch",
+    "nicename": "Ruben (Dutch)"
   },
   {
     "name": "Lotte",
-    "country": "Dutch"
+    "country": "Dutch",
+    "nicename": "Lotte (Dutch)"
   },
   {
     "name": "Laura",
-    "country": "Dutch"
+    "country": "Dutch",
+    "nicename": "Laura (Dutch)"
   },
   {
     "name": "Ida",
-    "country": "Norwegian"
+    "country": "Norwegian",
+    "nicename": "Ida (Norwegian)"
   },
   {
     "name": "Liv",
-    "country": "Norwegian"
+    "country": "Norwegian",
+    "nicename": "Liv (Norwegian)"
   },
   {
     "name": "Seoyeon",
-    "country": "Korean"
+    "country": "Korean",
+    "nicename": "Seoyeon (Korean)"
   },
   {
     "name": "Kazuha",
-    "country": "Japanese"
+    "country": "Japanese",
+    "nicename": "Kazuha (Japanese)"
   },
   {
     "name": "Tomoko",
-    "country": "Japanese"
+    "country": "Japanese",
+    "nicename": "Tomoko (Japanese)"
   },
   {
     "name": "Takumi",
-    "country": "Japanese"
+    "country": "Japanese",
+    "nicename": "Takumi (Japanese)"
   },
   {
     "name": "Mizuki",
-    "country": "Japanese"
+    "country": "Japanese",
+    "nicename": "Mizuki (Japanese)"
   },
   {
     "name": "Bianca",
-    "country": "Italian"
+    "country": "Italian",
+    "nicename": "Bianca (Italian)"
   },
   {
     "name": "Giorgio",
-    "country": "Italian"
+    "country": "Italian",
+    "nicename": "Giorgio (Italian)"
   },
   {
     "name": "Carla",
-    "country": "Italian"
+    "country": "Italian",
+    "nicename": "Carla (Italian)"
   },
   {
     "name": "Karl",
-    "country": "Icelandic"
+    "country": "Icelandic",
+    "nicename": "Karl (Icelandic)"
   },
   {
     "name": "Dora",
-    "country": "Icelandic"
+    "country": "Icelandic",
+    "nicename": "Dora (Icelandic)"
   },
   {
     "name": "Mathieu",
-    "country": "French"
+    "country": "French",
+    "nicename": "Mathieu (French)"
   },
   {
     "name": "Lea",
-    "country": "French"
+    "country": "French",
+    "nicename": "Lea (French)"
   },
   {
     "name": "Celine",
-    "country": "French"
+    "country": "French",
+    "nicename": "Celine (French)"
   },
   {
     "name": "Chantal",
-    "country": "Canadian French"
+    "country": "Canadian French",
+    "nicename": "Chantal (Canadian French)"
   },
   {
     "name": "Gabrielle",
-    "country": "Canadian French"
+    "country": "Canadian French",
+    "nicename": "Gabrielle (Canadian French)"
   },
   {
     "name": "Penelope",
-    "country": "US Spanish"
+    "country": "US Spanish",
+    "nicename": "Penelope (US Spanish)"
   },
   {
     "name": "Miguel",
-    "country": "US Spanish"
+    "country": "US Spanish",
+    "nicename": "Miguel (US Spanish)"
   },
   {
     "name": "Lupe",
-    "country": "US Spanish"
+    "country": "US Spanish",
+    "nicename": "Lupe (US Spanish)"
   },
   {
     "name": "Mia",
-    "country": "Mexican Spanish"
+    "country": "Mexican Spanish",
+    "nicename": "Mia (Mexican Spanish)"
   },
   {
     "name": "Lucia",
-    "country": "Castilian Spanish"
+    "country": "Castilian Spanish",
+    "nicename": "Lucia (Castilian Spanish)"
   },
   {
     "name": "Enrique",
-    "country": "Castilian Spanish"
+    "country": "Castilian Spanish",
+    "nicename": "Enrique (Castilian Spanish)"
   },
   {
     "name": "Conchita",
-    "country": "Castilian Spanish"
+    "country": "Castilian Spanish",
+    "nicename": "Conchita (Castilian Spanish)"
   },
   {
     "name": "Geraint",
-    "country": "Welsh English"
+    "country": "Welsh English",
+    "nicename": "Geraint (Welsh English)"
   },
   {
     "name": "Salli",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Salli (US English)"
   },
   {
     "name": "Matthew",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Matthew (US English)"
   },
   {
     "name": "Kimberly",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Kimberly (US English)"
   },
   {
     "name": "Kendra",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Kendra (US English)"
   },
   {
     "name": "Justin",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Justin (US English)"
   },
   {
     "name": "Joey",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Joey (US English)"
   },
   {
     "name": "Joanna",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Joanna (US English)"
   },
   {
     "name": "Ivy",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Ivy (US English)"
   },
   {
     "name": "Aria",
-    "country": "New Zealand English"
+    "country": "New Zealand English",
+    "nicename": "Aria (New Zealand English)"
   },
   {
     "name": "Ayanda",
-    "country": "South African English"
+    "country": "South African English",
+    "nicename": "Ayanda (South African English)"
   },
   {
     "name": "Raveena",
-    "country": "Indian English"
+    "country": "Indian English",
+    "nicename": "Raveena (Indian English)"
   },
   {
     "name": "Aditi",
-    "country": "Indian English"
+    "country": "Indian English",
+    "nicename": "Aditi (Indian English)"
   },
   {
     "name": "Emma",
-    "country": "British English"
+    "country": "British English",
+    "nicename": "Emma (British English)"
   },
   {
     "name": "Brian",
-    "country": "British English"
+    "country": "British English",
+    "nicename": "Brian (British English)"
   },
   {
     "name": "Amy",
-    "country": "British English"
+    "country": "British English",
+    "nicename": "Amy (British English)"
   },
   {
     "name": "Russell",
-    "country": "Australian English"
+    "country": "Australian English",
+    "nicename": "Russell (Australian English)"
   },
   {
     "name": "Nicole",
-    "country": "Australian English"
+    "country": "Australian English",
+    "nicename": "Nicole (Australian English)"
   },
   {
     "name": "Olivia",
-    "country": "Australian English"
+    "country": "Australian English",
+    "nicename": "Olivia (Australian English)"
   },
   {
     "name": "Vicki",
-    "country": "German"
+    "country": "German",
+    "nicename": "Vicki (German)"
   },
   {
     "name": "Marlene",
-    "country": "German"
+    "country": "German",
+    "nicename": "Marlene (German)"
   },
   {
     "name": "Hans",
-    "country": "German"
+    "country": "German",
+    "nicename": "Hans (German)"
   },
   {
     "name": "Naja",
-    "country": "Danish"
+    "country": "Danish",
+    "nicename": "Naja (Danish)"
   },
   {
     "name": "Mads",
-    "country": "Danish"
+    "country": "Danish",
+    "nicename": "Mads (Danish)"
   },
   {
     "name": "Sofie",
-    "country": "Danish"
+    "country": "Danish",
+    "nicename": "Sofie (Danish)"
   },
   {
     "name": "Gwyneth",
-    "country": "Welsh"
+    "country": "Welsh",
+    "nicename": "Gwyneth (Welsh)"
   },
   {
     "name": "Zhiyu",
-    "country": "Chinese Mandarin"
+    "country": "Chinese Mandarin",
+    "nicename": "Zhiyu (Chinese Mandarin)"
   },
   {
     "name": "Zeina",
-    "country": "Arabic"
+    "country": "Arabic",
+    "nicename": "Zeina (Arabic)"
   },
   {
     "name": "Hala",
-    "country": "Gulf Arabic"
+    "country": "Gulf Arabic",
+    "nicename": "Hala (Gulf Arabic)"
   },
   {
     "name": "Arlet",
-    "country": "Catalan"
+    "country": "Catalan",
+    "nicename": "Arlet (Catalan)"
   },
   {
     "name": "Hannah",
-    "country": "Austrian German"
+    "country": "Austrian German",
+    "nicename": "Hannah (Austrian German)"
   },
   {
     "name": "Ruth",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Ruth (US English)"
   },
   {
     "name": "Stephen",
-    "country": "US English"
+    "country": "US English",
+    "nicename": "Stephen (US English)"
   },
   {
     "name": "Kajal",
-    "country": "Indian English"
+    "country": "Indian English",
+    "nicename": "Kajal (Indian English)"
   },
   {
     "name": "Hiujin",
-    "country": "Cantonese"
+    "country": "Cantonese",
+    "nicename": "Hiujin (Cantonese)"
   },
   {
     "name": "Suvi",
-    "country": "Finnish"
+    "country": "Finnish",
+    "nicename": "Suvi (Finnish)"
   },
   {
     "name": "Niamh",
-    "country": "Irish English"
+    "country": "Irish English",
+    "nicename": "Niamh (Irish English)"
   },
   {
     "name": "Arthur",
-    "country": "British English"
+    "country": "British English",
+    "nicename": "Arthur (British English)"
   },
   {
     "name": "Daniel",
-    "country": "German"
+    "country": "German",
+    "nicename": "Daniel (German)"
   },
   {
     "name": "Liam",
-    "country": "Canadian French"
+    "country": "Canadian French",
+    "nicename": "Liam (Canadian French)"
   },
   {
     "name": "Pedro",
-    "country": "US Spanish"
+    "country": "US Spanish",
+    "nicename": "Pedro (US Spanish)"
   },
   {
     "name": "Sergio",
-    "country": "Castilian Spanish"
+    "country": "Castilian Spanish",
+    "nicename": "Sergio (Castilian Spanish)"
   },
   {
     "name": "Andres",
-    "country": "Mexican Spanish"
+    "country": "Mexican Spanish",
+    "nicename": "Andres (Mexican Spanish)"
   },
   {
     "name": "Remi",
-    "country": "French"
+    "country": "French",
+    "nicename": "Remi (French)"
   },
   {
     "name": "Adriano",
-    "country": "Italian"
+    "country": "Italian",
+    "nicename": "Adriano (Italian)"
   },
   {
     "name": "Thiago",
-    "country": "Brazilian Portuguese"
+    "country": "Brazilian Portuguese",
+    "nicename": "Thiago (Brazilian Portuguese)"
   },
   {
     "name": "Zayd",
-    "country": "Gulf Arabic"
+    "country": "Gulf Arabic",
+    "nicename": "Zayd (Gulf Arabic)"
   }
 ]

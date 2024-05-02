@@ -1,1 +1,2312 @@
-[{"name": "af-ZA-Standard-A", "country": "Afrikaans (South Africa)", "languageCodes": ["af-ZA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Standard-A", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Standard-B", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Standard-C", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Standard-D", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Wavenet-A", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Wavenet-B", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Wavenet-C", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ar-XA-Wavenet-D", "country": "Arabic (Pseudo-Accents)", "languageCodes": ["ar-XA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "bn-IN-Standard-A", "country": "Bangla (India)", "languageCodes": ["bn-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "bn-IN-Standard-B", "country": "Bangla (India)", "languageCodes": ["bn-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "bn-IN-Wavenet-A", "country": "Bangla (India)", "languageCodes": ["bn-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "bn-IN-Wavenet-B", "country": "Bangla (India)", "languageCodes": ["bn-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "eu-ES-Standard-A", "country": "Basque (Spain)", "languageCodes": ["eu-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "bg-BG-Standard-A", "country": "Bulgarian (Bulgaria)", "languageCodes": ["bg-BG"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "yue-HK-Standard-A", "country": "Cantonese (Hong Kong SAR China)", "languageCodes": ["yue-HK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "yue-HK-Standard-B", "country": "Cantonese (Hong Kong SAR China)", "languageCodes": ["yue-HK"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "yue-HK-Standard-C", "country": "Cantonese (Hong Kong SAR China)", "languageCodes": ["yue-HK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "yue-HK-Standard-D", "country": "Cantonese (Hong Kong SAR China)", "languageCodes": ["yue-HK"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ca-ES-Standard-A", "country": "Catalan (Spain)", "languageCodes": ["ca-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cs-CZ-Standard-A", "country": "Czech (Czechia)", "languageCodes": ["cs-CZ"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cs-CZ-Wavenet-A", "country": "Czech (Czechia)", "languageCodes": ["cs-CZ"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Standard-C", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Standard-D", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Standard-E", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Standard-A", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Wavenet-C", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Wavenet-D", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Wavenet-E", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Wavenet-A", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "da-DK-Neural2-D", "country": "Danish (Denmark)", "languageCodes": ["da-DK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-BE-Standard-A", "country": "Dutch (Belgium)", "languageCodes": ["nl-BE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-BE-Standard-B", "country": "Dutch (Belgium)", "languageCodes": ["nl-BE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-BE-Wavenet-A", "country": "Dutch (Belgium)", "languageCodes": ["nl-BE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-BE-Wavenet-B", "country": "Dutch (Belgium)", "languageCodes": ["nl-BE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Standard-B", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Standard-C", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Standard-D", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Standard-A", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Standard-E", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Wavenet-B", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Wavenet-C", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Wavenet-D", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Wavenet-A", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nl-NL-Wavenet-E", "country": "Dutch (Netherlands)", "languageCodes": ["nl-NL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Standard-A", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Standard-B", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Standard-C", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Standard-D", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-News-E", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-News-F", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-News-G", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Wavenet-A", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Wavenet-B", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Wavenet-C", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Wavenet-D", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Polyglot-1", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Neural2-A", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Neural2-B", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Neural2-C", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-AU-Neural2-D", "country": "English (Australia)", "languageCodes": ["en-AU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Standard-D", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Standard-A", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Standard-B", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Standard-C", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Wavenet-D", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Wavenet-A", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Wavenet-B", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-IN-Wavenet-C", "country": "English (India)", "languageCodes": ["en-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Standard-A", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Standard-B", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Standard-C", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Standard-D", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Standard-F", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-G", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-H", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-I", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-J", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-K", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-L", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-News-M", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Wavenet-A", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Wavenet-B", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Wavenet-C", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Wavenet-D", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Wavenet-F", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Neural2-A", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Neural2-B", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Neural2-C", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Neural2-D", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-GB-Neural2-F", "country": "English (United Kingdom)", "languageCodes": ["en-GB"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-A", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-B", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-C", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-D", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-E", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-F", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-G", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-H", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-I", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Standard-J", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-News-K", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-News-L", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-News-M", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-News-N", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-G", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-H", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-I", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-J", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-A", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-B", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-C", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-D", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-E", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Wavenet-F", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Studio-M", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Studio-O", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-A", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-C", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-D", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-E", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-F", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-G", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-H", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-I", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Neural2-J", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "en-US-Polyglot-1", "country": "English (United States)", "languageCodes": ["en-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Standard-A", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Standard-B", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Standard-C", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Standard-D", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Wavenet-A", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Wavenet-B", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Wavenet-C", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-PH-Wavenet-D", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-ph-Neural2-D", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fil-ph-Neural2-A", "country": "Filipino (Philippines)", "languageCodes": ["fil-PH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fi-FI-Standard-A", "country": "Finnish (Finland)", "languageCodes": ["fi-FI"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fi-FI-Wavenet-A", "country": "Finnish (Finland)", "languageCodes": ["fi-FI"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Standard-A", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Standard-B", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Standard-C", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Standard-D", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Wavenet-A", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Wavenet-B", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Wavenet-C", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Wavenet-D", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Neural2-A", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Neural2-B", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Neural2-C", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-CA-Neural2-D", "country": "French (Canada)", "languageCodes": ["fr-CA"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Standard-A", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Standard-B", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Standard-C", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Standard-D", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Standard-E", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Wavenet-E", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Wavenet-A", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Wavenet-B", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Wavenet-C", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Wavenet-D", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Neural2-A", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Neural2-B", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Neural2-C", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Neural2-D", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Neural2-E", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "fr-FR-Polyglot-1", "country": "French (France)", "languageCodes": ["fr-FR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "gl-ES-Standard-A", "country": "Galician (Spain)", "languageCodes": ["gl-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "gl-ES-Standard-A", "country": "Galician (Spain)", "languageCodes": ["gl-ES"], "ssmlGender": "Ssml_voice_gender_unspecified", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-A", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-B", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-C", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-D", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-E", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Standard-F", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-F", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-A", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-B", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-C", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-D", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Wavenet-E", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Neural2-B", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Neural2-C", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Neural2-D", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Neural2-F", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "de-DE-Polyglot-1", "country": "German (Germany)", "languageCodes": ["de-DE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "el-GR-Standard-A", "country": "Greek (Greece)", "languageCodes": ["el-GR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "el-GR-Wavenet-A", "country": "Greek (Greece)", "languageCodes": ["el-GR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "gu-IN-Standard-A", "country": "Gujarati (India)", "languageCodes": ["gu-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "gu-IN-Standard-B", "country": "Gujarati (India)", "languageCodes": ["gu-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "gu-IN-Wavenet-A", "country": "Gujarati (India)", "languageCodes": ["gu-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "gu-IN-Wavenet-B", "country": "Gujarati (India)", "languageCodes": ["gu-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Standard-D", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Standard-A", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Standard-B", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Standard-C", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Wavenet-D", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Wavenet-A", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Wavenet-B", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "he-IL-Wavenet-C", "country": "Hebrew (Israel)", "languageCodes": ["he-IL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Standard-D", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Standard-A", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Standard-B", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Standard-C", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Wavenet-D", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Wavenet-A", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Wavenet-B", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Wavenet-C", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Neural2-A", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Neural2-B", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Neural2-C", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "hi-IN-Neural2-D", "country": "Hindi (India)", "languageCodes": ["hi-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hu-HU-Standard-A", "country": "Hungarian (Hungary)", "languageCodes": ["hu-HU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "hu-HU-Wavenet-A", "country": "Hungarian (Hungary)", "languageCodes": ["hu-HU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "is-IS-Standard-A", "country": "Icelandic (Iceland)", "languageCodes": ["is-IS"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Standard-A", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Standard-B", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Standard-C", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Standard-D", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Wavenet-D", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Wavenet-A", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Wavenet-B", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "id-ID-Wavenet-C", "country": "Indonesian (Indonesia)", "languageCodes": ["id-ID"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Standard-B", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Standard-C", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Standard-D", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Standard-A", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Wavenet-A", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Wavenet-B", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Wavenet-C", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Wavenet-D", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Neural2-A", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "it-IT-Neural2-C", "country": "Italian (Italy)", "languageCodes": ["it-IT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Standard-A", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Standard-B", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Standard-C", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Standard-D", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Wavenet-B", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Wavenet-C", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Wavenet-D", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Wavenet-A", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Neural2-B", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Neural2-C", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ja-JP-Neural2-D", "country": "Japanese (Japan)", "languageCodes": ["ja-JP"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "kn-IN-Standard-A", "country": "Kannada (India)", "languageCodes": ["kn-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "kn-IN-Standard-B", "country": "Kannada (India)", "languageCodes": ["kn-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "kn-IN-Wavenet-A", "country": "Kannada (India)", "languageCodes": ["kn-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "kn-IN-Wavenet-B", "country": "Kannada (India)", "languageCodes": ["kn-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Standard-A", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Standard-B", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Standard-C", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Standard-D", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Wavenet-A", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Wavenet-B", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Wavenet-C", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Wavenet-D", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Neural2-A", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Neural2-B", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ko-KR-Neural2-C", "country": "Korean (South Korea)", "languageCodes": ["ko-KR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "lv-LV-Standard-A", "country": "Latvian (Latvia)", "languageCodes": ["lv-LV"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "lt-LT-Standard-A", "country": "Lithuanian (Lithuania)", "languageCodes": ["lt-LT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Standard-A", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Standard-B", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Standard-C", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Standard-D", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Wavenet-A", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Wavenet-B", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Wavenet-C", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ms-MY-Wavenet-D", "country": "Malay (Malaysia)", "languageCodes": ["ms-MY"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Standard-A", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Standard-B", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Wavenet-A", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Wavenet-B", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Wavenet-C", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ml-IN-Wavenet-D", "country": "Malayalam (India)", "languageCodes": ["ml-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Standard-C", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Standard-B", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Standard-A", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Standard-D", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Wavenet-A", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Wavenet-B", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Wavenet-C", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Wavenet-D", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-CN-Standard-A", "country": "Mandarin Chinese (China)", "languageCodes": ["cmn-CN"], "ssmlGender": "Ssml_voice_gender_unspecified", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Standard-A", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Standard-B", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Standard-C", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Wavenet-A", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Wavenet-B", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "cmn-TW-Wavenet-C", "country": "Mandarin Chinese (Taiwan)", "languageCodes": ["cmn-TW"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Standard-A", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Standard-B", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Standard-C", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Wavenet-A", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Wavenet-B", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "mr-IN-Wavenet-C", "country": "Marathi (India)", "languageCodes": ["mr-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Standard-A", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Standard-B", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Standard-E", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Standard-C", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Standard-D", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Wavenet-A", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Wavenet-B", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Wavenet-C", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Wavenet-D", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "nb-NO-Wavenet-E", "country": "Norwegian Bokm\u00e5l (Norway)", "languageCodes": ["nb-NO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Standard-A", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Standard-B", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Standard-C", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Standard-E", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Standard-D", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Wavenet-A", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Wavenet-B", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Wavenet-C", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Wavenet-E", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pl-PL-Wavenet-D", "country": "Polish (Poland)", "languageCodes": ["pl-PL"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Standard-A", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Standard-B", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Standard-C", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Wavenet-A", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Wavenet-B", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Wavenet-C", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Neural2-A", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Neural2-B", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-BR-Neural2-C", "country": "Portuguese (Brazil)", "languageCodes": ["pt-BR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Standard-A", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Standard-B", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Standard-C", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Standard-D", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Wavenet-A", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Wavenet-B", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Wavenet-C", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pt-PT-Wavenet-D", "country": "Portuguese (Portugal)", "languageCodes": ["pt-PT"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Standard-A", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Standard-B", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Standard-C", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Standard-D", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Wavenet-A", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Wavenet-B", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Wavenet-C", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "pa-IN-Wavenet-D", "country": "Punjabi (India)", "languageCodes": ["pa-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ro-RO-Standard-A", "country": "Romanian (Romania)", "languageCodes": ["ro-RO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ro-RO-Wavenet-A", "country": "Romanian (Romania)", "languageCodes": ["ro-RO"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Standard-E", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Standard-A", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Standard-B", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Standard-C", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Standard-D", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Wavenet-E", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Wavenet-A", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Wavenet-B", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Wavenet-C", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ru-RU-Wavenet-D", "country": "Russian (Russia)", "languageCodes": ["ru-RU"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sr-RS-Standard-A", "country": "Serbian (Serbia)", "languageCodes": ["sr-RS"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sk-SK-Standard-A", "country": "Slovak (Slovakia)", "languageCodes": ["sk-SK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sk-SK-Wavenet-A", "country": "Slovak (Slovakia)", "languageCodes": ["sk-SK"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Standard-A", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Standard-C", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Standard-D", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Standard-B", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Wavenet-C", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Wavenet-D", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Wavenet-B", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-A", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-B", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-C", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-D", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-E", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Neural2-F", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-ES-Polyglot-1", "country": "Spanish (Spain)", "languageCodes": ["es-ES"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Standard-A", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-US-Standard-B", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Standard-C", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Wavenet-A", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-US-Wavenet-B", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Wavenet-C", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-News-G", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-US-News-F", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-US-News-E", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-News-D", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Studio-B", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Neural2-A", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "es-US-Neural2-B", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Neural2-C", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "es-US-Polyglot-1", "country": "Spanish (United States)", "languageCodes": ["es-US"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Standard-B", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Standard-C", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Standard-D", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Standard-E", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Standard-A", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Wavenet-B", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Wavenet-D", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Wavenet-C", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Wavenet-E", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "sv-SE-Wavenet-A", "country": "Swedish (Sweden)", "languageCodes": ["sv-SE"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Standard-C", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Standard-D", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Standard-A", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Standard-B", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Wavenet-A", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Wavenet-B", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Wavenet-C", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "ta-IN-Wavenet-D", "country": "Tamil (India)", "languageCodes": ["ta-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "te-IN-Standard-A", "country": "Telugu (India)", "languageCodes": ["te-IN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "te-IN-Standard-B", "country": "Telugu (India)", "languageCodes": ["te-IN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "th-TH-Standard-A", "country": "Thai (Thailand)", "languageCodes": ["th-TH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "th-TH-Neural2-C", "country": "Thai (Thailand)", "languageCodes": ["th-TH"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Standard-B", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Standard-C", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Standard-D", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Standard-A", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Standard-E", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Wavenet-B", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Wavenet-C", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Wavenet-D", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Wavenet-E", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "tr-TR-Wavenet-A", "country": "Turkish (Turkey)", "languageCodes": ["tr-TR"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "uk-UA-Standard-A", "country": "Ukrainian (Ukraine)", "languageCodes": ["uk-UA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "uk-UA-Wavenet-A", "country": "Ukrainian (Ukraine)", "languageCodes": ["uk-UA"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Standard-A", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Standard-B", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Standard-C", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Standard-D", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Wavenet-A", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Wavenet-B", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Wavenet-C", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Wavenet-D", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Neural2-A", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Female", "naturalSampleRateHertz": 24000}, {"name": "vi-VN-Neural2-D", "country": "Vietnamese (Vietnam)", "languageCodes": ["vi-VN"], "ssmlGender": "Male", "naturalSampleRateHertz": 24000}]
+[
+  {
+    "name": "af-ZA-Standard-A",
+    "country": "af-ZA",
+    "nicename": "A (af-ZA)"
+  },
+  {
+    "name": "am-ET-Standard-A",
+    "country": "am-ET",
+    "nicename": "A (am-ET)"
+  },
+  {
+    "name": "am-ET-Standard-B",
+    "country": "am-ET",
+    "nicename": "B (am-ET)"
+  },
+  {
+    "name": "am-ET-Wavenet-A",
+    "country": "am-ET",
+    "nicename": "A (am-ET)"
+  },
+  {
+    "name": "am-ET-Wavenet-B",
+    "country": "am-ET",
+    "nicename": "B (am-ET)"
+  },
+  {
+    "name": "ar-XA-Standard-A",
+    "country": "ar-XA",
+    "nicename": "A (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Standard-B",
+    "country": "ar-XA",
+    "nicename": "B (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Standard-C",
+    "country": "ar-XA",
+    "nicename": "C (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Standard-D",
+    "country": "ar-XA",
+    "nicename": "D (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Wavenet-A",
+    "country": "ar-XA",
+    "nicename": "A (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Wavenet-B",
+    "country": "ar-XA",
+    "nicename": "B (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Wavenet-C",
+    "country": "ar-XA",
+    "nicename": "C (ar-XA)"
+  },
+  {
+    "name": "ar-XA-Wavenet-D",
+    "country": "ar-XA",
+    "nicename": "D (ar-XA)"
+  },
+  {
+    "name": "bg-BG-Standard-A",
+    "country": "bg-BG",
+    "nicename": "A (bg-BG)"
+  },
+  {
+    "name": "bn-IN-Standard-A",
+    "country": "bn-IN",
+    "nicename": "A (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Standard-B",
+    "country": "bn-IN",
+    "nicename": "B (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Standard-C",
+    "country": "bn-IN",
+    "nicename": "C (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Standard-D",
+    "country": "bn-IN",
+    "nicename": "D (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Wavenet-A",
+    "country": "bn-IN",
+    "nicename": "A (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Wavenet-B",
+    "country": "bn-IN",
+    "nicename": "B (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Wavenet-C",
+    "country": "bn-IN",
+    "nicename": "C (bn-IN)"
+  },
+  {
+    "name": "bn-IN-Wavenet-D",
+    "country": "bn-IN",
+    "nicename": "D (bn-IN)"
+  },
+  {
+    "name": "ca-ES-Standard-A",
+    "country": "ca-ES",
+    "nicename": "A (ca-ES)"
+  },
+  {
+    "name": "cmn-CN-Standard-A",
+    "country": "cmn-CN",
+    "nicename": "A (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Standard-B",
+    "country": "cmn-CN",
+    "nicename": "B (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Standard-C",
+    "country": "cmn-CN",
+    "nicename": "C (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Standard-D",
+    "country": "cmn-CN",
+    "nicename": "D (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Wavenet-A",
+    "country": "cmn-CN",
+    "nicename": "A (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Wavenet-B",
+    "country": "cmn-CN",
+    "nicename": "B (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Wavenet-C",
+    "country": "cmn-CN",
+    "nicename": "C (cmn-CN)"
+  },
+  {
+    "name": "cmn-CN-Wavenet-D",
+    "country": "cmn-CN",
+    "nicename": "D (cmn-CN)"
+  },
+  {
+    "name": "cmn-TW-Standard-A",
+    "country": "cmn-TW",
+    "nicename": "A (cmn-TW)"
+  },
+  {
+    "name": "cmn-TW-Standard-B",
+    "country": "cmn-TW",
+    "nicename": "B (cmn-TW)"
+  },
+  {
+    "name": "cmn-TW-Standard-C",
+    "country": "cmn-TW",
+    "nicename": "C (cmn-TW)"
+  },
+  {
+    "name": "cmn-TW-Wavenet-A",
+    "country": "cmn-TW",
+    "nicename": "A (cmn-TW)"
+  },
+  {
+    "name": "cmn-TW-Wavenet-B",
+    "country": "cmn-TW",
+    "nicename": "B (cmn-TW)"
+  },
+  {
+    "name": "cmn-TW-Wavenet-C",
+    "country": "cmn-TW",
+    "nicename": "C (cmn-TW)"
+  },
+  {
+    "name": "cs-CZ-Standard-A",
+    "country": "cs-CZ",
+    "nicename": "A (cs-CZ)"
+  },
+  {
+    "name": "cs-CZ-Wavenet-A",
+    "country": "cs-CZ",
+    "nicename": "A (cs-CZ)"
+  },
+  {
+    "name": "da-DK-Neural2-D",
+    "country": "da-DK",
+    "nicename": "D (da-DK)"
+  },
+  {
+    "name": "da-DK-Standard-A",
+    "country": "da-DK",
+    "nicename": "A (da-DK)"
+  },
+  {
+    "name": "da-DK-Standard-C",
+    "country": "da-DK",
+    "nicename": "C (da-DK)"
+  },
+  {
+    "name": "da-DK-Standard-D",
+    "country": "da-DK",
+    "nicename": "D (da-DK)"
+  },
+  {
+    "name": "da-DK-Standard-E",
+    "country": "da-DK",
+    "nicename": "E (da-DK)"
+  },
+  {
+    "name": "da-DK-Wavenet-A",
+    "country": "da-DK",
+    "nicename": "A (da-DK)"
+  },
+  {
+    "name": "da-DK-Wavenet-C",
+    "country": "da-DK",
+    "nicename": "C (da-DK)"
+  },
+  {
+    "name": "da-DK-Wavenet-D",
+    "country": "da-DK",
+    "nicename": "D (da-DK)"
+  },
+  {
+    "name": "da-DK-Wavenet-E",
+    "country": "da-DK",
+    "nicename": "E (da-DK)"
+  },
+  {
+    "name": "de-DE-Neural2-A",
+    "country": "de-DE",
+    "nicename": "A (de-DE)"
+  },
+  {
+    "name": "de-DE-Neural2-B",
+    "country": "de-DE",
+    "nicename": "B (de-DE)"
+  },
+  {
+    "name": "de-DE-Neural2-C",
+    "country": "de-DE",
+    "nicename": "C (de-DE)"
+  },
+  {
+    "name": "de-DE-Neural2-D",
+    "country": "de-DE",
+    "nicename": "D (de-DE)"
+  },
+  {
+    "name": "de-DE-Neural2-F",
+    "country": "de-DE",
+    "nicename": "F (de-DE)"
+  },
+  {
+    "name": "de-DE-Polyglot-1",
+    "country": "de-DE",
+    "nicename": "1 (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-A",
+    "country": "de-DE",
+    "nicename": "A (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-B",
+    "country": "de-DE",
+    "nicename": "B (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-C",
+    "country": "de-DE",
+    "nicename": "C (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-D",
+    "country": "de-DE",
+    "nicename": "D (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-E",
+    "country": "de-DE",
+    "nicename": "E (de-DE)"
+  },
+  {
+    "name": "de-DE-Standard-F",
+    "country": "de-DE",
+    "nicename": "F (de-DE)"
+  },
+  {
+    "name": "de-DE-Studio-B",
+    "country": "de-DE",
+    "nicename": "B (de-DE)"
+  },
+  {
+    "name": "de-DE-Studio-C",
+    "country": "de-DE",
+    "nicename": "C (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-A",
+    "country": "de-DE",
+    "nicename": "A (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-B",
+    "country": "de-DE",
+    "nicename": "B (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-C",
+    "country": "de-DE",
+    "nicename": "C (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-D",
+    "country": "de-DE",
+    "nicename": "D (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-E",
+    "country": "de-DE",
+    "nicename": "E (de-DE)"
+  },
+  {
+    "name": "de-DE-Wavenet-F",
+    "country": "de-DE",
+    "nicename": "F (de-DE)"
+  },
+  {
+    "name": "el-GR-Standard-A",
+    "country": "el-GR",
+    "nicename": "A (el-GR)"
+  },
+  {
+    "name": "el-GR-Wavenet-A",
+    "country": "el-GR",
+    "nicename": "A (el-GR)"
+  },
+  {
+    "name": "en-AU-Neural2-A",
+    "country": "en-AU",
+    "nicename": "A (en-AU)"
+  },
+  {
+    "name": "en-AU-Neural2-B",
+    "country": "en-AU",
+    "nicename": "B (en-AU)"
+  },
+  {
+    "name": "en-AU-Neural2-C",
+    "country": "en-AU",
+    "nicename": "C (en-AU)"
+  },
+  {
+    "name": "en-AU-Neural2-D",
+    "country": "en-AU",
+    "nicename": "D (en-AU)"
+  },
+  {
+    "name": "en-AU-News-E",
+    "country": "en-AU",
+    "nicename": "E (en-AU)"
+  },
+  {
+    "name": "en-AU-News-F",
+    "country": "en-AU",
+    "nicename": "F (en-AU)"
+  },
+  {
+    "name": "en-AU-News-G",
+    "country": "en-AU",
+    "nicename": "G (en-AU)"
+  },
+  {
+    "name": "en-AU-Polyglot-1",
+    "country": "en-AU",
+    "nicename": "1 (en-AU)"
+  },
+  {
+    "name": "en-AU-Standard-A",
+    "country": "en-AU",
+    "nicename": "A (en-AU)"
+  },
+  {
+    "name": "en-AU-Standard-B",
+    "country": "en-AU",
+    "nicename": "B (en-AU)"
+  },
+  {
+    "name": "en-AU-Standard-C",
+    "country": "en-AU",
+    "nicename": "C (en-AU)"
+  },
+  {
+    "name": "en-AU-Standard-D",
+    "country": "en-AU",
+    "nicename": "D (en-AU)"
+  },
+  {
+    "name": "en-AU-Wavenet-A",
+    "country": "en-AU",
+    "nicename": "A (en-AU)"
+  },
+  {
+    "name": "en-AU-Wavenet-B",
+    "country": "en-AU",
+    "nicename": "B (en-AU)"
+  },
+  {
+    "name": "en-AU-Wavenet-C",
+    "country": "en-AU",
+    "nicename": "C (en-AU)"
+  },
+  {
+    "name": "en-AU-Wavenet-D",
+    "country": "en-AU",
+    "nicename": "D (en-AU)"
+  },
+  {
+    "name": "en-GB-Neural2-A",
+    "country": "en-GB",
+    "nicename": "A (en-GB)"
+  },
+  {
+    "name": "en-GB-Neural2-B",
+    "country": "en-GB",
+    "nicename": "B (en-GB)"
+  },
+  {
+    "name": "en-GB-Neural2-C",
+    "country": "en-GB",
+    "nicename": "C (en-GB)"
+  },
+  {
+    "name": "en-GB-Neural2-D",
+    "country": "en-GB",
+    "nicename": "D (en-GB)"
+  },
+  {
+    "name": "en-GB-Neural2-F",
+    "country": "en-GB",
+    "nicename": "F (en-GB)"
+  },
+  {
+    "name": "en-GB-News-G",
+    "country": "en-GB",
+    "nicename": "G (en-GB)"
+  },
+  {
+    "name": "en-GB-News-H",
+    "country": "en-GB",
+    "nicename": "H (en-GB)"
+  },
+  {
+    "name": "en-GB-News-I",
+    "country": "en-GB",
+    "nicename": "I (en-GB)"
+  },
+  {
+    "name": "en-GB-News-J",
+    "country": "en-GB",
+    "nicename": "J (en-GB)"
+  },
+  {
+    "name": "en-GB-News-K",
+    "country": "en-GB",
+    "nicename": "K (en-GB)"
+  },
+  {
+    "name": "en-GB-News-L",
+    "country": "en-GB",
+    "nicename": "L (en-GB)"
+  },
+  {
+    "name": "en-GB-News-M",
+    "country": "en-GB",
+    "nicename": "M (en-GB)"
+  },
+  {
+    "name": "en-GB-Standard-A",
+    "country": "en-GB",
+    "nicename": "A (en-GB)"
+  },
+  {
+    "name": "en-GB-Standard-B",
+    "country": "en-GB",
+    "nicename": "B (en-GB)"
+  },
+  {
+    "name": "en-GB-Standard-C",
+    "country": "en-GB",
+    "nicename": "C (en-GB)"
+  },
+  {
+    "name": "en-GB-Standard-D",
+    "country": "en-GB",
+    "nicename": "D (en-GB)"
+  },
+  {
+    "name": "en-GB-Standard-F",
+    "country": "en-GB",
+    "nicename": "F (en-GB)"
+  },
+  {
+    "name": "en-GB-Studio-B",
+    "country": "en-GB",
+    "nicename": "B (en-GB)"
+  },
+  {
+    "name": "en-GB-Studio-C",
+    "country": "en-GB",
+    "nicename": "C (en-GB)"
+  },
+  {
+    "name": "en-GB-Wavenet-A",
+    "country": "en-GB",
+    "nicename": "A (en-GB)"
+  },
+  {
+    "name": "en-GB-Wavenet-B",
+    "country": "en-GB",
+    "nicename": "B (en-GB)"
+  },
+  {
+    "name": "en-GB-Wavenet-C",
+    "country": "en-GB",
+    "nicename": "C (en-GB)"
+  },
+  {
+    "name": "en-GB-Wavenet-D",
+    "country": "en-GB",
+    "nicename": "D (en-GB)"
+  },
+  {
+    "name": "en-GB-Wavenet-F",
+    "country": "en-GB",
+    "nicename": "F (en-GB)"
+  },
+  {
+    "name": "en-IN-Neural2-A",
+    "country": "en-IN",
+    "nicename": "A (en-IN)"
+  },
+  {
+    "name": "en-IN-Neural2-B",
+    "country": "en-IN",
+    "nicename": "B (en-IN)"
+  },
+  {
+    "name": "en-IN-Neural2-C",
+    "country": "en-IN",
+    "nicename": "C (en-IN)"
+  },
+  {
+    "name": "en-IN-Neural2-D",
+    "country": "en-IN",
+    "nicename": "D (en-IN)"
+  },
+  {
+    "name": "en-IN-Standard-A",
+    "country": "en-IN",
+    "nicename": "A (en-IN)"
+  },
+  {
+    "name": "en-IN-Standard-B",
+    "country": "en-IN",
+    "nicename": "B (en-IN)"
+  },
+  {
+    "name": "en-IN-Standard-C",
+    "country": "en-IN",
+    "nicename": "C (en-IN)"
+  },
+  {
+    "name": "en-IN-Standard-D",
+    "country": "en-IN",
+    "nicename": "D (en-IN)"
+  },
+  {
+    "name": "en-IN-Wavenet-A",
+    "country": "en-IN",
+    "nicename": "A (en-IN)"
+  },
+  {
+    "name": "en-IN-Wavenet-B",
+    "country": "en-IN",
+    "nicename": "B (en-IN)"
+  },
+  {
+    "name": "en-IN-Wavenet-C",
+    "country": "en-IN",
+    "nicename": "C (en-IN)"
+  },
+  {
+    "name": "en-IN-Wavenet-D",
+    "country": "en-IN",
+    "nicename": "D (en-IN)"
+  },
+  {
+    "name": "en-US-Casual-K",
+    "country": "en-US",
+    "nicename": "K (en-US)"
+  },
+  {
+    "name": "en-US-Journey-D",
+    "country": "en-US",
+    "nicename": "D (en-US)"
+  },
+  {
+    "name": "en-US-Journey-F",
+    "country": "en-US",
+    "nicename": "F (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-A",
+    "country": "en-US",
+    "nicename": "A (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-C",
+    "country": "en-US",
+    "nicename": "C (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-D",
+    "country": "en-US",
+    "nicename": "D (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-E",
+    "country": "en-US",
+    "nicename": "E (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-F",
+    "country": "en-US",
+    "nicename": "F (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-G",
+    "country": "en-US",
+    "nicename": "G (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-H",
+    "country": "en-US",
+    "nicename": "H (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-I",
+    "country": "en-US",
+    "nicename": "I (en-US)"
+  },
+  {
+    "name": "en-US-Neural2-J",
+    "country": "en-US",
+    "nicename": "J (en-US)"
+  },
+  {
+    "name": "en-US-News-K",
+    "country": "en-US",
+    "nicename": "K (en-US)"
+  },
+  {
+    "name": "en-US-News-L",
+    "country": "en-US",
+    "nicename": "L (en-US)"
+  },
+  {
+    "name": "en-US-News-N",
+    "country": "en-US",
+    "nicename": "N (en-US)"
+  },
+  {
+    "name": "en-US-Polyglot-1",
+    "country": "en-US",
+    "nicename": "1 (en-US)"
+  },
+  {
+    "name": "en-US-Standard-A",
+    "country": "en-US",
+    "nicename": "A (en-US)"
+  },
+  {
+    "name": "en-US-Standard-B",
+    "country": "en-US",
+    "nicename": "B (en-US)"
+  },
+  {
+    "name": "en-US-Standard-C",
+    "country": "en-US",
+    "nicename": "C (en-US)"
+  },
+  {
+    "name": "en-US-Standard-D",
+    "country": "en-US",
+    "nicename": "D (en-US)"
+  },
+  {
+    "name": "en-US-Standard-E",
+    "country": "en-US",
+    "nicename": "E (en-US)"
+  },
+  {
+    "name": "en-US-Standard-F",
+    "country": "en-US",
+    "nicename": "F (en-US)"
+  },
+  {
+    "name": "en-US-Standard-G",
+    "country": "en-US",
+    "nicename": "G (en-US)"
+  },
+  {
+    "name": "en-US-Standard-H",
+    "country": "en-US",
+    "nicename": "H (en-US)"
+  },
+  {
+    "name": "en-US-Standard-I",
+    "country": "en-US",
+    "nicename": "I (en-US)"
+  },
+  {
+    "name": "en-US-Standard-J",
+    "country": "en-US",
+    "nicename": "J (en-US)"
+  },
+  {
+    "name": "en-US-Studio-O",
+    "country": "en-US",
+    "nicename": "O (en-US)"
+  },
+  {
+    "name": "en-US-Studio-Q",
+    "country": "en-US",
+    "nicename": "Q (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-A",
+    "country": "en-US",
+    "nicename": "A (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-B",
+    "country": "en-US",
+    "nicename": "B (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-C",
+    "country": "en-US",
+    "nicename": "C (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-D",
+    "country": "en-US",
+    "nicename": "D (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-E",
+    "country": "en-US",
+    "nicename": "E (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-F",
+    "country": "en-US",
+    "nicename": "F (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-G",
+    "country": "en-US",
+    "nicename": "G (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-H",
+    "country": "en-US",
+    "nicename": "H (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-I",
+    "country": "en-US",
+    "nicename": "I (en-US)"
+  },
+  {
+    "name": "en-US-Wavenet-J",
+    "country": "en-US",
+    "nicename": "J (en-US)"
+  },
+  {
+    "name": "es-ES-Neural2-A",
+    "country": "es-ES",
+    "nicename": "A (es-ES)"
+  },
+  {
+    "name": "es-ES-Neural2-B",
+    "country": "es-ES",
+    "nicename": "B (es-ES)"
+  },
+  {
+    "name": "es-ES-Neural2-C",
+    "country": "es-ES",
+    "nicename": "C (es-ES)"
+  },
+  {
+    "name": "es-ES-Neural2-D",
+    "country": "es-ES",
+    "nicename": "D (es-ES)"
+  },
+  {
+    "name": "es-ES-Neural2-E",
+    "country": "es-ES",
+    "nicename": "E (es-ES)"
+  },
+  {
+    "name": "es-ES-Neural2-F",
+    "country": "es-ES",
+    "nicename": "F (es-ES)"
+  },
+  {
+    "name": "es-ES-Polyglot-1",
+    "country": "es-ES",
+    "nicename": "1 (es-ES)"
+  },
+  {
+    "name": "es-ES-Standard-A",
+    "country": "es-ES",
+    "nicename": "A (es-ES)"
+  },
+  {
+    "name": "es-ES-Standard-B",
+    "country": "es-ES",
+    "nicename": "B (es-ES)"
+  },
+  {
+    "name": "es-ES-Standard-C",
+    "country": "es-ES",
+    "nicename": "C (es-ES)"
+  },
+  {
+    "name": "es-ES-Standard-D",
+    "country": "es-ES",
+    "nicename": "D (es-ES)"
+  },
+  {
+    "name": "es-ES-Studio-C",
+    "country": "es-ES",
+    "nicename": "C (es-ES)"
+  },
+  {
+    "name": "es-ES-Studio-F",
+    "country": "es-ES",
+    "nicename": "F (es-ES)"
+  },
+  {
+    "name": "es-ES-Wavenet-B",
+    "country": "es-ES",
+    "nicename": "B (es-ES)"
+  },
+  {
+    "name": "es-ES-Wavenet-C",
+    "country": "es-ES",
+    "nicename": "C (es-ES)"
+  },
+  {
+    "name": "es-ES-Wavenet-D",
+    "country": "es-ES",
+    "nicename": "D (es-ES)"
+  },
+  {
+    "name": "es-US-Neural2-A",
+    "country": "es-US",
+    "nicename": "A (es-US)"
+  },
+  {
+    "name": "es-US-Neural2-B",
+    "country": "es-US",
+    "nicename": "B (es-US)"
+  },
+  {
+    "name": "es-US-Neural2-C",
+    "country": "es-US",
+    "nicename": "C (es-US)"
+  },
+  {
+    "name": "es-US-News-D",
+    "country": "es-US",
+    "nicename": "D (es-US)"
+  },
+  {
+    "name": "es-US-News-E",
+    "country": "es-US",
+    "nicename": "E (es-US)"
+  },
+  {
+    "name": "es-US-News-F",
+    "country": "es-US",
+    "nicename": "F (es-US)"
+  },
+  {
+    "name": "es-US-News-G",
+    "country": "es-US",
+    "nicename": "G (es-US)"
+  },
+  {
+    "name": "es-US-Polyglot-1",
+    "country": "es-US",
+    "nicename": "1 (es-US)"
+  },
+  {
+    "name": "es-US-Standard-A",
+    "country": "es-US",
+    "nicename": "A (es-US)"
+  },
+  {
+    "name": "es-US-Standard-B",
+    "country": "es-US",
+    "nicename": "B (es-US)"
+  },
+  {
+    "name": "es-US-Standard-C",
+    "country": "es-US",
+    "nicename": "C (es-US)"
+  },
+  {
+    "name": "es-US-Studio-B",
+    "country": "es-US",
+    "nicename": "B (es-US)"
+  },
+  {
+    "name": "es-US-Wavenet-A",
+    "country": "es-US",
+    "nicename": "A (es-US)"
+  },
+  {
+    "name": "es-US-Wavenet-B",
+    "country": "es-US",
+    "nicename": "B (es-US)"
+  },
+  {
+    "name": "es-US-Wavenet-C",
+    "country": "es-US",
+    "nicename": "C (es-US)"
+  },
+  {
+    "name": "eu-ES-Standard-A",
+    "country": "eu-ES",
+    "nicename": "A (eu-ES)"
+  },
+  {
+    "name": "fi-FI-Standard-A",
+    "country": "fi-FI",
+    "nicename": "A (fi-FI)"
+  },
+  {
+    "name": "fi-FI-Wavenet-A",
+    "country": "fi-FI",
+    "nicename": "A (fi-FI)"
+  },
+  {
+    "name": "fil-PH-Standard-A",
+    "country": "fil-PH",
+    "nicename": "A (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Standard-B",
+    "country": "fil-PH",
+    "nicename": "B (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Standard-C",
+    "country": "fil-PH",
+    "nicename": "C (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Standard-D",
+    "country": "fil-PH",
+    "nicename": "D (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Wavenet-A",
+    "country": "fil-PH",
+    "nicename": "A (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Wavenet-B",
+    "country": "fil-PH",
+    "nicename": "B (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Wavenet-C",
+    "country": "fil-PH",
+    "nicename": "C (fil-PH)"
+  },
+  {
+    "name": "fil-PH-Wavenet-D",
+    "country": "fil-PH",
+    "nicename": "D (fil-PH)"
+  },
+  {
+    "name": "fil-ph-Neural2-A",
+    "country": "fil-PH",
+    "nicename": "A (fil-PH)"
+  },
+  {
+    "name": "fil-ph-Neural2-D",
+    "country": "fil-PH",
+    "nicename": "D (fil-PH)"
+  },
+  {
+    "name": "fr-CA-Neural2-A",
+    "country": "fr-CA",
+    "nicename": "A (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Neural2-B",
+    "country": "fr-CA",
+    "nicename": "B (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Neural2-C",
+    "country": "fr-CA",
+    "nicename": "C (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Neural2-D",
+    "country": "fr-CA",
+    "nicename": "D (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Standard-A",
+    "country": "fr-CA",
+    "nicename": "A (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Standard-B",
+    "country": "fr-CA",
+    "nicename": "B (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Standard-C",
+    "country": "fr-CA",
+    "nicename": "C (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Standard-D",
+    "country": "fr-CA",
+    "nicename": "D (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Wavenet-A",
+    "country": "fr-CA",
+    "nicename": "A (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Wavenet-B",
+    "country": "fr-CA",
+    "nicename": "B (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Wavenet-C",
+    "country": "fr-CA",
+    "nicename": "C (fr-CA)"
+  },
+  {
+    "name": "fr-CA-Wavenet-D",
+    "country": "fr-CA",
+    "nicename": "D (fr-CA)"
+  },
+  {
+    "name": "fr-FR-Neural2-A",
+    "country": "fr-FR",
+    "nicename": "A (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Neural2-B",
+    "country": "fr-FR",
+    "nicename": "B (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Neural2-C",
+    "country": "fr-FR",
+    "nicename": "C (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Neural2-D",
+    "country": "fr-FR",
+    "nicename": "D (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Neural2-E",
+    "country": "fr-FR",
+    "nicename": "E (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Polyglot-1",
+    "country": "fr-FR",
+    "nicename": "1 (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Standard-A",
+    "country": "fr-FR",
+    "nicename": "A (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Standard-B",
+    "country": "fr-FR",
+    "nicename": "B (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Standard-C",
+    "country": "fr-FR",
+    "nicename": "C (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Standard-D",
+    "country": "fr-FR",
+    "nicename": "D (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Standard-E",
+    "country": "fr-FR",
+    "nicename": "E (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Studio-A",
+    "country": "fr-FR",
+    "nicename": "A (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Studio-D",
+    "country": "fr-FR",
+    "nicename": "D (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Wavenet-A",
+    "country": "fr-FR",
+    "nicename": "A (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Wavenet-B",
+    "country": "fr-FR",
+    "nicename": "B (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Wavenet-C",
+    "country": "fr-FR",
+    "nicename": "C (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Wavenet-D",
+    "country": "fr-FR",
+    "nicename": "D (fr-FR)"
+  },
+  {
+    "name": "fr-FR-Wavenet-E",
+    "country": "fr-FR",
+    "nicename": "E (fr-FR)"
+  },
+  {
+    "name": "gl-ES-Standard-A",
+    "country": "gl-ES",
+    "nicename": "A (gl-ES)"
+  },
+  {
+    "name": "gu-IN-Standard-A",
+    "country": "gu-IN",
+    "nicename": "A (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Standard-B",
+    "country": "gu-IN",
+    "nicename": "B (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Standard-C",
+    "country": "gu-IN",
+    "nicename": "C (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Standard-D",
+    "country": "gu-IN",
+    "nicename": "D (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Wavenet-A",
+    "country": "gu-IN",
+    "nicename": "A (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Wavenet-B",
+    "country": "gu-IN",
+    "nicename": "B (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Wavenet-C",
+    "country": "gu-IN",
+    "nicename": "C (gu-IN)"
+  },
+  {
+    "name": "gu-IN-Wavenet-D",
+    "country": "gu-IN",
+    "nicename": "D (gu-IN)"
+  },
+  {
+    "name": "he-IL-Standard-A",
+    "country": "he-IL",
+    "nicename": "A (he-IL)"
+  },
+  {
+    "name": "he-IL-Standard-B",
+    "country": "he-IL",
+    "nicename": "B (he-IL)"
+  },
+  {
+    "name": "he-IL-Standard-C",
+    "country": "he-IL",
+    "nicename": "C (he-IL)"
+  },
+  {
+    "name": "he-IL-Standard-D",
+    "country": "he-IL",
+    "nicename": "D (he-IL)"
+  },
+  {
+    "name": "he-IL-Wavenet-A",
+    "country": "he-IL",
+    "nicename": "A (he-IL)"
+  },
+  {
+    "name": "he-IL-Wavenet-B",
+    "country": "he-IL",
+    "nicename": "B (he-IL)"
+  },
+  {
+    "name": "he-IL-Wavenet-C",
+    "country": "he-IL",
+    "nicename": "C (he-IL)"
+  },
+  {
+    "name": "he-IL-Wavenet-D",
+    "country": "he-IL",
+    "nicename": "D (he-IL)"
+  },
+  {
+    "name": "hi-IN-Neural2-A",
+    "country": "hi-IN",
+    "nicename": "A (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Neural2-B",
+    "country": "hi-IN",
+    "nicename": "B (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Neural2-C",
+    "country": "hi-IN",
+    "nicename": "C (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Neural2-D",
+    "country": "hi-IN",
+    "nicename": "D (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Standard-A",
+    "country": "hi-IN",
+    "nicename": "A (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Standard-B",
+    "country": "hi-IN",
+    "nicename": "B (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Standard-C",
+    "country": "hi-IN",
+    "nicename": "C (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Standard-D",
+    "country": "hi-IN",
+    "nicename": "D (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Wavenet-A",
+    "country": "hi-IN",
+    "nicename": "A (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Wavenet-B",
+    "country": "hi-IN",
+    "nicename": "B (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Wavenet-C",
+    "country": "hi-IN",
+    "nicename": "C (hi-IN)"
+  },
+  {
+    "name": "hi-IN-Wavenet-D",
+    "country": "hi-IN",
+    "nicename": "D (hi-IN)"
+  },
+  {
+    "name": "hu-HU-Standard-A",
+    "country": "hu-HU",
+    "nicename": "A (hu-HU)"
+  },
+  {
+    "name": "hu-HU-Wavenet-A",
+    "country": "hu-HU",
+    "nicename": "A (hu-HU)"
+  },
+  {
+    "name": "id-ID-Standard-A",
+    "country": "id-ID",
+    "nicename": "A (id-ID)"
+  },
+  {
+    "name": "id-ID-Standard-B",
+    "country": "id-ID",
+    "nicename": "B (id-ID)"
+  },
+  {
+    "name": "id-ID-Standard-C",
+    "country": "id-ID",
+    "nicename": "C (id-ID)"
+  },
+  {
+    "name": "id-ID-Standard-D",
+    "country": "id-ID",
+    "nicename": "D (id-ID)"
+  },
+  {
+    "name": "id-ID-Wavenet-A",
+    "country": "id-ID",
+    "nicename": "A (id-ID)"
+  },
+  {
+    "name": "id-ID-Wavenet-B",
+    "country": "id-ID",
+    "nicename": "B (id-ID)"
+  },
+  {
+    "name": "id-ID-Wavenet-C",
+    "country": "id-ID",
+    "nicename": "C (id-ID)"
+  },
+  {
+    "name": "id-ID-Wavenet-D",
+    "country": "id-ID",
+    "nicename": "D (id-ID)"
+  },
+  {
+    "name": "is-IS-Standard-A",
+    "country": "is-IS",
+    "nicename": "A (is-IS)"
+  },
+  {
+    "name": "it-IT-Neural2-A",
+    "country": "it-IT",
+    "nicename": "A (it-IT)"
+  },
+  {
+    "name": "it-IT-Neural2-C",
+    "country": "it-IT",
+    "nicename": "C (it-IT)"
+  },
+  {
+    "name": "it-IT-Standard-A",
+    "country": "it-IT",
+    "nicename": "A (it-IT)"
+  },
+  {
+    "name": "it-IT-Standard-B",
+    "country": "it-IT",
+    "nicename": "B (it-IT)"
+  },
+  {
+    "name": "it-IT-Standard-C",
+    "country": "it-IT",
+    "nicename": "C (it-IT)"
+  },
+  {
+    "name": "it-IT-Standard-D",
+    "country": "it-IT",
+    "nicename": "D (it-IT)"
+  },
+  {
+    "name": "it-IT-Wavenet-A",
+    "country": "it-IT",
+    "nicename": "A (it-IT)"
+  },
+  {
+    "name": "it-IT-Wavenet-B",
+    "country": "it-IT",
+    "nicename": "B (it-IT)"
+  },
+  {
+    "name": "it-IT-Wavenet-C",
+    "country": "it-IT",
+    "nicename": "C (it-IT)"
+  },
+  {
+    "name": "it-IT-Wavenet-D",
+    "country": "it-IT",
+    "nicename": "D (it-IT)"
+  },
+  {
+    "name": "ja-JP-Neural2-B",
+    "country": "ja-JP",
+    "nicename": "B (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Neural2-C",
+    "country": "ja-JP",
+    "nicename": "C (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Neural2-D",
+    "country": "ja-JP",
+    "nicename": "D (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Standard-A",
+    "country": "ja-JP",
+    "nicename": "A (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Standard-B",
+    "country": "ja-JP",
+    "nicename": "B (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Standard-C",
+    "country": "ja-JP",
+    "nicename": "C (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Standard-D",
+    "country": "ja-JP",
+    "nicename": "D (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Wavenet-A",
+    "country": "ja-JP",
+    "nicename": "A (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Wavenet-B",
+    "country": "ja-JP",
+    "nicename": "B (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Wavenet-C",
+    "country": "ja-JP",
+    "nicename": "C (ja-JP)"
+  },
+  {
+    "name": "ja-JP-Wavenet-D",
+    "country": "ja-JP",
+    "nicename": "D (ja-JP)"
+  },
+  {
+    "name": "kn-IN-Standard-A",
+    "country": "kn-IN",
+    "nicename": "A (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Standard-B",
+    "country": "kn-IN",
+    "nicename": "B (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Standard-C",
+    "country": "kn-IN",
+    "nicename": "C (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Standard-D",
+    "country": "kn-IN",
+    "nicename": "D (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Wavenet-A",
+    "country": "kn-IN",
+    "nicename": "A (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Wavenet-B",
+    "country": "kn-IN",
+    "nicename": "B (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Wavenet-C",
+    "country": "kn-IN",
+    "nicename": "C (kn-IN)"
+  },
+  {
+    "name": "kn-IN-Wavenet-D",
+    "country": "kn-IN",
+    "nicename": "D (kn-IN)"
+  },
+  {
+    "name": "ko-KR-Neural2-A",
+    "country": "ko-KR",
+    "nicename": "A (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Neural2-B",
+    "country": "ko-KR",
+    "nicename": "B (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Neural2-C",
+    "country": "ko-KR",
+    "nicename": "C (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Standard-A",
+    "country": "ko-KR",
+    "nicename": "A (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Standard-B",
+    "country": "ko-KR",
+    "nicename": "B (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Standard-C",
+    "country": "ko-KR",
+    "nicename": "C (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Standard-D",
+    "country": "ko-KR",
+    "nicename": "D (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Wavenet-A",
+    "country": "ko-KR",
+    "nicename": "A (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Wavenet-B",
+    "country": "ko-KR",
+    "nicename": "B (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Wavenet-C",
+    "country": "ko-KR",
+    "nicename": "C (ko-KR)"
+  },
+  {
+    "name": "ko-KR-Wavenet-D",
+    "country": "ko-KR",
+    "nicename": "D (ko-KR)"
+  },
+  {
+    "name": "lt-LT-Standard-A",
+    "country": "lt-LT",
+    "nicename": "A (lt-LT)"
+  },
+  {
+    "name": "lv-LV-Standard-A",
+    "country": "lv-LV",
+    "nicename": "A (lv-LV)"
+  },
+  {
+    "name": "ml-IN-Standard-A",
+    "country": "ml-IN",
+    "nicename": "A (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Standard-B",
+    "country": "ml-IN",
+    "nicename": "B (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Standard-C",
+    "country": "ml-IN",
+    "nicename": "C (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Standard-D",
+    "country": "ml-IN",
+    "nicename": "D (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Wavenet-A",
+    "country": "ml-IN",
+    "nicename": "A (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Wavenet-B",
+    "country": "ml-IN",
+    "nicename": "B (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Wavenet-C",
+    "country": "ml-IN",
+    "nicename": "C (ml-IN)"
+  },
+  {
+    "name": "ml-IN-Wavenet-D",
+    "country": "ml-IN",
+    "nicename": "D (ml-IN)"
+  },
+  {
+    "name": "mr-IN-Standard-A",
+    "country": "mr-IN",
+    "nicename": "A (mr-IN)"
+  },
+  {
+    "name": "mr-IN-Standard-B",
+    "country": "mr-IN",
+    "nicename": "B (mr-IN)"
+  },
+  {
+    "name": "mr-IN-Standard-C",
+    "country": "mr-IN",
+    "nicename": "C (mr-IN)"
+  },
+  {
+    "name": "mr-IN-Wavenet-A",
+    "country": "mr-IN",
+    "nicename": "A (mr-IN)"
+  },
+  {
+    "name": "mr-IN-Wavenet-B",
+    "country": "mr-IN",
+    "nicename": "B (mr-IN)"
+  },
+  {
+    "name": "mr-IN-Wavenet-C",
+    "country": "mr-IN",
+    "nicename": "C (mr-IN)"
+  },
+  {
+    "name": "ms-MY-Standard-A",
+    "country": "ms-MY",
+    "nicename": "A (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Standard-B",
+    "country": "ms-MY",
+    "nicename": "B (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Standard-C",
+    "country": "ms-MY",
+    "nicename": "C (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Standard-D",
+    "country": "ms-MY",
+    "nicename": "D (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Wavenet-A",
+    "country": "ms-MY",
+    "nicename": "A (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Wavenet-B",
+    "country": "ms-MY",
+    "nicename": "B (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Wavenet-C",
+    "country": "ms-MY",
+    "nicename": "C (ms-MY)"
+  },
+  {
+    "name": "ms-MY-Wavenet-D",
+    "country": "ms-MY",
+    "nicename": "D (ms-MY)"
+  },
+  {
+    "name": "nb-NO-Standard-A",
+    "country": "nb-NO",
+    "nicename": "A (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Standard-B",
+    "country": "nb-NO",
+    "nicename": "B (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Standard-C",
+    "country": "nb-NO",
+    "nicename": "C (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Standard-D",
+    "country": "nb-NO",
+    "nicename": "D (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Standard-E",
+    "country": "nb-NO",
+    "nicename": "E (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Wavenet-A",
+    "country": "nb-NO",
+    "nicename": "A (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Wavenet-B",
+    "country": "nb-NO",
+    "nicename": "B (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Wavenet-C",
+    "country": "nb-NO",
+    "nicename": "C (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Wavenet-D",
+    "country": "nb-NO",
+    "nicename": "D (nb-NO)"
+  },
+  {
+    "name": "nb-NO-Wavenet-E",
+    "country": "nb-NO",
+    "nicename": "E (nb-NO)"
+  },
+  {
+    "name": "nl-BE-Standard-A",
+    "country": "nl-BE",
+    "nicename": "A (nl-BE)"
+  },
+  {
+    "name": "nl-BE-Standard-B",
+    "country": "nl-BE",
+    "nicename": "B (nl-BE)"
+  },
+  {
+    "name": "nl-BE-Wavenet-A",
+    "country": "nl-BE",
+    "nicename": "A (nl-BE)"
+  },
+  {
+    "name": "nl-BE-Wavenet-B",
+    "country": "nl-BE",
+    "nicename": "B (nl-BE)"
+  },
+  {
+    "name": "nl-NL-Standard-A",
+    "country": "nl-NL",
+    "nicename": "A (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Standard-B",
+    "country": "nl-NL",
+    "nicename": "B (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Standard-C",
+    "country": "nl-NL",
+    "nicename": "C (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Standard-D",
+    "country": "nl-NL",
+    "nicename": "D (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Standard-E",
+    "country": "nl-NL",
+    "nicename": "E (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Wavenet-A",
+    "country": "nl-NL",
+    "nicename": "A (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Wavenet-B",
+    "country": "nl-NL",
+    "nicename": "B (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Wavenet-C",
+    "country": "nl-NL",
+    "nicename": "C (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Wavenet-D",
+    "country": "nl-NL",
+    "nicename": "D (nl-NL)"
+  },
+  {
+    "name": "nl-NL-Wavenet-E",
+    "country": "nl-NL",
+    "nicename": "E (nl-NL)"
+  },
+  {
+    "name": "pa-IN-Standard-A",
+    "country": "pa-IN",
+    "nicename": "A (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Standard-B",
+    "country": "pa-IN",
+    "nicename": "B (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Standard-C",
+    "country": "pa-IN",
+    "nicename": "C (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Standard-D",
+    "country": "pa-IN",
+    "nicename": "D (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Wavenet-A",
+    "country": "pa-IN",
+    "nicename": "A (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Wavenet-B",
+    "country": "pa-IN",
+    "nicename": "B (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Wavenet-C",
+    "country": "pa-IN",
+    "nicename": "C (pa-IN)"
+  },
+  {
+    "name": "pa-IN-Wavenet-D",
+    "country": "pa-IN",
+    "nicename": "D (pa-IN)"
+  },
+  {
+    "name": "pl-PL-Standard-A",
+    "country": "pl-PL",
+    "nicename": "A (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Standard-B",
+    "country": "pl-PL",
+    "nicename": "B (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Standard-C",
+    "country": "pl-PL",
+    "nicename": "C (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Standard-D",
+    "country": "pl-PL",
+    "nicename": "D (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Standard-E",
+    "country": "pl-PL",
+    "nicename": "E (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Wavenet-A",
+    "country": "pl-PL",
+    "nicename": "A (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Wavenet-B",
+    "country": "pl-PL",
+    "nicename": "B (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Wavenet-C",
+    "country": "pl-PL",
+    "nicename": "C (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Wavenet-D",
+    "country": "pl-PL",
+    "nicename": "D (pl-PL)"
+  },
+  {
+    "name": "pl-PL-Wavenet-E",
+    "country": "pl-PL",
+    "nicename": "E (pl-PL)"
+  },
+  {
+    "name": "pt-BR-Neural2-A",
+    "country": "pt-BR",
+    "nicename": "A (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Neural2-B",
+    "country": "pt-BR",
+    "nicename": "B (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Neural2-C",
+    "country": "pt-BR",
+    "nicename": "C (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Standard-A",
+    "country": "pt-BR",
+    "nicename": "A (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Standard-B",
+    "country": "pt-BR",
+    "nicename": "B (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Standard-C",
+    "country": "pt-BR",
+    "nicename": "C (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Studio-B",
+    "country": "pt-BR",
+    "nicename": "B (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Studio-C",
+    "country": "pt-BR",
+    "nicename": "C (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Wavenet-A",
+    "country": "pt-BR",
+    "nicename": "A (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Wavenet-B",
+    "country": "pt-BR",
+    "nicename": "B (pt-BR)"
+  },
+  {
+    "name": "pt-BR-Wavenet-C",
+    "country": "pt-BR",
+    "nicename": "C (pt-BR)"
+  },
+  {
+    "name": "pt-PT-Standard-A",
+    "country": "pt-PT",
+    "nicename": "A (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Standard-B",
+    "country": "pt-PT",
+    "nicename": "B (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Standard-C",
+    "country": "pt-PT",
+    "nicename": "C (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Standard-D",
+    "country": "pt-PT",
+    "nicename": "D (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Wavenet-A",
+    "country": "pt-PT",
+    "nicename": "A (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Wavenet-B",
+    "country": "pt-PT",
+    "nicename": "B (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Wavenet-C",
+    "country": "pt-PT",
+    "nicename": "C (pt-PT)"
+  },
+  {
+    "name": "pt-PT-Wavenet-D",
+    "country": "pt-PT",
+    "nicename": "D (pt-PT)"
+  },
+  {
+    "name": "ro-RO-Standard-A",
+    "country": "ro-RO",
+    "nicename": "A (ro-RO)"
+  },
+  {
+    "name": "ro-RO-Wavenet-A",
+    "country": "ro-RO",
+    "nicename": "A (ro-RO)"
+  },
+  {
+    "name": "ru-RU-Standard-A",
+    "country": "ru-RU",
+    "nicename": "A (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Standard-B",
+    "country": "ru-RU",
+    "nicename": "B (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Standard-C",
+    "country": "ru-RU",
+    "nicename": "C (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Standard-D",
+    "country": "ru-RU",
+    "nicename": "D (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Standard-E",
+    "country": "ru-RU",
+    "nicename": "E (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Wavenet-A",
+    "country": "ru-RU",
+    "nicename": "A (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Wavenet-B",
+    "country": "ru-RU",
+    "nicename": "B (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Wavenet-C",
+    "country": "ru-RU",
+    "nicename": "C (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Wavenet-D",
+    "country": "ru-RU",
+    "nicename": "D (ru-RU)"
+  },
+  {
+    "name": "ru-RU-Wavenet-E",
+    "country": "ru-RU",
+    "nicename": "E (ru-RU)"
+  },
+  {
+    "name": "sk-SK-Standard-A",
+    "country": "sk-SK",
+    "nicename": "A (sk-SK)"
+  },
+  {
+    "name": "sk-SK-Wavenet-A",
+    "country": "sk-SK",
+    "nicename": "A (sk-SK)"
+  },
+  {
+    "name": "sr-RS-Standard-A",
+    "country": "sr-RS",
+    "nicename": "A (sr-RS)"
+  },
+  {
+    "name": "sv-SE-Standard-A",
+    "country": "sv-SE",
+    "nicename": "A (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Standard-B",
+    "country": "sv-SE",
+    "nicename": "B (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Standard-C",
+    "country": "sv-SE",
+    "nicename": "C (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Standard-D",
+    "country": "sv-SE",
+    "nicename": "D (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Standard-E",
+    "country": "sv-SE",
+    "nicename": "E (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Wavenet-A",
+    "country": "sv-SE",
+    "nicename": "A (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Wavenet-B",
+    "country": "sv-SE",
+    "nicename": "B (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Wavenet-C",
+    "country": "sv-SE",
+    "nicename": "C (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Wavenet-D",
+    "country": "sv-SE",
+    "nicename": "D (sv-SE)"
+  },
+  {
+    "name": "sv-SE-Wavenet-E",
+    "country": "sv-SE",
+    "nicename": "E (sv-SE)"
+  },
+  {
+    "name": "ta-IN-Standard-A",
+    "country": "ta-IN",
+    "nicename": "A (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Standard-B",
+    "country": "ta-IN",
+    "nicename": "B (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Standard-C",
+    "country": "ta-IN",
+    "nicename": "C (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Standard-D",
+    "country": "ta-IN",
+    "nicename": "D (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Wavenet-A",
+    "country": "ta-IN",
+    "nicename": "A (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Wavenet-B",
+    "country": "ta-IN",
+    "nicename": "B (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Wavenet-C",
+    "country": "ta-IN",
+    "nicename": "C (ta-IN)"
+  },
+  {
+    "name": "ta-IN-Wavenet-D",
+    "country": "ta-IN",
+    "nicename": "D (ta-IN)"
+  },
+  {
+    "name": "te-IN-Standard-A",
+    "country": "te-IN",
+    "nicename": "A (te-IN)"
+  },
+  {
+    "name": "te-IN-Standard-B",
+    "country": "te-IN",
+    "nicename": "B (te-IN)"
+  },
+  {
+    "name": "th-TH-Neural2-C",
+    "country": "th-TH",
+    "nicename": "C (th-TH)"
+  },
+  {
+    "name": "th-TH-Standard-A",
+    "country": "th-TH",
+    "nicename": "A (th-TH)"
+  },
+  {
+    "name": "tr-TR-Standard-A",
+    "country": "tr-TR",
+    "nicename": "A (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Standard-B",
+    "country": "tr-TR",
+    "nicename": "B (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Standard-C",
+    "country": "tr-TR",
+    "nicename": "C (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Standard-D",
+    "country": "tr-TR",
+    "nicename": "D (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Standard-E",
+    "country": "tr-TR",
+    "nicename": "E (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Wavenet-A",
+    "country": "tr-TR",
+    "nicename": "A (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Wavenet-B",
+    "country": "tr-TR",
+    "nicename": "B (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Wavenet-C",
+    "country": "tr-TR",
+    "nicename": "C (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Wavenet-D",
+    "country": "tr-TR",
+    "nicename": "D (tr-TR)"
+  },
+  {
+    "name": "tr-TR-Wavenet-E",
+    "country": "tr-TR",
+    "nicename": "E (tr-TR)"
+  },
+  {
+    "name": "uk-UA-Standard-A",
+    "country": "uk-UA",
+    "nicename": "A (uk-UA)"
+  },
+  {
+    "name": "uk-UA-Wavenet-A",
+    "country": "uk-UA",
+    "nicename": "A (uk-UA)"
+  },
+  {
+    "name": "vi-VN-Neural2-A",
+    "country": "vi-VN",
+    "nicename": "A (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Neural2-D",
+    "country": "vi-VN",
+    "nicename": "D (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Standard-A",
+    "country": "vi-VN",
+    "nicename": "A (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Standard-B",
+    "country": "vi-VN",
+    "nicename": "B (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Standard-C",
+    "country": "vi-VN",
+    "nicename": "C (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Standard-D",
+    "country": "vi-VN",
+    "nicename": "D (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Wavenet-A",
+    "country": "vi-VN",
+    "nicename": "A (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Wavenet-B",
+    "country": "vi-VN",
+    "nicename": "B (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Wavenet-C",
+    "country": "vi-VN",
+    "nicename": "C (vi-VN)"
+  },
+  {
+    "name": "vi-VN-Wavenet-D",
+    "country": "vi-VN",
+    "nicename": "D (vi-VN)"
+  },
+  {
+    "name": "yue-HK-Standard-A",
+    "country": "yue-HK",
+    "nicename": "A (yue-HK)"
+  },
+  {
+    "name": "yue-HK-Standard-B",
+    "country": "yue-HK",
+    "nicename": "B (yue-HK)"
+  },
+  {
+    "name": "yue-HK-Standard-C",
+    "country": "yue-HK",
+    "nicename": "C (yue-HK)"
+  },
+  {
+    "name": "yue-HK-Standard-D",
+    "country": "yue-HK",
+    "nicename": "D (yue-HK)"
+  }
+]

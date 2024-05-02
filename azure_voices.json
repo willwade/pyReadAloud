@@ -1,1906 +1,2382 @@
 [
   {
     "name": "af-ZA-AdriNeural",
-    "country": "af-ZA"
+    "country": "af-ZA",
+    "nicename": "Adri (af-ZA)"
   },
   {
     "name": "af-ZA-WillemNeural",
-    "country": "af-ZA"
+    "country": "af-ZA",
+    "nicename": "Willem (af-ZA)"
   },
   {
     "name": "am-ET-MekdesNeural",
-    "country": "am-ET"
+    "country": "am-ET",
+    "nicename": "\u1218\u1245\u12f0\u1235 (am-ET)"
   },
   {
     "name": "am-ET-AmehaNeural",
-    "country": "am-ET"
+    "country": "am-ET",
+    "nicename": "\u12a0\u121d\u1200 (am-ET)"
   },
   {
     "name": "ar-AE-FatimaNeural",
-    "country": "ar-AE"
+    "country": "ar-AE",
+    "nicename": "\u0641\u0627\u0637\u0645\u0629 (ar-AE)"
   },
   {
     "name": "ar-AE-HamdanNeural",
-    "country": "ar-AE"
+    "country": "ar-AE",
+    "nicename": "\u062d\u0645\u062f\u0627\u0646 (ar-AE)"
   },
   {
     "name": "ar-BH-LailaNeural",
-    "country": "ar-BH"
+    "country": "ar-BH",
+    "nicename": "\u0644\u064a\u0644\u0649 (ar-BH)"
   },
   {
     "name": "ar-BH-AliNeural",
-    "country": "ar-BH"
+    "country": "ar-BH",
+    "nicename": "\u0639\u0644\u064a (ar-BH)"
   },
   {
     "name": "ar-DZ-AminaNeural",
-    "country": "ar-DZ"
+    "country": "ar-DZ",
+    "nicename": "\u0623\u0645\u064a\u0646\u0629 (ar-DZ)"
   },
   {
     "name": "ar-DZ-IsmaelNeural",
-    "country": "ar-DZ"
+    "country": "ar-DZ",
+    "nicename": "\u0625\u0633\u0645\u0627\u0639\u064a\u0644 (ar-DZ)"
   },
   {
     "name": "ar-EG-SalmaNeural",
-    "country": "ar-EG"
+    "country": "ar-EG",
+    "nicename": "\u0633\u0644\u0645\u0649 (ar-EG)"
   },
   {
     "name": "ar-EG-ShakirNeural",
-    "country": "ar-EG"
+    "country": "ar-EG",
+    "nicename": "\u0634\u0627\u0643\u0631 (ar-EG)"
   },
   {
     "name": "ar-IQ-RanaNeural",
-    "country": "ar-IQ"
+    "country": "ar-IQ",
+    "nicename": "\u0631\u0646\u0627 (ar-IQ)"
   },
   {
     "name": "ar-IQ-BasselNeural",
-    "country": "ar-IQ"
+    "country": "ar-IQ",
+    "nicename": "\u0628\u0627\u0633\u0644 (ar-IQ)"
   },
   {
     "name": "ar-JO-SanaNeural",
-    "country": "ar-JO"
+    "country": "ar-JO",
+    "nicename": "\u0633\u0646\u0627\u0621 (ar-JO)"
   },
   {
     "name": "ar-JO-TaimNeural",
-    "country": "ar-JO"
+    "country": "ar-JO",
+    "nicename": "\u062a\u064a\u0645 (ar-JO)"
   },
   {
     "name": "ar-KW-NouraNeural",
-    "country": "ar-KW"
+    "country": "ar-KW",
+    "nicename": "\u0646\u0648\u0631\u0627 (ar-KW)"
   },
   {
     "name": "ar-KW-FahedNeural",
-    "country": "ar-KW"
+    "country": "ar-KW",
+    "nicename": "\u0641\u0647\u062f (ar-KW)"
   },
   {
     "name": "ar-LB-LaylaNeural",
-    "country": "ar-LB"
+    "country": "ar-LB",
+    "nicename": "\u0644\u064a\u0644\u0649 (ar-LB)"
   },
   {
     "name": "ar-LB-RamiNeural",
-    "country": "ar-LB"
+    "country": "ar-LB",
+    "nicename": "\u0631\u0627\u0645\u064a (ar-LB)"
   },
   {
     "name": "ar-LY-ImanNeural",
-    "country": "ar-LY"
+    "country": "ar-LY",
+    "nicename": "\u0625\u064a\u0645\u0627\u0646 (ar-LY)"
   },
   {
     "name": "ar-LY-OmarNeural",
-    "country": "ar-LY"
+    "country": "ar-LY",
+    "nicename": "\u0623\u062d\u0645\u062f (ar-LY)"
   },
   {
     "name": "ar-MA-MounaNeural",
-    "country": "ar-MA"
+    "country": "ar-MA",
+    "nicename": "\u0645\u0646\u0649 (ar-MA)"
   },
   {
     "name": "ar-MA-JamalNeural",
-    "country": "ar-MA"
+    "country": "ar-MA",
+    "nicename": "\u062c\u0645\u0627\u0644 (ar-MA)"
   },
   {
     "name": "ar-OM-AyshaNeural",
-    "country": "ar-OM"
+    "country": "ar-OM",
+    "nicename": "\u0639\u0627\u0626\u0634\u0629 (ar-OM)"
   },
   {
     "name": "ar-OM-AbdullahNeural",
-    "country": "ar-OM"
+    "country": "ar-OM",
+    "nicename": "\u0639\u0628\u062f\u0627\u0644\u0644\u0647 (ar-OM)"
   },
   {
     "name": "ar-QA-AmalNeural",
-    "country": "ar-QA"
+    "country": "ar-QA",
+    "nicename": "\u0623\u0645\u0644 (ar-QA)"
   },
   {
     "name": "ar-QA-MoazNeural",
-    "country": "ar-QA"
+    "country": "ar-QA",
+    "nicename": "\u0645\u0639\u0627\u0630 (ar-QA)"
   },
   {
     "name": "ar-SA-ZariyahNeural",
-    "country": "ar-SA"
+    "country": "ar-SA",
+    "nicename": "\u0632\u0627\u0631\u064a\u0629 (ar-SA)"
   },
   {
     "name": "ar-SA-HamedNeural",
-    "country": "ar-SA"
+    "country": "ar-SA",
+    "nicename": "\u062d\u0627\u0645\u062f (ar-SA)"
   },
   {
     "name": "ar-SY-AmanyNeural",
-    "country": "ar-SY"
+    "country": "ar-SY",
+    "nicename": "\u0623\u0645\u0627\u0646\u064a (ar-SY)"
   },
   {
     "name": "ar-SY-LaithNeural",
-    "country": "ar-SY"
+    "country": "ar-SY",
+    "nicename": "\u0644\u064a\u062b (ar-SY)"
   },
   {
     "name": "ar-TN-ReemNeural",
-    "country": "ar-TN"
+    "country": "ar-TN",
+    "nicename": "\u0631\u064a\u0645 (ar-TN)"
   },
   {
     "name": "ar-TN-HediNeural",
-    "country": "ar-TN"
+    "country": "ar-TN",
+    "nicename": "\u0647\u0627\u062f\u064a (ar-TN)"
   },
   {
     "name": "ar-YE-MaryamNeural",
-    "country": "ar-YE"
+    "country": "ar-YE",
+    "nicename": "\u0645\u0631\u064a\u0645 (ar-YE)"
   },
   {
     "name": "ar-YE-SalehNeural",
-    "country": "ar-YE"
+    "country": "ar-YE",
+    "nicename": "\u0635\u0627\u0644\u062d (ar-YE)"
   },
   {
     "name": "az-AZ-BanuNeural",
-    "country": "az-AZ"
+    "country": "az-AZ",
+    "nicename": "Banu (az-AZ)"
   },
   {
     "name": "az-AZ-BabekNeural",
-    "country": "az-AZ"
+    "country": "az-AZ",
+    "nicename": "Bab\u0259k (az-AZ)"
   },
   {
     "name": "bg-BG-KalinaNeural",
-    "country": "bg-BG"
+    "country": "bg-BG",
+    "nicename": "\u041a\u0430\u043b\u0438\u043d\u0430 (bg-BG)"
   },
   {
     "name": "bg-BG-BorislavNeural",
-    "country": "bg-BG"
+    "country": "bg-BG",
+    "nicename": "\u0411\u043e\u0440\u0438\u0441\u043b\u0430\u0432 (bg-BG)"
   },
   {
     "name": "bn-BD-NabanitaNeural",
-    "country": "bn-BD"
+    "country": "bn-BD",
+    "nicename": "\u09a8\u09ac\u09a8\u09c0\u09a4\u09be (bn-BD)"
   },
   {
     "name": "bn-BD-PradeepNeural",
-    "country": "bn-BD"
+    "country": "bn-BD",
+    "nicename": "\u09aa\u09cd\u09b0\u09a6\u09cd\u09ac\u09c0\u09aa (bn-BD)"
   },
   {
     "name": "bn-IN-TanishaaNeural",
-    "country": "bn-IN"
+    "country": "bn-IN",
+    "nicename": "\u09a4\u09be\u09a8\u09bf\u09b6\u09be (bn-IN)"
   },
   {
     "name": "bn-IN-BashkarNeural",
-    "country": "bn-IN"
+    "country": "bn-IN",
+    "nicename": "\u09ad\u09be\u09b8\u09cd\u0995\u09b0 (bn-IN)"
   },
   {
     "name": "bs-BA-VesnaNeural",
-    "country": "bs-BA"
+    "country": "bs-BA",
+    "nicename": "Vesna (bs-BA)"
   },
   {
     "name": "bs-BA-GoranNeural",
-    "country": "bs-BA"
+    "country": "bs-BA",
+    "nicename": "Goran (bs-BA)"
   },
   {
     "name": "ca-ES-JoanaNeural",
-    "country": "ca-ES"
+    "country": "ca-ES",
+    "nicename": "Joana (ca-ES)"
   },
   {
     "name": "ca-ES-EnricNeural",
-    "country": "ca-ES"
+    "country": "ca-ES",
+    "nicename": "Enric (ca-ES)"
   },
   {
     "name": "ca-ES-AlbaNeural",
-    "country": "ca-ES"
+    "country": "ca-ES",
+    "nicename": "Alba (ca-ES)"
   },
   {
     "name": "cs-CZ-VlastaNeural",
-    "country": "cs-CZ"
+    "country": "cs-CZ",
+    "nicename": "Vlasta (cs-CZ)"
   },
   {
     "name": "cs-CZ-AntoninNeural",
-    "country": "cs-CZ"
+    "country": "cs-CZ",
+    "nicename": "Anton\u00edn (cs-CZ)"
   },
   {
     "name": "cy-GB-NiaNeural",
-    "country": "cy-GB"
+    "country": "cy-GB",
+    "nicename": "Nia (cy-GB)"
   },
   {
     "name": "cy-GB-AledNeural",
-    "country": "cy-GB"
+    "country": "cy-GB",
+    "nicename": "Aled (cy-GB)"
   },
   {
     "name": "da-DK-ChristelNeural",
-    "country": "da-DK"
+    "country": "da-DK",
+    "nicename": "Christel (da-DK)"
   },
   {
     "name": "da-DK-JeppeNeural",
-    "country": "da-DK"
+    "country": "da-DK",
+    "nicename": "Jeppe (da-DK)"
   },
   {
     "name": "de-AT-IngridNeural",
-    "country": "de-AT"
+    "country": "de-AT",
+    "nicename": "Ingrid (de-AT)"
   },
   {
     "name": "de-AT-JonasNeural",
-    "country": "de-AT"
+    "country": "de-AT",
+    "nicename": "Jonas (de-AT)"
   },
   {
     "name": "de-CH-LeniNeural",
-    "country": "de-CH"
+    "country": "de-CH",
+    "nicename": "Leni (de-CH)"
   },
   {
     "name": "de-CH-JanNeural",
-    "country": "de-CH"
+    "country": "de-CH",
+    "nicename": "Jan (de-CH)"
   },
   {
     "name": "de-DE-KatjaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Katja (de-DE)"
   },
   {
     "name": "de-DE-ConradNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Conrad (de-DE)"
   },
   {
     "name": "de-DE-AmalaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Amala (de-DE)"
   },
   {
     "name": "de-DE-BerndNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Bernd (de-DE)"
   },
   {
     "name": "de-DE-ChristophNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Christoph (de-DE)"
   },
   {
     "name": "de-DE-ElkeNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Elke (de-DE)"
   },
   {
     "name": "de-DE-FlorianMultilingualNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Florian Mehrsprachig (de-DE)"
   },
   {
     "name": "de-DE-GiselaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Gisela (de-DE)"
   },
   {
     "name": "de-DE-KasperNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Kasper (de-DE)"
   },
   {
     "name": "de-DE-KillianNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Killian (de-DE)"
   },
   {
     "name": "de-DE-KlarissaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Klarissa (de-DE)"
   },
   {
     "name": "de-DE-KlausNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Klaus (de-DE)"
   },
   {
     "name": "de-DE-LouisaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Louisa (de-DE)"
   },
   {
     "name": "de-DE-MajaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Maja (de-DE)"
   },
   {
     "name": "de-DE-RalfNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Ralf (de-DE)"
   },
   {
     "name": "de-DE-SeraphinaMultilingualNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Seraphina Mehrsprachig (de-DE)"
   },
   {
     "name": "de-DE-TanjaNeural",
-    "country": "de-DE"
+    "country": "de-DE",
+    "nicename": "Tanja (de-DE)"
   },
   {
     "name": "el-GR-AthinaNeural",
-    "country": "el-GR"
+    "country": "el-GR",
+    "nicename": "\u0391\u03b8\u03b7\u03bd\u03ac (el-GR)"
   },
   {
     "name": "el-GR-NestorasNeural",
-    "country": "el-GR"
+    "country": "el-GR",
+    "nicename": "\u039d\u03ad\u03c3\u03c4\u03bf\u03c1\u03b1\u03c2 (el-GR)"
   },
   {
     "name": "en-AU-NatashaNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Natasha (en-AU)"
   },
   {
     "name": "en-AU-WilliamNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "William (en-AU)"
   },
   {
     "name": "en-AU-AnnetteNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Annette (en-AU)"
   },
   {
     "name": "en-AU-CarlyNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Carly (en-AU)"
   },
   {
     "name": "en-AU-DarrenNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Darren (en-AU)"
   },
   {
     "name": "en-AU-DuncanNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Duncan (en-AU)"
   },
   {
     "name": "en-AU-ElsieNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Elsie (en-AU)"
   },
   {
     "name": "en-AU-FreyaNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Freya (en-AU)"
   },
   {
     "name": "en-AU-JoanneNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Joanne (en-AU)"
   },
   {
     "name": "en-AU-KenNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Ken (en-AU)"
   },
   {
     "name": "en-AU-KimNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Kim (en-AU)"
   },
   {
     "name": "en-AU-NeilNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Neil (en-AU)"
   },
   {
     "name": "en-AU-TimNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Tim (en-AU)"
   },
   {
     "name": "en-AU-TinaNeural",
-    "country": "en-AU"
+    "country": "en-AU",
+    "nicename": "Tina (en-AU)"
   },
   {
     "name": "en-CA-ClaraNeural",
-    "country": "en-CA"
+    "country": "en-CA",
+    "nicename": "Clara (en-CA)"
   },
   {
     "name": "en-CA-LiamNeural",
-    "country": "en-CA"
+    "country": "en-CA",
+    "nicename": "Liam (en-CA)"
   },
   {
     "name": "en-GB-SoniaNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Sonia (en-GB)"
   },
   {
     "name": "en-GB-RyanNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Ryan (en-GB)"
   },
   {
     "name": "en-GB-LibbyNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Libby (en-GB)"
   },
   {
     "name": "en-GB-AbbiNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Abbi (en-GB)"
   },
   {
     "name": "en-GB-AlfieNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Alfie (en-GB)"
   },
   {
     "name": "en-GB-BellaNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Bella (en-GB)"
   },
   {
     "name": "en-GB-ElliotNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Elliot (en-GB)"
   },
   {
     "name": "en-GB-EthanNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Ethan (en-GB)"
   },
   {
     "name": "en-GB-HollieNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Hollie (en-GB)"
   },
   {
     "name": "en-GB-MaisieNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Maisie (en-GB)"
   },
   {
     "name": "en-GB-NoahNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Noah (en-GB)"
   },
   {
     "name": "en-GB-OliverNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Oliver (en-GB)"
   },
   {
     "name": "en-GB-OliviaNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Olivia (en-GB)"
   },
   {
     "name": "en-GB-ThomasNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Thomas (en-GB)"
   },
   {
     "name": "en-GB-MiaNeural",
-    "country": "en-GB"
+    "country": "en-GB",
+    "nicename": "Mia (en-GB)"
   },
   {
     "name": "en-HK-YanNeural",
-    "country": "en-HK"
+    "country": "en-HK",
+    "nicename": "Yan (en-HK)"
   },
   {
     "name": "en-HK-SamNeural",
-    "country": "en-HK"
+    "country": "en-HK",
+    "nicename": "Sam (en-HK)"
   },
   {
     "name": "en-IE-EmilyNeural",
-    "country": "en-IE"
+    "country": "en-IE",
+    "nicename": "Emily (en-IE)"
   },
   {
     "name": "en-IE-ConnorNeural",
-    "country": "en-IE"
+    "country": "en-IE",
+    "nicename": "Connor (en-IE)"
   },
   {
     "name": "en-IN-NeerjaNeural",
-    "country": "en-IN"
+    "country": "en-IN",
+    "nicename": "Neerja (en-IN)"
   },
   {
     "name": "en-IN-PrabhatNeural",
-    "country": "en-IN"
+    "country": "en-IN",
+    "nicename": "Prabhat (en-IN)"
   },
   {
     "name": "en-KE-AsiliaNeural",
-    "country": "en-KE"
+    "country": "en-KE",
+    "nicename": "Asilia (en-KE)"
   },
   {
     "name": "en-KE-ChilembaNeural",
-    "country": "en-KE"
+    "country": "en-KE",
+    "nicename": "Chilemba (en-KE)"
   },
   {
     "name": "en-NG-EzinneNeural",
-    "country": "en-NG"
+    "country": "en-NG",
+    "nicename": "Ezinne (en-NG)"
   },
   {
     "name": "en-NG-AbeoNeural",
-    "country": "en-NG"
+    "country": "en-NG",
+    "nicename": "Abeo (en-NG)"
   },
   {
     "name": "en-NZ-MollyNeural",
-    "country": "en-NZ"
+    "country": "en-NZ",
+    "nicename": "Molly (en-NZ)"
   },
   {
     "name": "en-NZ-MitchellNeural",
-    "country": "en-NZ"
+    "country": "en-NZ",
+    "nicename": "Mitchell (en-NZ)"
   },
   {
     "name": "en-PH-RosaNeural",
-    "country": "en-PH"
+    "country": "en-PH",
+    "nicename": "Rosa (en-PH)"
   },
   {
     "name": "en-PH-JamesNeural",
-    "country": "en-PH"
+    "country": "en-PH",
+    "nicename": "James (en-PH)"
   },
   {
     "name": "en-SG-LunaNeural",
-    "country": "en-SG"
+    "country": "en-SG",
+    "nicename": "Luna (en-SG)"
   },
   {
     "name": "en-SG-WayneNeural",
-    "country": "en-SG"
+    "country": "en-SG",
+    "nicename": "Wayne (en-SG)"
   },
   {
     "name": "en-TZ-ImaniNeural",
-    "country": "en-TZ"
+    "country": "en-TZ",
+    "nicename": "Imani (en-TZ)"
   },
   {
     "name": "en-TZ-ElimuNeural",
-    "country": "en-TZ"
+    "country": "en-TZ",
+    "nicename": "Elimu (en-TZ)"
   },
   {
     "name": "en-US-AvaMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Ava Multilingual (en-US)"
   },
   {
     "name": "en-US-AndrewMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Andrew Multilingual (en-US)"
   },
   {
     "name": "en-US-EmmaMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Emma Multilingual (en-US)"
   },
   {
     "name": "en-US-BrianMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Brian Multilingual (en-US)"
   },
   {
     "name": "en-US-AvaNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Ava (en-US)"
   },
   {
     "name": "en-US-AndrewNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Andrew (en-US)"
   },
   {
     "name": "en-US-EmmaNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Emma (en-US)"
   },
   {
     "name": "en-US-BrianNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Brian (en-US)"
   },
   {
     "name": "en-US-JennyNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Jenny (en-US)"
   },
   {
     "name": "en-US-GuyNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Guy (en-US)"
   },
   {
     "name": "en-US-AriaNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Aria (en-US)"
   },
   {
     "name": "en-US-DavisNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Davis (en-US)"
   },
   {
     "name": "en-US-JaneNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Jane (en-US)"
   },
   {
     "name": "en-US-JasonNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Jason (en-US)"
   },
   {
     "name": "en-US-SaraNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Sara (en-US)"
   },
   {
     "name": "en-US-TonyNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Tony (en-US)"
   },
   {
     "name": "en-US-NancyNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Nancy (en-US)"
   },
   {
     "name": "en-US-AmberNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Amber (en-US)"
   },
   {
     "name": "en-US-AnaNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Ana (en-US)"
   },
   {
     "name": "en-US-AshleyNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Ashley (en-US)"
   },
   {
     "name": "en-US-BrandonNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Brandon (en-US)"
   },
   {
     "name": "en-US-ChristopherNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Christopher (en-US)"
   },
   {
     "name": "en-US-CoraNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Cora (en-US)"
   },
   {
     "name": "en-US-ElizabethNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Elizabeth (en-US)"
   },
   {
     "name": "en-US-EricNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Eric (en-US)"
   },
   {
     "name": "en-US-JacobNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Jacob (en-US)"
   },
   {
     "name": "en-US-JennyMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Jenny Multilingual (en-US)"
   },
   {
     "name": "en-US-MichelleNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Michelle (en-US)"
   },
   {
     "name": "en-US-MonicaNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Monica (en-US)"
   },
   {
     "name": "en-US-RogerNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Roger (en-US)"
   },
   {
     "name": "en-US-RyanMultilingualNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Ryan Multilingual (en-US)"
   },
   {
     "name": "en-US-SteffanNeural",
-    "country": "en-US"
+    "country": "en-US",
+    "nicename": "Steffan (en-US)"
   },
   {
     "name": "en-ZA-LeahNeural",
-    "country": "en-ZA"
+    "country": "en-ZA",
+    "nicename": "Leah (en-ZA)"
   },
   {
     "name": "en-ZA-LukeNeural",
-    "country": "en-ZA"
+    "country": "en-ZA",
+    "nicename": "Luke (en-ZA)"
   },
   {
     "name": "es-AR-ElenaNeural",
-    "country": "es-AR"
+    "country": "es-AR",
+    "nicename": "Elena (es-AR)"
   },
   {
     "name": "es-AR-TomasNeural",
-    "country": "es-AR"
+    "country": "es-AR",
+    "nicename": "Tomas (es-AR)"
   },
   {
     "name": "es-BO-SofiaNeural",
-    "country": "es-BO"
+    "country": "es-BO",
+    "nicename": "Sofia (es-BO)"
   },
   {
     "name": "es-BO-MarceloNeural",
-    "country": "es-BO"
+    "country": "es-BO",
+    "nicename": "Marcelo (es-BO)"
   },
   {
     "name": "es-CL-CatalinaNeural",
-    "country": "es-CL"
+    "country": "es-CL",
+    "nicename": "Catalina (es-CL)"
   },
   {
     "name": "es-CL-LorenzoNeural",
-    "country": "es-CL"
+    "country": "es-CL",
+    "nicename": "Lorenzo (es-CL)"
   },
   {
     "name": "es-CO-SalomeNeural",
-    "country": "es-CO"
+    "country": "es-CO",
+    "nicename": "Salome (es-CO)"
   },
   {
     "name": "es-CO-GonzaloNeural",
-    "country": "es-CO"
+    "country": "es-CO",
+    "nicename": "Gonzalo (es-CO)"
   },
   {
     "name": "es-CR-MariaNeural",
-    "country": "es-CR"
+    "country": "es-CR",
+    "nicename": "Mar\u00eda (es-CR)"
   },
   {
     "name": "es-CR-JuanNeural",
-    "country": "es-CR"
+    "country": "es-CR",
+    "nicename": "Juan (es-CR)"
   },
   {
     "name": "es-CU-BelkysNeural",
-    "country": "es-CU"
+    "country": "es-CU",
+    "nicename": "Belkys (es-CU)"
   },
   {
     "name": "es-CU-ManuelNeural",
-    "country": "es-CU"
+    "country": "es-CU",
+    "nicename": "Manuel (es-CU)"
   },
   {
     "name": "es-DO-RamonaNeural",
-    "country": "es-DO"
+    "country": "es-DO",
+    "nicename": "Ramona (es-DO)"
   },
   {
     "name": "es-DO-EmilioNeural",
-    "country": "es-DO"
+    "country": "es-DO",
+    "nicename": "Emilio (es-DO)"
   },
   {
     "name": "es-EC-AndreaNeural",
-    "country": "es-EC"
+    "country": "es-EC",
+    "nicename": "Andrea (es-EC)"
   },
   {
     "name": "es-EC-LuisNeural",
-    "country": "es-EC"
+    "country": "es-EC",
+    "nicename": "Luis (es-EC)"
   },
   {
     "name": "es-ES-ElviraNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Elvira (es-ES)"
   },
   {
     "name": "es-ES-AlvaroNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "\u00c1lvaro (es-ES)"
   },
   {
     "name": "es-ES-AbrilNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Abril (es-ES)"
   },
   {
     "name": "es-ES-ArnauNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Arnau (es-ES)"
   },
   {
     "name": "es-ES-DarioNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Dario (es-ES)"
   },
   {
     "name": "es-ES-EliasNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Elias (es-ES)"
   },
   {
     "name": "es-ES-EstrellaNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Estrella (es-ES)"
   },
   {
     "name": "es-ES-IreneNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Irene (es-ES)"
   },
   {
     "name": "es-ES-LaiaNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Laia (es-ES)"
   },
   {
     "name": "es-ES-LiaNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Lia (es-ES)"
   },
   {
     "name": "es-ES-NilNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Nil (es-ES)"
   },
   {
     "name": "es-ES-SaulNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Saul (es-ES)"
   },
   {
     "name": "es-ES-TeoNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Teo (es-ES)"
   },
   {
     "name": "es-ES-TrianaNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Triana (es-ES)"
   },
   {
     "name": "es-ES-VeraNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Vera (es-ES)"
   },
   {
     "name": "es-ES-XimenaNeural",
-    "country": "es-ES"
+    "country": "es-ES",
+    "nicename": "Ximena (es-ES)"
   },
   {
     "name": "es-GQ-TeresaNeural",
-    "country": "es-GQ"
+    "country": "es-GQ",
+    "nicename": "Teresa (es-GQ)"
   },
   {
     "name": "es-GQ-JavierNeural",
-    "country": "es-GQ"
+    "country": "es-GQ",
+    "nicename": "Javier (es-GQ)"
   },
   {
     "name": "es-GT-MartaNeural",
-    "country": "es-GT"
+    "country": "es-GT",
+    "nicename": "Marta (es-GT)"
   },
   {
     "name": "es-GT-AndresNeural",
-    "country": "es-GT"
+    "country": "es-GT",
+    "nicename": "Andr\u00e9s (es-GT)"
   },
   {
     "name": "es-HN-KarlaNeural",
-    "country": "es-HN"
+    "country": "es-HN",
+    "nicename": "Karla (es-HN)"
   },
   {
     "name": "es-HN-CarlosNeural",
-    "country": "es-HN"
+    "country": "es-HN",
+    "nicename": "Carlos (es-HN)"
   },
   {
     "name": "es-MX-DaliaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Dalia (es-MX)"
   },
   {
     "name": "es-MX-JorgeNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Jorge (es-MX)"
   },
   {
     "name": "es-MX-BeatrizNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Beatriz (es-MX)"
   },
   {
     "name": "es-MX-CandelaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Candela (es-MX)"
   },
   {
     "name": "es-MX-CarlotaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Carlota (es-MX)"
   },
   {
     "name": "es-MX-CecilioNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Cecilio (es-MX)"
   },
   {
     "name": "es-MX-GerardoNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Gerardo (es-MX)"
   },
   {
     "name": "es-MX-LarissaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Larissa (es-MX)"
   },
   {
     "name": "es-MX-LibertoNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Liberto (es-MX)"
   },
   {
     "name": "es-MX-LucianoNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Luciano (es-MX)"
   },
   {
     "name": "es-MX-MarinaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Marina (es-MX)"
   },
   {
     "name": "es-MX-NuriaNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Nuria (es-MX)"
   },
   {
     "name": "es-MX-PelayoNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Pelayo (es-MX)"
   },
   {
     "name": "es-MX-RenataNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Renata (es-MX)"
   },
   {
     "name": "es-MX-YagoNeural",
-    "country": "es-MX"
+    "country": "es-MX",
+    "nicename": "Yago (es-MX)"
   },
   {
     "name": "es-NI-YolandaNeural",
-    "country": "es-NI"
+    "country": "es-NI",
+    "nicename": "Yolanda (es-NI)"
   },
   {
     "name": "es-NI-FedericoNeural",
-    "country": "es-NI"
+    "country": "es-NI",
+    "nicename": "Federico (es-NI)"
   },
   {
     "name": "es-PA-MargaritaNeural",
-    "country": "es-PA"
+    "country": "es-PA",
+    "nicename": "Margarita (es-PA)"
   },
   {
     "name": "es-PA-RobertoNeural",
-    "country": "es-PA"
+    "country": "es-PA",
+    "nicename": "Roberto (es-PA)"
   },
   {
     "name": "es-PE-CamilaNeural",
-    "country": "es-PE"
+    "country": "es-PE",
+    "nicename": "Camila (es-PE)"
   },
   {
     "name": "es-PE-AlexNeural",
-    "country": "es-PE"
+    "country": "es-PE",
+    "nicename": "Alex (es-PE)"
   },
   {
     "name": "es-PR-KarinaNeural",
-    "country": "es-PR"
+    "country": "es-PR",
+    "nicename": "Karina (es-PR)"
   },
   {
     "name": "es-PR-VictorNeural",
-    "country": "es-PR"
+    "country": "es-PR",
+    "nicename": "V\u00edctor (es-PR)"
   },
   {
     "name": "es-PY-TaniaNeural",
-    "country": "es-PY"
+    "country": "es-PY",
+    "nicename": "Tania (es-PY)"
   },
   {
     "name": "es-PY-MarioNeural",
-    "country": "es-PY"
+    "country": "es-PY",
+    "nicename": "Mario (es-PY)"
   },
   {
     "name": "es-SV-LorenaNeural",
-    "country": "es-SV"
+    "country": "es-SV",
+    "nicename": "Lorena (es-SV)"
   },
   {
     "name": "es-SV-RodrigoNeural",
-    "country": "es-SV"
+    "country": "es-SV",
+    "nicename": "Rodrigo (es-SV)"
   },
   {
     "name": "es-US-PalomaNeural",
-    "country": "es-US"
+    "country": "es-US",
+    "nicename": "Paloma (es-US)"
   },
   {
     "name": "es-US-AlonsoNeural",
-    "country": "es-US"
+    "country": "es-US",
+    "nicename": "Alonso (es-US)"
   },
   {
     "name": "es-UY-ValentinaNeural",
-    "country": "es-UY"
+    "country": "es-UY",
+    "nicename": "Valentina (es-UY)"
   },
   {
     "name": "es-UY-MateoNeural",
-    "country": "es-UY"
+    "country": "es-UY",
+    "nicename": "Mateo (es-UY)"
   },
   {
     "name": "es-VE-PaolaNeural",
-    "country": "es-VE"
+    "country": "es-VE",
+    "nicename": "Paola (es-VE)"
   },
   {
     "name": "es-VE-SebastianNeural",
-    "country": "es-VE"
+    "country": "es-VE",
+    "nicename": "Sebasti\u00e1n (es-VE)"
   },
   {
     "name": "et-EE-AnuNeural",
-    "country": "et-EE"
+    "country": "et-EE",
+    "nicename": "Anu (et-EE)"
   },
   {
     "name": "et-EE-KertNeural",
-    "country": "et-EE"
+    "country": "et-EE",
+    "nicename": "Kert (et-EE)"
   },
   {
     "name": "eu-ES-AinhoaNeural",
-    "country": "eu-ES"
+    "country": "eu-ES",
+    "nicename": "Ainhoa (eu-ES)"
   },
   {
     "name": "eu-ES-AnderNeural",
-    "country": "eu-ES"
+    "country": "eu-ES",
+    "nicename": "Ander (eu-ES)"
   },
   {
     "name": "fa-IR-DilaraNeural",
-    "country": "fa-IR"
+    "country": "fa-IR",
+    "nicename": "\u062f\u0644\u0627\u0631\u0627 (fa-IR)"
   },
   {
     "name": "fa-IR-FaridNeural",
-    "country": "fa-IR"
+    "country": "fa-IR",
+    "nicename": "\u0641\u0631\u06cc\u062f (fa-IR)"
   },
   {
     "name": "fi-FI-SelmaNeural",
-    "country": "fi-FI"
+    "country": "fi-FI",
+    "nicename": "Selma (fi-FI)"
   },
   {
     "name": "fi-FI-HarriNeural",
-    "country": "fi-FI"
+    "country": "fi-FI",
+    "nicename": "Harri (fi-FI)"
   },
   {
     "name": "fi-FI-NooraNeural",
-    "country": "fi-FI"
+    "country": "fi-FI",
+    "nicename": "Noora (fi-FI)"
   },
   {
     "name": "fil-PH-BlessicaNeural",
-    "country": "fil-PH"
+    "country": "fil-PH",
+    "nicename": "Blessica (fil-PH)"
   },
   {
     "name": "fil-PH-AngeloNeural",
-    "country": "fil-PH"
+    "country": "fil-PH",
+    "nicename": "Angelo (fil-PH)"
   },
   {
     "name": "fr-BE-CharlineNeural",
-    "country": "fr-BE"
+    "country": "fr-BE",
+    "nicename": "Charline (fr-BE)"
   },
   {
     "name": "fr-BE-GerardNeural",
-    "country": "fr-BE"
+    "country": "fr-BE",
+    "nicename": "Gerard (fr-BE)"
   },
   {
     "name": "fr-CA-SylvieNeural",
-    "country": "fr-CA"
+    "country": "fr-CA",
+    "nicename": "Sylvie (fr-CA)"
   },
   {
     "name": "fr-CA-JeanNeural",
-    "country": "fr-CA"
+    "country": "fr-CA",
+    "nicename": "Jean (fr-CA)"
   },
   {
     "name": "fr-CA-AntoineNeural",
-    "country": "fr-CA"
+    "country": "fr-CA",
+    "nicename": "Antoine (fr-CA)"
   },
   {
     "name": "fr-CA-ThierryNeural",
-    "country": "fr-CA"
+    "country": "fr-CA",
+    "nicename": "Thierry (fr-CA)"
   },
   {
     "name": "fr-CH-ArianeNeural",
-    "country": "fr-CH"
+    "country": "fr-CH",
+    "nicename": "Ariane (fr-CH)"
   },
   {
     "name": "fr-CH-FabriceNeural",
-    "country": "fr-CH"
+    "country": "fr-CH",
+    "nicename": "Fabrice (fr-CH)"
   },
   {
     "name": "fr-FR-DeniseNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Denise (fr-FR)"
   },
   {
     "name": "fr-FR-HenriNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Henri (fr-FR)"
   },
   {
     "name": "fr-FR-AlainNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Alain (fr-FR)"
   },
   {
     "name": "fr-FR-BrigitteNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Brigitte (fr-FR)"
   },
   {
     "name": "fr-FR-CelesteNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Celeste (fr-FR)"
   },
   {
     "name": "fr-FR-ClaudeNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Claude (fr-FR)"
   },
   {
     "name": "fr-FR-CoralieNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Coralie (fr-FR)"
   },
   {
     "name": "fr-FR-EloiseNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Eloise (fr-FR)"
   },
   {
     "name": "fr-FR-JacquelineNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Jacqueline (fr-FR)"
   },
   {
     "name": "fr-FR-JeromeNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Jerome (fr-FR)"
   },
   {
     "name": "fr-FR-JosephineNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Josephine (fr-FR)"
   },
   {
     "name": "fr-FR-MauriceNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Maurice (fr-FR)"
   },
   {
     "name": "fr-FR-RemyMultilingualNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "R\u00e9my Multilingue (fr-FR)"
   },
   {
     "name": "fr-FR-VivienneMultilingualNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Vivienne Multilingue (fr-FR)"
   },
   {
     "name": "fr-FR-YvesNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Yves (fr-FR)"
   },
   {
     "name": "fr-FR-YvetteNeural",
-    "country": "fr-FR"
+    "country": "fr-FR",
+    "nicename": "Yvette (fr-FR)"
   },
   {
     "name": "ga-IE-OrlaNeural",
-    "country": "ga-IE"
+    "country": "ga-IE",
+    "nicename": "Orla (ga-IE)"
   },
   {
     "name": "ga-IE-ColmNeural",
-    "country": "ga-IE"
+    "country": "ga-IE",
+    "nicename": "Colm (ga-IE)"
   },
   {
     "name": "gl-ES-SabelaNeural",
-    "country": "gl-ES"
+    "country": "gl-ES",
+    "nicename": "Sabela (gl-ES)"
   },
   {
     "name": "gl-ES-RoiNeural",
-    "country": "gl-ES"
+    "country": "gl-ES",
+    "nicename": "Roi (gl-ES)"
   },
   {
     "name": "gu-IN-DhwaniNeural",
-    "country": "gu-IN"
+    "country": "gu-IN",
+    "nicename": "\u0aa7\u0acd\u0ab5\u0aa8\u0ac0 (gu-IN)"
   },
   {
     "name": "gu-IN-NiranjanNeural",
-    "country": "gu-IN"
+    "country": "gu-IN",
+    "nicename": "\u0aa8\u0abf\u0ab0\u0a82\u0a9c\u0aa8 (gu-IN)"
   },
   {
     "name": "he-IL-HilaNeural",
-    "country": "he-IL"
+    "country": "he-IL",
+    "nicename": "\u05d4\u05d9\u05dc\u05d4 (he-IL)"
   },
   {
     "name": "he-IL-AvriNeural",
-    "country": "he-IL"
+    "country": "he-IL",
+    "nicename": "\u05d0\u05d1\u05e8\u05d9 (he-IL)"
   },
   {
     "name": "hi-IN-SwaraNeural",
-    "country": "hi-IN"
+    "country": "hi-IN",
+    "nicename": "\u0938\u094d\u0935\u0930\u093e (hi-IN)"
   },
   {
     "name": "hi-IN-MadhurNeural",
-    "country": "hi-IN"
+    "country": "hi-IN",
+    "nicename": "\u092e\u0927\u0941\u0930 (hi-IN)"
   },
   {
     "name": "hr-HR-GabrijelaNeural",
-    "country": "hr-HR"
+    "country": "hr-HR",
+    "nicename": "Gabrijela (hr-HR)"
   },
   {
     "name": "hr-HR-SreckoNeural",
-    "country": "hr-HR"
+    "country": "hr-HR",
+    "nicename": "Sre\u0107ko (hr-HR)"
   },
   {
     "name": "hu-HU-NoemiNeural",
-    "country": "hu-HU"
+    "country": "hu-HU",
+    "nicename": "No\u00e9mi (hu-HU)"
   },
   {
     "name": "hu-HU-TamasNeural",
-    "country": "hu-HU"
+    "country": "hu-HU",
+    "nicename": "Tam\u00e1s (hu-HU)"
   },
   {
     "name": "hy-AM-AnahitNeural",
-    "country": "hy-AM"
+    "country": "hy-AM",
+    "nicename": "\u0531\u0576\u0561\u0570\u056b\u057f (hy-AM)"
   },
   {
     "name": "hy-AM-HaykNeural",
-    "country": "hy-AM"
+    "country": "hy-AM",
+    "nicename": "\u0540\u0561\u0575\u056f (hy-AM)"
   },
   {
     "name": "id-ID-GadisNeural",
-    "country": "id-ID"
+    "country": "id-ID",
+    "nicename": "Gadis (id-ID)"
   },
   {
     "name": "id-ID-ArdiNeural",
-    "country": "id-ID"
+    "country": "id-ID",
+    "nicename": "Ardi (id-ID)"
   },
   {
     "name": "is-IS-GudrunNeural",
-    "country": "is-IS"
+    "country": "is-IS",
+    "nicename": "Gu\u00f0r\u00fan (is-IS)"
   },
   {
     "name": "is-IS-GunnarNeural",
-    "country": "is-IS"
+    "country": "is-IS",
+    "nicename": "Gunnar (is-IS)"
   },
   {
     "name": "it-IT-ElsaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Elsa (it-IT)"
   },
   {
     "name": "it-IT-IsabellaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Isabella (it-IT)"
   },
   {
     "name": "it-IT-DiegoNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Diego (it-IT)"
   },
   {
     "name": "it-IT-BenignoNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Benigno (it-IT)"
   },
   {
     "name": "it-IT-CalimeroNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Calimero (it-IT)"
   },
   {
     "name": "it-IT-CataldoNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Cataldo (it-IT)"
   },
   {
     "name": "it-IT-FabiolaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Fabiola (it-IT)"
   },
   {
     "name": "it-IT-FiammaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Fiamma (it-IT)"
   },
   {
     "name": "it-IT-GianniNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Gianni (it-IT)"
   },
   {
     "name": "it-IT-GiuseppeNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Giuseppe (it-IT)"
   },
   {
     "name": "it-IT-ImeldaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Imelda (it-IT)"
   },
   {
     "name": "it-IT-IrmaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Irma (it-IT)"
   },
   {
     "name": "it-IT-LisandroNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Lisandro (it-IT)"
   },
   {
     "name": "it-IT-PalmiraNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Palmira (it-IT)"
   },
   {
     "name": "it-IT-PierinaNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Pierina (it-IT)"
   },
   {
     "name": "it-IT-RinaldoNeural",
-    "country": "it-IT"
+    "country": "it-IT",
+    "nicename": "Rinaldo (it-IT)"
   },
   {
     "name": "ja-JP-NanamiNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u4e03\u6d77 (ja-JP)"
   },
   {
     "name": "ja-JP-KeitaNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u572d\u592a (ja-JP)"
   },
   {
     "name": "ja-JP-AoiNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u78a7\u8863 (ja-JP)"
   },
   {
     "name": "ja-JP-DaichiNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u5927\u667a (ja-JP)"
   },
   {
     "name": "ja-JP-MayuNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u771f\u5915 (ja-JP)"
   },
   {
     "name": "ja-JP-NaokiNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u76f4\u7d00 (ja-JP)"
   },
   {
     "name": "ja-JP-ShioriNeural",
-    "country": "ja-JP"
+    "country": "ja-JP",
+    "nicename": "\u5fd7\u7e54 (ja-JP)"
   },
   {
     "name": "jv-ID-SitiNeural",
-    "country": "jv-ID"
+    "country": "jv-ID",
+    "nicename": "Siti (jv-ID)"
   },
   {
     "name": "jv-ID-DimasNeural",
-    "country": "jv-ID"
+    "country": "jv-ID",
+    "nicename": "Dimas (jv-ID)"
   },
   {
     "name": "ka-GE-EkaNeural",
-    "country": "ka-GE"
+    "country": "ka-GE",
+    "nicename": "\u10d4\u10d9\u10d0 (ka-GE)"
   },
   {
     "name": "ka-GE-GiorgiNeural",
-    "country": "ka-GE"
+    "country": "ka-GE",
+    "nicename": "\u10d2\u10d8\u10dd\u10e0\u10d2\u10d8 (ka-GE)"
   },
   {
     "name": "kk-KZ-AigulNeural",
-    "country": "kk-KZ"
+    "country": "kk-KZ",
+    "nicename": "\u0410\u0439\u0433\u04af\u043b (kk-KZ)"
   },
   {
     "name": "kk-KZ-DauletNeural",
-    "country": "kk-KZ"
+    "country": "kk-KZ",
+    "nicename": "\u0414\u04d9\u0443\u043b\u0435\u0442 (kk-KZ)"
   },
   {
     "name": "km-KH-SreymomNeural",
-    "country": "km-KH"
+    "country": "km-KH",
+    "nicename": "\u179f\u17d2\u179a\u17b8\u1798\u17bb\u17c6 (km-KH)"
   },
   {
     "name": "km-KH-PisethNeural",
-    "country": "km-KH"
+    "country": "km-KH",
+    "nicename": "\u1796\u17b7\u179f\u17b7\u178a\u17d2\u178b (km-KH)"
   },
   {
     "name": "kn-IN-SapnaNeural",
-    "country": "kn-IN"
+    "country": "kn-IN",
+    "nicename": "\u0cb8\u0caa\u0ccd\u0ca8\u0cbe (kn-IN)"
   },
   {
     "name": "kn-IN-GaganNeural",
-    "country": "kn-IN"
+    "country": "kn-IN",
+    "nicename": "\u0c97\u0c97\u0ca8\u0ccd (kn-IN)"
   },
   {
     "name": "ko-KR-SunHiNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc120\ud788 (ko-KR)"
   },
   {
     "name": "ko-KR-InJoonNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc778\uc900 (ko-KR)"
   },
   {
     "name": "ko-KR-BongJinNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\ubd09\uc9c4 (ko-KR)"
   },
   {
     "name": "ko-KR-GookMinNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uad6d\ubbfc (ko-KR)"
   },
   {
     "name": "ko-KR-HyunsuNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\ud604\uc218 (ko-KR)"
   },
   {
     "name": "ko-KR-JiMinNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc9c0\ubbfc (ko-KR)"
   },
   {
     "name": "ko-KR-SeoHyeonNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc11c\ud604 (ko-KR)"
   },
   {
     "name": "ko-KR-SoonBokNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc21c\ubcf5 (ko-KR)"
   },
   {
     "name": "ko-KR-YuJinNeural",
-    "country": "ko-KR"
+    "country": "ko-KR",
+    "nicename": "\uc720\uc9c4 (ko-KR)"
   },
   {
     "name": "lo-LA-KeomanyNeural",
-    "country": "lo-LA"
+    "country": "lo-LA",
+    "nicename": "\u0ec1\u0e81\u0ec9\u0ea7\u0ea1\u0eb0\u0e99\u0eb5 (lo-LA)"
   },
   {
     "name": "lo-LA-ChanthavongNeural",
-    "country": "lo-LA"
+    "country": "lo-LA",
+    "nicename": "\u0e88\u0eb1\u0e99\u0e97\u0eb0\u0ea7\u0ebb\u0e87 (lo-LA)"
   },
   {
     "name": "lt-LT-OnaNeural",
-    "country": "lt-LT"
+    "country": "lt-LT",
+    "nicename": "Ona (lt-LT)"
   },
   {
     "name": "lt-LT-LeonasNeural",
-    "country": "lt-LT"
+    "country": "lt-LT",
+    "nicename": "Leonas (lt-LT)"
   },
   {
     "name": "lv-LV-EveritaNeural",
-    "country": "lv-LV"
+    "country": "lv-LV",
+    "nicename": "Everita (lv-LV)"
   },
   {
     "name": "lv-LV-NilsNeural",
-    "country": "lv-LV"
+    "country": "lv-LV",
+    "nicename": "Nils (lv-LV)"
   },
   {
     "name": "mk-MK-MarijaNeural",
-    "country": "mk-MK"
+    "country": "mk-MK",
+    "nicename": "\u041c\u0430\u0440\u0438\u0458\u0430 (mk-MK)"
   },
   {
     "name": "mk-MK-AleksandarNeural",
-    "country": "mk-MK"
+    "country": "mk-MK",
+    "nicename": "\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0430\u0440 (mk-MK)"
   },
   {
     "name": "ml-IN-SobhanaNeural",
-    "country": "ml-IN"
+    "country": "ml-IN",
+    "nicename": "\u0d36\u0d4b\u0d2d\u0d28 (ml-IN)"
   },
   {
     "name": "ml-IN-MidhunNeural",
-    "country": "ml-IN"
+    "country": "ml-IN",
+    "nicename": "\u0d2e\u0d3f\u0d25\u0d41\u0d7b (ml-IN)"
   },
   {
     "name": "mn-MN-YesuiNeural",
-    "country": "mn-MN"
+    "country": "mn-MN",
+    "nicename": "\u0415\u0441\u04af\u0439 (mn-MN)"
   },
   {
     "name": "mn-MN-BataaNeural",
-    "country": "mn-MN"
+    "country": "mn-MN",
+    "nicename": "\u0411\u0430\u0442\u0430\u0430 (mn-MN)"
   },
   {
     "name": "mr-IN-AarohiNeural",
-    "country": "mr-IN"
+    "country": "mr-IN",
+    "nicename": "\u0906\u0930\u094b\u0939\u0940 (mr-IN)"
   },
   {
     "name": "mr-IN-ManoharNeural",
-    "country": "mr-IN"
+    "country": "mr-IN",
+    "nicename": "\u092e\u0928\u094b\u0939\u0930 (mr-IN)"
   },
   {
     "name": "ms-MY-YasminNeural",
-    "country": "ms-MY"
+    "country": "ms-MY",
+    "nicename": "Yasmin (ms-MY)"
   },
   {
     "name": "ms-MY-OsmanNeural",
-    "country": "ms-MY"
+    "country": "ms-MY",
+    "nicename": "Osman (ms-MY)"
   },
   {
     "name": "mt-MT-GraceNeural",
-    "country": "mt-MT"
+    "country": "mt-MT",
+    "nicename": "Grace (mt-MT)"
   },
   {
     "name": "mt-MT-JosephNeural",
-    "country": "mt-MT"
+    "country": "mt-MT",
+    "nicename": "Joseph (mt-MT)"
   },
   {
     "name": "my-MM-NilarNeural",
-    "country": "my-MM"
+    "country": "my-MM",
+    "nicename": "\u1014\u102e\u101c\u102c (my-MM)"
   },
   {
     "name": "my-MM-ThihaNeural",
-    "country": "my-MM"
+    "country": "my-MM",
+    "nicename": "\u101e\u102e\u101f (my-MM)"
   },
   {
     "name": "nb-NO-PernilleNeural",
-    "country": "nb-NO"
+    "country": "nb-NO",
+    "nicename": "Pernille (nb-NO)"
   },
   {
     "name": "nb-NO-FinnNeural",
-    "country": "nb-NO"
+    "country": "nb-NO",
+    "nicename": "Finn (nb-NO)"
   },
   {
     "name": "nb-NO-IselinNeural",
-    "country": "nb-NO"
+    "country": "nb-NO",
+    "nicename": "Iselin (nb-NO)"
   },
   {
     "name": "ne-NP-HemkalaNeural",
-    "country": "ne-NP"
+    "country": "ne-NP",
+    "nicename": "\u0939\u0947\u092e\u0915\u0932\u093e (ne-NP)"
   },
   {
     "name": "ne-NP-SagarNeural",
-    "country": "ne-NP"
+    "country": "ne-NP",
+    "nicename": "\u0938\u093e\u0917\u0930 (ne-NP)"
   },
   {
     "name": "nl-BE-DenaNeural",
-    "country": "nl-BE"
+    "country": "nl-BE",
+    "nicename": "Dena (nl-BE)"
   },
   {
     "name": "nl-BE-ArnaudNeural",
-    "country": "nl-BE"
+    "country": "nl-BE",
+    "nicename": "Arnaud (nl-BE)"
   },
   {
     "name": "nl-NL-FennaNeural",
-    "country": "nl-NL"
+    "country": "nl-NL",
+    "nicename": "Fenna (nl-NL)"
   },
   {
     "name": "nl-NL-MaartenNeural",
-    "country": "nl-NL"
+    "country": "nl-NL",
+    "nicename": "Maarten (nl-NL)"
   },
   {
     "name": "nl-NL-ColetteNeural",
-    "country": "nl-NL"
+    "country": "nl-NL",
+    "nicename": "Colette (nl-NL)"
   },
   {
     "name": "pl-PL-AgnieszkaNeural",
-    "country": "pl-PL"
+    "country": "pl-PL",
+    "nicename": "Agnieszka (pl-PL)"
   },
   {
     "name": "pl-PL-MarekNeural",
-    "country": "pl-PL"
+    "country": "pl-PL",
+    "nicename": "Marek (pl-PL)"
   },
   {
     "name": "pl-PL-ZofiaNeural",
-    "country": "pl-PL"
+    "country": "pl-PL",
+    "nicename": "Zofia (pl-PL)"
   },
   {
     "name": "ps-AF-LatifaNeural",
-    "country": "ps-AF"
+    "country": "ps-AF",
+    "nicename": "\u0644\u0637\u064a\u0641\u0647 (ps-AF)"
   },
   {
     "name": "ps-AF-GulNawazNeural",
-    "country": "ps-AF"
+    "country": "ps-AF",
+    "nicename": " \u06ab\u0644 \u0646\u0648\u0627\u0632 (ps-AF)"
   },
   {
     "name": "pt-BR-FranciscaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Francisca (pt-BR)"
   },
   {
     "name": "pt-BR-AntonioNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Ant\u00f4nio (pt-BR)"
   },
   {
     "name": "pt-BR-BrendaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Brenda (pt-BR)"
   },
   {
     "name": "pt-BR-DonatoNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Donato (pt-BR)"
   },
   {
     "name": "pt-BR-ElzaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Elza (pt-BR)"
   },
   {
     "name": "pt-BR-FabioNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Fabio (pt-BR)"
   },
   {
     "name": "pt-BR-GiovannaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Giovanna (pt-BR)"
   },
   {
     "name": "pt-BR-HumbertoNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Humberto (pt-BR)"
   },
   {
     "name": "pt-BR-JulioNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Julio (pt-BR)"
   },
   {
     "name": "pt-BR-LeilaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Leila (pt-BR)"
   },
   {
     "name": "pt-BR-LeticiaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Leticia (pt-BR)"
   },
   {
     "name": "pt-BR-ManuelaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Manuela (pt-BR)"
   },
   {
     "name": "pt-BR-NicolauNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Nicolau (pt-BR)"
   },
   {
     "name": "pt-BR-ThalitaNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Thalita (pt-BR)"
   },
   {
     "name": "pt-BR-ValerioNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Valerio (pt-BR)"
   },
   {
     "name": "pt-BR-YaraNeural",
-    "country": "pt-BR"
+    "country": "pt-BR",
+    "nicename": "Yara (pt-BR)"
   },
   {
     "name": "pt-PT-RaquelNeural",
-    "country": "pt-PT"
+    "country": "pt-PT",
+    "nicename": "Raquel (pt-PT)"
   },
   {
     "name": "pt-PT-DuarteNeural",
-    "country": "pt-PT"
+    "country": "pt-PT",
+    "nicename": "Duarte (pt-PT)"
   },
   {
     "name": "pt-PT-FernandaNeural",
-    "country": "pt-PT"
+    "country": "pt-PT",
+    "nicename": "Fernanda (pt-PT)"
   },
   {
     "name": "ro-RO-AlinaNeural",
-    "country": "ro-RO"
+    "country": "ro-RO",
+    "nicename": "Alina (ro-RO)"
   },
   {
     "name": "ro-RO-EmilNeural",
-    "country": "ro-RO"
+    "country": "ro-RO",
+    "nicename": "Emil (ro-RO)"
   },
   {
     "name": "ru-RU-SvetlanaNeural",
-    "country": "ru-RU"
+    "country": "ru-RU",
+    "nicename": "\u0421\u0432\u0435\u0442\u043b\u0430\u043d\u0430 (ru-RU)"
   },
   {
     "name": "ru-RU-DmitryNeural",
-    "country": "ru-RU"
+    "country": "ru-RU",
+    "nicename": "\u0414\u043c\u0438\u0442\u0440\u0438\u0439 (ru-RU)"
   },
   {
     "name": "ru-RU-DariyaNeural",
-    "country": "ru-RU"
+    "country": "ru-RU",
+    "nicename": "\u0414\u0430\u0440\u0438\u044f (ru-RU)"
   },
   {
     "name": "si-LK-ThiliniNeural",
-    "country": "si-LK"
+    "country": "si-LK",
+    "nicename": "\u0dad\u0dd2\u0dc5\u0dd2\u0dab\u0dd2 (si-LK)"
   },
   {
     "name": "si-LK-SameeraNeural",
-    "country": "si-LK"
+    "country": "si-LK",
+    "nicename": "\u0dc3\u0db8\u0dd3\u0dbb (si-LK)"
   },
   {
     "name": "sk-SK-ViktoriaNeural",
-    "country": "sk-SK"
+    "country": "sk-SK",
+    "nicename": "Vikt\u00f3ria (sk-SK)"
   },
   {
     "name": "sk-SK-LukasNeural",
-    "country": "sk-SK"
+    "country": "sk-SK",
+    "nicename": "Luk\u00e1\u0161 (sk-SK)"
   },
   {
     "name": "sl-SI-PetraNeural",
-    "country": "sl-SI"
+    "country": "sl-SI",
+    "nicename": "Petra (sl-SI)"
   },
   {
     "name": "sl-SI-RokNeural",
-    "country": "sl-SI"
+    "country": "sl-SI",
+    "nicename": "Rok (sl-SI)"
   },
   {
     "name": "so-SO-UbaxNeural",
-    "country": "so-SO"
+    "country": "so-SO",
+    "nicename": "Ubax (so-SO)"
   },
   {
     "name": "so-SO-MuuseNeural",
-    "country": "so-SO"
+    "country": "so-SO",
+    "nicename": "Muuse (so-SO)"
   },
   {
     "name": "sq-AL-AnilaNeural",
-    "country": "sq-AL"
+    "country": "sq-AL",
+    "nicename": "Anila (sq-AL)"
   },
   {
     "name": "sq-AL-IlirNeural",
-    "country": "sq-AL"
+    "country": "sq-AL",
+    "nicename": "Ilir (sq-AL)"
   },
   {
     "name": "sr-Latn-RS-NicholasNeural",
-    "country": "sr-Latn-RS"
+    "country": "sr-Latn-RS",
+    "nicename": "Nicholas (sr-Latn-RS)"
   },
   {
     "name": "sr-Latn-RS-SophieNeural",
-    "country": "sr-Latn-RS"
+    "country": "sr-Latn-RS",
+    "nicename": "Sophie (sr-Latn-RS)"
   },
   {
     "name": "sr-RS-SophieNeural",
-    "country": "sr-RS"
+    "country": "sr-RS",
+    "nicename": "\u0421\u043e\u0444\u0438\u0458\u0430 (sr-RS)"
   },
   {
     "name": "sr-RS-NicholasNeural",
-    "country": "sr-RS"
+    "country": "sr-RS",
+    "nicename": "\u041d\u0438\u043a\u043e\u043b\u0430 (sr-RS)"
   },
   {
     "name": "su-ID-TutiNeural",
-    "country": "su-ID"
+    "country": "su-ID",
+    "nicename": "Tuti (su-ID)"
   },
   {
     "name": "su-ID-JajangNeural",
-    "country": "su-ID"
+    "country": "su-ID",
+    "nicename": "Jajang (su-ID)"
   },
   {
     "name": "sv-SE-SofieNeural",
-    "country": "sv-SE"
+    "country": "sv-SE",
+    "nicename": "Sofie (sv-SE)"
   },
   {
     "name": "sv-SE-MattiasNeural",
-    "country": "sv-SE"
+    "country": "sv-SE",
+    "nicename": "Mattias (sv-SE)"
   },
   {
     "name": "sv-SE-HilleviNeural",
-    "country": "sv-SE"
+    "country": "sv-SE",
+    "nicename": "Hillevi (sv-SE)"
   },
   {
     "name": "sw-KE-ZuriNeural",
-    "country": "sw-KE"
+    "country": "sw-KE",
+    "nicename": "Zuri (sw-KE)"
   },
   {
     "name": "sw-KE-RafikiNeural",
-    "country": "sw-KE"
+    "country": "sw-KE",
+    "nicename": "Rafiki (sw-KE)"
   },
   {
     "name": "sw-TZ-RehemaNeural",
-    "country": "sw-TZ"
+    "country": "sw-TZ",
+    "nicename": "Rehema (sw-TZ)"
   },
   {
     "name": "sw-TZ-DaudiNeural",
-    "country": "sw-TZ"
+    "country": "sw-TZ",
+    "nicename": "Daudi (sw-TZ)"
   },
   {
     "name": "ta-IN-PallaviNeural",
-    "country": "ta-IN"
+    "country": "ta-IN",
+    "nicename": "\u0baa\u0bb2\u0bcd\u0bb2\u0bb5\u0bbf (ta-IN)"
   },
   {
     "name": "ta-IN-ValluvarNeural",
-    "country": "ta-IN"
+    "country": "ta-IN",
+    "nicename": "\u0bb5\u0bb3\u0bcd\u0bb3\u0bc1\u0bb5\u0bb0\u0bcd (ta-IN)"
   },
   {
     "name": "ta-LK-SaranyaNeural",
-    "country": "ta-LK"
+    "country": "ta-LK",
+    "nicename": "\u0b9a\u0bb0\u0ba3\u0bcd\u0baf\u0bbe (ta-LK)"
   },
   {
     "name": "ta-LK-KumarNeural",
-    "country": "ta-LK"
+    "country": "ta-LK",
+    "nicename": "\u0b95\u0bc1\u0bae\u0bbe\u0bb0\u0bcd (ta-LK)"
   },
   {
     "name": "ta-MY-KaniNeural",
-    "country": "ta-MY"
+    "country": "ta-MY",
+    "nicename": "\u0b95\u0ba9\u0bbf (ta-MY)"
   },
   {
     "name": "ta-MY-SuryaNeural",
-    "country": "ta-MY"
+    "country": "ta-MY",
+    "nicename": "\u0b9a\u0bc2\u0bb0\u0bcd\u0baf\u0bbe (ta-MY)"
   },
   {
     "name": "ta-SG-VenbaNeural",
-    "country": "ta-SG"
+    "country": "ta-SG",
+    "nicename": "\u0bb5\u0bc6\u0ba3\u0bcd\u0baa\u0bbe (ta-SG)"
   },
   {
     "name": "ta-SG-AnbuNeural",
-    "country": "ta-SG"
+    "country": "ta-SG",
+    "nicename": "\u0b85\u0ba9\u0bcd\u0baa\u0bc1 (ta-SG)"
   },
   {
     "name": "te-IN-ShrutiNeural",
-    "country": "te-IN"
+    "country": "te-IN",
+    "nicename": "\u0c36\u0c4d\u0c30\u0c41\u0c24\u0c3f (te-IN)"
   },
   {
     "name": "te-IN-MohanNeural",
-    "country": "te-IN"
+    "country": "te-IN",
+    "nicename": "\u0c2e\u0c4b\u0c39\u0c28\u0c4d (te-IN)"
   },
   {
     "name": "th-TH-PremwadeeNeural",
-    "country": "th-TH"
+    "country": "th-TH",
+    "nicename": "\u0e40\u0e1b\u0e23\u0e21\u0e27\u0e14\u0e35 (th-TH)"
   },
   {
     "name": "th-TH-NiwatNeural",
-    "country": "th-TH"
+    "country": "th-TH",
+    "nicename": "\u0e19\u0e34\u0e27\u0e31\u0e12\u0e19\u0e4c (th-TH)"
   },
   {
     "name": "th-TH-AcharaNeural",
-    "country": "th-TH"
+    "country": "th-TH",
+    "nicename": "\u0e2d\u0e31\u0e08\u0e09\u0e23\u0e32 (th-TH)"
   },
   {
     "name": "tr-TR-EmelNeural",
-    "country": "tr-TR"
+    "country": "tr-TR",
+    "nicename": "Emel (tr-TR)"
   },
   {
     "name": "tr-TR-AhmetNeural",
-    "country": "tr-TR"
+    "country": "tr-TR",
+    "nicename": "Ahmet (tr-TR)"
   },
   {
     "name": "uk-UA-PolinaNeural",
-    "country": "uk-UA"
+    "country": "uk-UA",
+    "nicename": "\u041f\u043e\u043b\u0456\u043d\u0430 (uk-UA)"
   },
   {
     "name": "uk-UA-OstapNeural",
-    "country": "uk-UA"
+    "country": "uk-UA",
+    "nicename": "\u041e\u0441\u0442\u0430\u043f (uk-UA)"
   },
   {
     "name": "ur-IN-GulNeural",
-    "country": "ur-IN"
+    "country": "ur-IN",
+    "nicename": "\u06af\u0644 (ur-IN)"
   },
   {
     "name": "ur-IN-SalmanNeural",
-    "country": "ur-IN"
+    "country": "ur-IN",
+    "nicename": "\u0633\u0644\u0645\u0627\u0646 (ur-IN)"
   },
   {
     "name": "ur-PK-UzmaNeural",
-    "country": "ur-PK"
+    "country": "ur-PK",
+    "nicename": "\u0639\u0638\u0645\u06cc\u0670 (ur-PK)"
   },
   {
     "name": "ur-PK-AsadNeural",
-    "country": "ur-PK"
+    "country": "ur-PK",
+    "nicename": "\u0627\u0633\u062f (ur-PK)"
   },
   {
     "name": "uz-UZ-MadinaNeural",
-    "country": "uz-UZ"
+    "country": "uz-UZ",
+    "nicename": "Madina (uz-UZ)"
   },
   {
     "name": "uz-UZ-SardorNeural",
-    "country": "uz-UZ"
+    "country": "uz-UZ",
+    "nicename": "Sardor (uz-UZ)"
   },
   {
     "name": "vi-VN-HoaiMyNeural",
-    "country": "vi-VN"
+    "country": "vi-VN",
+    "nicename": "Ho\u00e0i My (vi-VN)"
   },
   {
     "name": "vi-VN-NamMinhNeural",
-    "country": "vi-VN"
+    "country": "vi-VN",
+    "nicename": "Nam Minh (vi-VN)"
   },
   {
     "name": "wuu-CN-XiaotongNeural",
-    "country": "wuu-CN"
+    "country": "wuu-CN",
+    "nicename": "\u6653\u5f64 (wuu-CN)"
   },
   {
     "name": "wuu-CN-YunzheNeural",
-    "country": "wuu-CN"
+    "country": "wuu-CN",
+    "nicename": "\u4e91\u54f2 (wuu-CN)"
   },
   {
     "name": "yue-CN-XiaoMinNeural",
-    "country": "yue-CN"
+    "country": "yue-CN",
+    "nicename": "\u6653\u654f (yue-CN)"
   },
   {
     "name": "yue-CN-YunSongNeural",
-    "country": "yue-CN"
+    "country": "yue-CN",
+    "nicename": "\u4e91\u677e (yue-CN)"
   },
   {
     "name": "zh-CN-XiaoxiaoNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u6653 (zh-CN)"
   },
   {
     "name": "zh-CN-YunxiNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u5e0c (zh-CN)"
   },
   {
     "name": "zh-CN-YunjianNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u5065 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoyiNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u4f0a (zh-CN)"
   },
   {
     "name": "zh-CN-YunyangNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u626c (zh-CN)"
   },
   {
     "name": "zh-CN-XiaochenNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u8fb0 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaohanNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u6db5 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaomengNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u68a6 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaomoNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u58a8 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoqiuNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u79cb (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoruiNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u777f (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoshuangNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u53cc (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoxiaoDialectsNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u6653 \u65b9\u8a00 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoxiaoMultilingualNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u6653 \u591a\u8bed\u8a00 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoyanNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u989c (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoyouNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u60a0 (zh-CN)"
   },
   {
     "name": "zh-CN-XiaozhenNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u7504 (zh-CN)"
   },
   {
     "name": "zh-CN-YunfengNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u67ab (zh-CN)"
   },
   {
     "name": "zh-CN-YunhaoNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u7693 (zh-CN)"
   },
   {
     "name": "zh-CN-YunxiaNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u590f (zh-CN)"
   },
   {
     "name": "zh-CN-YunyeNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u91ce (zh-CN)"
   },
   {
     "name": "zh-CN-YunzeNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u4e91\u6cfd (zh-CN)"
   },
   {
     "name": "zh-CN-XiaoxuanNeural",
-    "country": "zh-CN"
+    "country": "zh-CN",
+    "nicename": "\u6653\u8431 (zh-CN)"
   },
   {
     "name": "zh-CN-henan-YundengNeural",
-    "country": "zh-CN-henan"
+    "country": "zh-CN-henan",
+    "nicename": "\u4e91\u767b (zh-CN-henan)"
   },
   {
     "name": "zh-CN-liaoning-XiaobeiNeural",
-    "country": "zh-CN-liaoning"
+    "country": "zh-CN-liaoning",
+    "nicename": "\u6653\u5317 (zh-CN-liaoning)"
   },
   {
     "name": "zh-CN-shaanxi-XiaoniNeural",
-    "country": "zh-CN-shaanxi"
+    "country": "zh-CN-shaanxi",
+    "nicename": "\u6653\u59ae (zh-CN-shaanxi)"
   },
   {
     "name": "zh-CN-shandong-YunxiangNeural",
-    "country": "zh-CN-shandong"
+    "country": "zh-CN-shandong",
+    "nicename": "\u4e91\u7fd4 (zh-CN-shandong)"
   },
   {
     "name": "zh-CN-sichuan-YunxiNeural",
-    "country": "zh-CN-sichuan"
+    "country": "zh-CN-sichuan",
+    "nicename": "\u4e91\u5e0c \u56db\u5ddd (zh-CN-sichuan)"
   },
   {
     "name": "zh-HK-HiuMaanNeural",
-    "country": "zh-HK"
+    "country": "zh-HK",
+    "nicename": "\u66c9\u66fc (zh-HK)"
   },
   {
     "name": "zh-HK-WanLungNeural",
-    "country": "zh-HK"
+    "country": "zh-HK",
+    "nicename": "\u96f2\u9f8d (zh-HK)"
   },
   {
     "name": "zh-HK-HiuGaaiNeural",
-    "country": "zh-HK"
+    "country": "zh-HK",
+    "nicename": "\u66c9\u4f73 (zh-HK)"
   },
   {
     "name": "zh-TW-HsiaoChenNeural",
-    "country": "zh-TW"
+    "country": "zh-TW",
+    "nicename": "\u66c9\u81fb (zh-TW)"
   },
   {
     "name": "zh-TW-YunJheNeural",
-    "country": "zh-TW"
+    "country": "zh-TW",
+    "nicename": "\u96f2\u54f2 (zh-TW)"
   },
   {
     "name": "zh-TW-HsiaoYuNeural",
-    "country": "zh-TW"
+    "country": "zh-TW",
+    "nicename": "\u66c9\u96e8 (zh-TW)"
   },
   {
     "name": "zu-ZA-ThandoNeural",
-    "country": "zu-ZA"
+    "country": "zu-ZA",
+    "nicename": "Thando (zu-ZA)"
   },
   {
     "name": "zu-ZA-ThembaNeural",
-    "country": "zu-ZA"
+    "country": "zu-ZA",
+    "nicename": "Themba (zu-ZA)"
   }
 ]

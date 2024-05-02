@@ -2,7 +2,8 @@ import os
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
-from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject
+from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject, QLoggingCategory
+from PyQt5.QtGui import QFont
 import pyttsx3
 from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS
 import wave
@@ -117,7 +118,7 @@ class VoiceManager(QObject):
         try:
             with open(f"{engine_name}_voices.json", "r") as file:
                 voices = json.load(file)
-                return [{'name': voice['name'], 'id': voice['name'], 'details': voice} for voice in voices]
+                return [{'name': voice['nicename'], 'id': voice['name'], 'details': voice} for voice in voices]
         except FileNotFoundError:
             return []
 
@@ -384,9 +385,16 @@ class TextToSpeechApp(QMainWindow):
             self.settings = self.configManager.load_settings_from_file()
             self.apply_settings(self.settings)
 
+
 def main():
+    QLoggingCategory.setFilterRules('qt.fonts=false')
     configManager = ConfigManager()
     app = QApplication(sys.argv)
+    # Set font substitutions
+    QFont.insertSubstitution("MS Shell Dlg 2", "Segoe UI")
+    QFont.insertSubstitution("MS UI Gothic", "Yu Gothic")
+    QFont.insertSubstitution("SimSun", "Microsoft YaHei")
+    # Optionally set a default font
     ex = TextToSpeechApp(configManager)
     sys.exit(app.exec_())
 
