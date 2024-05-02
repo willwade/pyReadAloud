@@ -2,9 +2,9 @@ import os
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
-from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal
+from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject
 import pyttsx3
-from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient
+from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS
 import wave
 import pyaudio
 import json
@@ -12,28 +12,72 @@ import json
 
 
         
-class VoiceManager():
+class VoiceManager(QObject):
+    wordSpoken = pyqtSignal(int, int)  # Emit the start and end indices of the spoken word
+
     def __init__(self, configManager):
+        super(VoiceManager, self).__init__()
         self.configManager = configManager
         self.engine = None
         self.engine_type = 'system'  # Default engine type
         self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
+        self.setup_callbacks()
+
+    def setup_callbacks(self):
+        if self.engine_type == 'system':
+            self.ttsx_engine.connect('started-word', self.on_word)
+    
+    def on_word(self, name, location, length):
+        self.wordSpoken.emit(location, location + length)
+
+    def speak(self, text):
+        if self.engine_type == 'system':
+            self.ttsx_engine.say(text)
+            self.ttsx_engine.startLoop(False)  # Start in non-blocking mode
+        else:
+            self.speak_with_timing(text)
+
+    def speak_with_timing(self, text):
+        words = text.split()
+        position = 0  # This variable will be modified inside emit_word_timing
+        durations = [len(word) / 5.0 for word in words]  # Estimate 0.2 seconds per character
+    
+        def emit_word_timing():
+            nonlocal position  # Correct placement of nonlocal
+            if not words:  # Check if there are no more words left to process
+                return
+            duration = durations.pop(0)
+            word = words.pop(0)
+            start = position
+            end = start + len(word)
+            self.wordSpoken.emit(start, end)
+            QTimer.singleShot(int(duration * 1000), emit_word_timing)
+            position = end + 1  # Update position for the next word
+    
+        emit_word_timing()
+
+    def stop_speak(self):
+        if self.engine_type == 'system':
+            self.ttsx_engine.endLoop()     
             
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
-        if engine_type == 'system':
+        if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             self.engine = self.ttsx_engine
+            self.engine.setProperty('voice_id', self.configManager.settings.get('voice_name'))
+            self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
         elif engine_type == 'Google':
-            self.engine = GoogleClient(credentials=self.configManager.credentials['Google']['creds_path'])
+            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']))
         elif engine_type == 'Polly':
-            self.engine = PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key']))
+            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=self.configManager.settings.get('voice_name'))
         elif engine_type == 'Azure':
-            self.engine = MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region'])
+            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region']), voice=self.configManager.settings.get('voice_name'))
         elif engine_type == 'Watson':
-            self.engine = WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL']))
+            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL'])), voice=self.configManager.settings.get('voice_name'))
         else:
             print(f"Unsupported TTS engine type: {engine_type}")
 
+        
     def get_voices(self, engine_type):
         if engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
@@ -201,7 +245,6 @@ class SettingsDialog(QDialog):
             self.colorButton.setText(color.name())
 
 
-
 class SpeechThread(QThread):
     finished = pyqtSignal()
 
@@ -211,9 +254,8 @@ class SpeechThread(QThread):
         self.voiceManager = voiceManager
 
     def run(self):
-        if self.voiceManager:
-            self.voiceManager.speak(self.text)
-        self.finished.emit()
+        self.voiceManager.speak(self.text)
+        self.finished.emit()  # Signal that the speech has finished
 
 class TextToSpeechApp(QMainWindow):
     def __init__(self, configManager=None):
@@ -223,6 +265,7 @@ class TextToSpeechApp(QMainWindow):
         self.highlight_color = QColor(self.settings.get('highlight_color', '#FFFF00'))
         self.voiceManager = VoiceManager(configManager)
         self.voiceManager.init_engine(self.settings.get('tts_engine', 'system'))
+        self.voiceManager.wordSpoken.connect(self.highlight_text)
         self.initUI()
         self.apply_settings(self.settings)
 
@@ -266,72 +309,67 @@ class TextToSpeechApp(QMainWindow):
         self.show()
 
     def apply_settings(self, settings):
-        self.tts_type = settings.get('tts_engine', 'system')
         self.highlight_color = QColor(settings.get('highlight_color', '#FFFF00'))
-    
-        if self.tts_type == 'system':
-            self.engine = pyttsx3.init()
-            voice_id = settings.get('voice_name')
-            if voice_id:
-                self.engine.setProperty('voice', voice_id)
-            rate = settings.get('speech_rate', 200)
-            self.engine.setProperty('rate', rate)
-        else:
-            # Initialize appropriate TTS engine based on type
-            self.initialize_tts_engine(settings)
 
-
-    def initialize_tts_engine(self, settings):
-        if self.tts_type == 'Google':
-            # Example to initialize Google TTS            
-            client = GoogleClient(credentials=self.configManager.credentials['Google']['creds_path'])  # Assuming credentials management is handled
-            self.engine = client
-        elif self.tts_type == 'Polly':
-            # Initialize Polly TTS
-            client = PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key']))
-            self.engine = client
-        elif self.tts_type == 'Azure':
-            # Initialize Azure TTS
-            client = MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region'])
-            self.engine = client
-        elif self.tts_type == 'Watson':
-            # Initialize Watson TTS
-            client = WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL']))
-            self.engine = client
-        else:
-            # Log an error or handle unsupported engine types
-            print(f"Unsupported TTS engine type: {self.tts_type}")
             
     def read_text(self):
-        text = self.textEdit.toPlainText()
         cursor = self.textEdit.textCursor()
-        format = QTextCharFormat()
-        format.setBackground(self.highlight_color)
-
+        text = self.textEdit.toPlainText()
+        
+        # Get the current position of the cursor in the text
+        cursor_position = cursor.position()
+    
+        # Determine the text to read based on the selected radio button
         selected_text = ""
         if self.radio_sentence.isChecked():
-            selected_text = text.split('.')[0]
+            selected_text = self.extract_sentence(text, cursor_position)
         elif self.radio_paragraph.isChecked():
-            selected_text = text.split('\n')[0]
+            selected_text = self.extract_paragraph(text, cursor_position)
         elif self.radio_word.isChecked():
-            selected_text = text.split()[0]
+            selected_text = self.extract_word(text, cursor_position)
         elif self.radio_all.isChecked():
-            selected_text = text
+            selected_text = text  # Read all text
+    
+        self.start_speech(selected_text)
+    
+    def extract_sentence(self, text, pos):
+        # Find the nearest sentence around the cursor position
+        start = text.rfind('.', 0, pos) + 1
+        if start < 0: start = 0
+        end = text.find('.', pos)
+        if end < 0: end = len(text)
+        return text[start:end].strip()
+    
+    def extract_paragraph(self, text, pos):
+        # Find the nearest paragraph around the cursor position
+        start = text.rfind('\n', 0, pos) + 1
+        if start < 0: start = 0
+        end = text.find('\n', pos)
+        if end < 0: end = len(text)
+        return text[start:end].strip()
+    
+    def extract_word(self, text, pos):
+        # Find the nearest word around the cursor position
+        separators = ' ,.;:\n'
+        start = max(text.rfind(s, 0, pos + 1) for s in separators if s in text) + 1
+        end = min((text.find(s, pos) for s in separators if s in text), default=len(text))
+        return text[start:end].strip()
 
-        self.highlight_text(selected_text, cursor, format)
-        self.start_speech_thread(selected_text)
 
-    def highlight_text(self, text, cursor, format):
-        # Find and highlight text
-        cursor.movePosition(QTextCursor.Start)
-        cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, len(text))
-        self.textEdit.setTextCursor(cursor)
-        cursor.setCharFormat(format)
-
-    def start_speech_thread(self, text):
+    def start_speech(self, text):
+        self.textEdit.setPlainText(text)
         self.thread = SpeechThread(text, self.voiceManager)
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
+
+    def highlight_text(self, start, end, format):
+        cursor = self.textEdit.textCursor()
+        cursor.setPosition(start)
+        cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
+        format = QTextCharFormat()
+        format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
+        cursor.setCharFormat(format)
+        self.textEdit.setTextCursor(cursor)
 
     def reset_highlight(self):
         cursor = self.textEdit.textCursor()
