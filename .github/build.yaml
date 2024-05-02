@@ -31,7 +31,7 @@ jobs:
 
       - name: Run PyInstaller
         run: |
-          pyinstaller --onefile pyReadAloud.py
+          pyinstaller --add-data "*.json;." pyReadAloud.py
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
