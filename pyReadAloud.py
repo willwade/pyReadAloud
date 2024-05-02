@@ -1,5 +1,6 @@
 import os
 import sys
+import logging
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
 from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject, QLoggingCategory
@@ -10,7 +11,7 @@ import wave
 import pyaudio
 import json
 
-
+logging.basicConfig(level=logging.DEBUG,format='%(name)s - %(levelname)s - %(message)s')
 
         
 class VoiceManager(QObject):
@@ -31,30 +32,37 @@ class VoiceManager(QObject):
     def on_word(self, name, location, length):
         self.wordSpoken.emit(location, location + length)
 
-    def speak(self, text):
+    def speak_threaded(self, text):
+        logging.debug(f"[speak in voicem] speak called  {text}")
         if self.engine_type == 'system':
+            logging.debug(f"[speak with system] speaking with timinhg {text}")
             self.ttsx_engine.say(text)
             self.ttsx_engine.startLoop(False)  # Start in non-blocking mode
         else:
+            logging.debug(f"[speak with wrapper] speaking with timinhg {text}")
             self.speak_with_timing(text)
 
     def speak_with_timing(self, text):
+        logging.debug(f"[speak with timing] speaking with timinhg {text}")
         words = text.split()
         position = 0  # This variable will be modified inside emit_word_timing
         durations = [len(word) / 5.0 for word in words]  # Estimate 0.2 seconds per character
     
         def emit_word_timing():
-            nonlocal position  # Correct placement of nonlocal
-            if not words:  # Check if there are no more words left to process
+            nonlocal position
+            if not words:
+                logging.debug("[emit_word_timing] No more words to process.")
                 return
             duration = durations.pop(0)
             word = words.pop(0)
             start = position
             end = start + len(word)
+            logging.debug(f"[emit_word_timing] Emitting word: {word}, Start: {start}, End: {end}, Duration: {duration}")
             self.wordSpoken.emit(start, end)
-            QTimer.singleShot(int(duration * 1000), emit_word_timing)
+            self.speak(word)
             position = end + 1  # Update position for the next word
-    
+            QTimer.singleShot(int(duration * 1000), emit_word_timing)
+
         emit_word_timing()
 
     def stop_speak(self):
@@ -63,38 +71,65 @@ class VoiceManager(QObject):
             
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
+        voice_details = self.configManager.settings.get('voice_details', {})
+        voice_name = voice_details.get('id')
+        lang = voice_details.get('lang')
         if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             self.engine = self.ttsx_engine
             self.engine.setProperty('voice_id', self.configManager.settings.get('voice_name'))
             self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
         elif engine_type == 'Google':
-            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']))
+            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']), lang=lang, voice=voice_name)
         elif engine_type == 'Polly':
-            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=self.configManager.settings.get('voice_name'))
+            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
         elif engine_type == 'Azure':
-            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region']), voice=self.configManager.settings.get('voice_name'))
+            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region']), voice=voice_name, lang=lang)
         elif engine_type == 'Watson':
-            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL'])), voice=self.configManager.settings.get('voice_name'))
+            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL'])), voice=voice_name, lang=lang)
         else:
-            print(f"Unsupported TTS engine type: {engine_type}")
+            logging.debug(f"Unsupported TTS engine type: {engine_type}")
 
         
     def get_voices(self, engine_type):
         if engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
-            return [{'name': voice.name, 'id': voice.id} for voice in voices]
+            return [{'name': voice.name, 'nicename': voice.name, 'id': voice.id} for voice in voices]
         else:
             return self.load_voices_from_service(engine_type)
+
+    def get_lang_for_voice_id(self, engine_type, voice_id):
+        if engine_type == 'System Voice (SAPI)':
+            # For SAPI, language code is not directly available; you might infer or return a default
+            voices = self.ttsx_engine.getProperty('voices')
+            for voice in voices:
+                if voice.id == voice_id:
+                    # Example to infer language from voice name, if it includes language information
+                    lang = voice.name.split('-')[-1] if '-' in voice.name else 'en-US'  # Example inference
+                    return lang
+            return 'en-US'  # Return a default if no match or inference is possible
+        else:
+            voices = self.load_voices_from_service(engine_type)
+            for voice in voices:
+                if voice['id'] == voice_id:
+                    # Assume that the language code is stored in 'country'
+                    return voice['country']
+            return None  # Return None or a default if no match is found
             
     def speak(self, text):
+        logging.debug(f"[speak] calling speak speak - the final one.. {text} with {self.engine_type}")
         if self.engine_type == 'system':
             # Using pyttsx3
             self.engine.say(text)
             self.engine.runAndWait()
-        elif self.engine_type == 'wrapper':
+        elif self.engine_type != 'system':
             # Using TTS-Wrapper
-            audio_bytes = self.engine.synth_to_bytes(self.text, format='wav')
-            self.play_audio(audio_bytes)
+            try:    
+                logging.debug(f"speaking now.. {text}")
+                audio_bytes = self.engine.synth_to_bytes(self.engine.ssml.add(text), format='wav')
+                self.play_audio(audio_bytes)
+            except Exception as e:
+                logging.debug(f"Error synthesizing or playing audio: {e}")
+
 
     def play_audio(self, audio_bytes):
         # Play audio from bytes
@@ -115,11 +150,13 @@ class VoiceManager(QObject):
 
     def load_voices_from_service(self, engine_name):
         # Handle voice loading from JSON files for non-system engines
+        engine_name = engine_name.lower()
         try:
             with open(f"{engine_name}_voices.json", "r") as file:
                 voices = json.load(file)
-                return [{'name': voice['nicename'], 'id': voice['name'], 'details': voice} for voice in voices]
+                return [{'name': voice['nicename'], 'id': voice['name'], 'lang': voice['country'], 'details': voice} for voice in voices]
         except FileNotFoundError:
+            logging.debug(f"{engine_name}_voices.json couldnt be found")
             return []
 
 
@@ -224,15 +261,19 @@ class SettingsDialog(QDialog):
         engine_choice = self.engineCombo.currentText()
         voices = self.voiceManager.get_voices(engine_choice)
         self.voiceCombo.clear()
-        for voice in voices:
-            self.voiceCombo.addItem(voice['name'], voice['id'])
+        if voices:  # Check if voices is not None and not empty
+            for voice in voices:
+                display_name = voice.get('nicename', voice.get('name', 'Unknown Voice'))
+                self.voiceCombo.addItem(display_name, voice)
+        else:
+            logging.debug(f"Warning: No voices found for engine {engine_choice}")
         self.credentials_label.setVisible(engine_choice != "System Voice (SAPI)")
-        
+
 
     def save_settings(self):
         settings = {
             "tts_engine": self.engineCombo.currentText(),
-            "voice_name": self.voiceCombo.currentData(),
+            "voice_details": self.voiceCombo.currentData(),
             "speech_rate": self.rateSlider.value(),
             "highlight_color": self.colorButton.styleSheet().split("background-color: ")[1].split(";")[0]
         }
@@ -255,7 +296,8 @@ class SpeechThread(QThread):
         self.voiceManager = voiceManager
 
     def run(self):
-        self.voiceManager.speak(self.text)
+        logging.debug(f"[speachthread run] called {self.text}")
+        self.voiceManager.speak_threaded(self.text)
         self.finished.emit()  # Signal that the speech has finished
 
 class TextToSpeechApp(QMainWindow):
@@ -358,19 +400,30 @@ class TextToSpeechApp(QMainWindow):
 
 
     def start_speech(self, text):
+        logging.debug(f"[start_speech] called.. here we go..")
         self.textEdit.setPlainText(text)
         self.thread = SpeechThread(text, self.voiceManager)
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
 
-    def highlight_text(self, start, end, format):
-        cursor = self.textEdit.textCursor()
-        cursor.setPosition(start)
-        cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
-        format = QTextCharFormat()
-        format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
-        cursor.setCharFormat(format)
-        self.textEdit.setTextCursor(cursor)
+    def highlight_text(self, start, end):
+        logging.debug(f"Highlighting text from {start} to {end}")
+        try:
+            cursor = self.textEdit.textCursor()
+            cursor.setPosition(start)
+            cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
+            format = QTextCharFormat()
+            format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
+            cursor.setCharFormat(format)
+            self.textEdit.setTextCursor(cursor)
+        except Exception as e:
+            logging.debug(f"Error highlighting text: {e}")
+
+
+    def closeEvent(self, event):
+        self.voiceManager.stop_speak()
+        self.voiceManager.shutdown()
+        event.accept()
 
     def reset_highlight(self):
         cursor = self.textEdit.textCursor()
