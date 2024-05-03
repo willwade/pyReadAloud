@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-windows:
     runs-on: windows-latest  # PyInstaller should be run in the target OS environment
 
     steps:
@@ -43,3 +43,38 @@ jobs:
           name: pyReadAloud-windows
           path: dist/pyReadAloud.zip
           
+  build-mac:
+    runs-on: macos-latest  # Specify macOS runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.1.0
+        with:
+          python-version: '3.11.4'  # Specify your Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create credentials file
+        run: |
+          echo '${{ secrets.CREDENTIALS_FILE_CONTENT }}' > credentials.json
+          echo '${{ secrets.GOOGLE_KEY }}' > ttsandtranslate-7dd2e2d80d42.json
+
+      - name: Run PyInstaller
+        run: |
+          pyinstaller --add-data "*.json:." pyReadAloud.py  # Adjust path separators for macOS
+
+      - name: Zip application directory
+        run: |
+          zip -r dist/pyReadAloud.zip dist/pyReadAloud/
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: pyReadAloud-macos
+          path: dist/pyReadAloud.zip
