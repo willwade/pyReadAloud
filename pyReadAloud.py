@@ -85,7 +85,7 @@ class VoiceManager(QObject):
         logging.debug(f"Voice name: {voice_name}, Language: {lang}")
         if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             self.engine = self.ttsx_engine
-            self.engine.setProperty('voice_id', self.configManager.settings.get('voice_name'))
+            self.engine.setProperty('voice', voice_name)
             self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
         elif engine_type == 'Google':
             self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']), lang=lang, voice=voice_name)
