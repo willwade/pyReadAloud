@@ -447,10 +447,11 @@ class TextToSpeechApp(QMainWindow):
 
     def start_speech(self, text):
         logging.debug(f"[start_speech] called.. here we go..")
-        self.textEdit.setPlainText(text)
-        self.thread = SpeechThread(text, self.voiceManager)
-        self.thread.finished.connect(self.reset_highlight)
-        self.thread.start()
+        self.voiceManager.speak(text)
+#         self.textEdit.setPlainText(text)
+#         self.thread = SpeechThread(text, self.voiceManager)
+#         self.thread.finished.connect(self.reset_highlight)
+#         self.thread.start()
 
         
     def highlight_text(self, start, end):
