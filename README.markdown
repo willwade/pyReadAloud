@@ -1,7 +1,10 @@
 pyReadAloud
 -----------
 
-A small  app that reads words, sentences or paragraphs aloud
+A small  app that reads words, sentences or paragraphs aloud. Should work cross platform.
+
+NOTE: highlighting unreliable to impossible with anything other than a system voice
+NOTE: No idea why this crashes silently on a mac..
 
 **Requirements**
 
