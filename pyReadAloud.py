@@ -48,7 +48,6 @@ class VoiceManager(QObject):
             self.ttsx_engine.say(word)
             self.ttsx_engine.runAndWait()
             self.speakCompleted.emit(word)  # Emit after speaking
-            self.ttsx_engine.startLoop(False)  # Start in non-blocking mode - nut using??
         else:
             try:
                 logging.debug(f"[speak with wrapper] speaking with timing {word}")
@@ -75,10 +74,7 @@ class VoiceManager(QObject):
                 QTimer.singleShot(int(duration * 1000), lambda: speak_next_word(index + 1))
     
         speak_next_word()  # Start the recursive timing
-
-    def stop_speak(self):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
-            self.ttsx_engine.endLoop()     
+    
             
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
@@ -106,7 +102,26 @@ class VoiceManager(QObject):
     def get_voices(self, engine_type):
         if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
-            return [{'name': voice.name, 'nicename': voice.name, 'id': voice.id} for voice in voices]
+            enhanced_voices = []
+            for voice in voices:
+                # Extracting the gender and assigning default if None
+                if voice.gender is None:
+                    gender = 'M'
+                else:
+                    gender = 'F' if 'female' in voice.gender.lower() else 'N' if 'neuter' in voice.gender.lower() else 'M'
+                
+               # Extracting the first language or a default if the list is empty
+                language = voice.languages[0] if voice.languages else voice.id.split('.')[-1].split('-')[0]
+        
+                # Adding voice information to the list
+                enhanced_voices.append({
+                    'name': voice.name,
+                    'nicename': voice.name,
+                    'id': voice.id,
+                    'lang': language,
+                    'gender': gender
+                })
+            return enhanced_voices
         else:
             return self.load_voices_from_service(engine_type)
 
@@ -462,7 +477,6 @@ class TextToSpeechApp(QMainWindow):
 #             self.voiceManager.speak(next_word)
             
     def closeEvent(self, event):
-        self.voiceManager.stop_speak()
         self.voiceManager.shutdown()
         event.accept()
 
