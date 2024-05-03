@@ -23,20 +23,28 @@ class VoiceManager(QObject):
         self.configManager = configManager
         self.engine = None
         self.engine_type = 'system'  # Default engine type
-        self.ttsx_engine = pyttsx3.init()  # Initialize pyttsx3 engine immediately
-        self.setup_callbacks()
+        self.initialize_ttsx_engine()
 
-    def setup_callbacks(self):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
-            self.ttsx_engine.connect('started-word', self.on_word)
-    
+    def initialize_ttsx_engine(self):
+        self.ttsx_engine = pyttsx3.init()
+        self.connect_events()
+
+    def connect_events(self):
+        # Connecting to the started-word event
+        self.ttsx_engine.connect('started-word', self.on_word)
+        logging.debug("Connected to pyttsx3 started-word event.")
+        
     def on_word(self, name, location, length):
-        self.wordSpoken.emit(location, location + length)
+        logging.debug(f"[on_word] Word started: {name} at {location} with length {length}")
+        if location >= 0 and length > 0:
+            self.wordSpoken.emit(location, location + length)
+        else:
+            logging.error(f"[on_word] Invalid word parameters: location={location}, length={length}")
 
     def speak_threaded(self, word):
-        logging.debug(f"[speak in voicem] speak called  {word} with {self.engine_type}")
+        logging.debug(f"[speak_threaded] speak called  {word} with {self.engine_type}")
         if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
-            logging.debug(f"[speak with system] speaking with timinhg {word}")
+            logging.debug(f"[speak_threaded with system] speaking {word}")
             self.ttsx_engine.say(word)
             self.ttsx_engine.runAndWait()
             self.speakCompleted.emit(word)  # Emit after speaking
@@ -429,16 +437,20 @@ class TextToSpeechApp(QMainWindow):
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
 
+        
     def highlight_text(self, start, end):
-        logging.debug(f"Highlighting text from {start} to {end}")
+        logging.debug(f"[highlight_text] Highlighting text from {start} to {end}")
         try:
-            cursor = self.textEdit.textCursor()
-            cursor.setPosition(start)
-            cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
-            format = QTextCharFormat()
-            format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
-            cursor.setCharFormat(format)
-            self.textEdit.setTextCursor(cursor)
+            if end > start and start >= 0:
+                cursor = self.textEdit.textCursor()
+                cursor.setPosition(start)
+                cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
+                format = QTextCharFormat()
+                format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
+                cursor.setCharFormat(format)
+                self.textEdit.setTextCursor(cursor)
+            else:
+                logging.error(f"Invalid indices for highlighting: start={start}, end={end}")
         except Exception as e:
             logging.debug(f"Error highlighting text: {e}")
 
