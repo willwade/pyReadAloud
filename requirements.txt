@@ -3,5 +3,5 @@ PyQt5
 pyinstaller==6.1.0
 git+https://github.com/willwade/py3-tts#egg=py3-tts
 #TTS-Wrapper==0.8.0
-TTS-Wrapper[google,microsoft,sapi,watson,polly]
+git+https://github.com/willwade/tts-wrapper#egg=tts-wrapper[google,watson,microsoft,polly,elevenlabs]
 boto3

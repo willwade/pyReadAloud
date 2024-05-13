@@ -6,7 +6,7 @@ from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
 from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject, QLoggingCategory
 from PyQt5.QtGui import QFont
 import pyttsx3
-from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS
+from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS, ElevenLabsClient, ElevenLabsTTS, WatsonClient, WatsonTTS
 import wave
 import pyaudio
 import json
@@ -25,8 +25,11 @@ class VoiceManager(QObject):
         self.engine_type = 'system'  # Default engine type
         self.initialize_ttsx_engine()
 
-    def initialize_ttsx_engine(self):
-        self.ttsx_engine = pyttsx3.init()
+    def initialize_ttsx_engine(self, engine_type=None):
+        if engine_type == 'eSpeak':
+            self.ttsx_engine = pyttsx3.init(driverName='espeak')
+        else:
+            self.ttsx_engine = pyttsx3.init()
         self.connect_events()
 
     def connect_events(self):
@@ -43,7 +46,7 @@ class VoiceManager(QObject):
 
     def speak_threaded(self, word):
         logging.debug(f"[speak_threaded] speak called  {word} with {self.engine_type}")
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
             logging.debug(f"[speak_threaded with system] speaking {word}")
             self.ttsx_engine.say(word)
             self.ttsx_engine.runAndWait()
@@ -51,28 +54,27 @@ class VoiceManager(QObject):
         else:
             try:
                 logging.debug(f"[speak with wrapper] speaking with timing {word}")
-                audio_bytes = self.engine.synth_to_bytes(self.engine.ssml.add(word), format='wav')
-                self.play_audio(audio_bytes)
-                self.speakCompleted.emit(word)  # Emit after audio played
+                ssml_text = self.tts.ssml.add(word)
+                self.tts.speak(ssml_text)
+                self.speakCompleted.emit(word)
             except Exception as e:
                 logging.error(f"Error in synthesizing or playing audio: {e}")
                 self.speakCompleted.emit(word)  # Still emit to continue the process
 
     def speak_with_timing(self, text):
         words = text.split()
-        durations = [len(word) / 5.0 for word in words]  # Adjust time per character if necessary
+        durations = [len(word) / 5.0 for word in words]
     
         def speak_next_word(index=0):
             if index < len(words):
                 word = words[index]
                 duration = durations[index]
-                start = sum(len(w) + 1 for w in words[:index])  # calculate start index
+                start = sum(len(w) + 1 for w in words[:index])
                 end = start + len(word)
-                logging.debug(f"Emitting word: {word}, Start: {start}, End: {end}, Duration: {duration}")
-                self.wordSpoken.emit(start, end)
-                self.speak_threaded(word)
+                ssml_text = self.tts.ssml.add(word)
+                self.tts.start_playback_with_callbacks(ssml_text, callback=self.my_callback)
                 QTimer.singleShot(int(duration * 1000), lambda: speak_next_word(index + 1))
-    
+
         speak_next_word()  # Start the recursive timing
     
             
@@ -87,20 +89,24 @@ class VoiceManager(QObject):
             self.engine = self.ttsx_engine
             self.engine.setProperty('voice', voice_name)
             self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
+        elif engine_type == 'eSpeak':
+            self.ttsx_engine = pyttsx3.init(driverName='espeak')
+            self.engine.setProperty('voice', voice_name)
+            self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
         elif engine_type == 'Google':
-            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']), lang=lang, voice=voice_name)
+            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['google']['creds_path']), lang=lang, voice=voice_name)
         elif engine_type == 'Polly':
-            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
-        elif engine_type == 'Azure':
-            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['TOKEN'], region=self.configManager.credentials['Microsoft']['region']), voice=voice_name, lang=lang)
+            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['polly']['region'], self.configManager.credentials['polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
+        elif engine_type == 'Microsoft':
+            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['microsoft']['token'], region=self.configManager.credentials['microsoft']['region']), voice=voice_name, lang=lang)
         elif engine_type == 'Watson':
-            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['API_KEY'], self.configManager.credentials['Watson']['API_URL'])), voice=voice_name, lang=lang)
+            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['watson']['api_key'], self.configManager.credentials['watson']['api_url'],self.configManager.credentials['watson']['instance_id'])), voice=voice_name, lang=lang)
         else:
             logging.debug(f"Unsupported TTS engine type: {engine_type}")
 
         
     def get_voices(self, engine_type):
-        if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
+        if engine_type == 'system' or engine_type == 'System Voice (SAPI)' or engine_type == 'eSpeak':
             voices = self.ttsx_engine.getProperty('voices')
             enhanced_voices = []
             for voice in voices:
@@ -126,7 +132,7 @@ class VoiceManager(QObject):
             return self.load_voices_from_service(engine_type)
 
     def get_lang_for_voice_id(self, engine_type, voice_id):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
             # For SAPI, language code is not directly available; you might infer or return a default
             voices = self.ttsx_engine.getProperty('voices')
             for voice in voices:
@@ -145,7 +151,7 @@ class VoiceManager(QObject):
             
     def speak(self, text):
         logging.debug(f"[speak] calling speak speak - the final one.. {text} with {self.engine_type}")
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
             # Using pyttsx3
             self.engine.say(text)
             self.engine.runAndWait()
@@ -173,7 +179,7 @@ class VoiceManager(QObject):
 
 
     def shutdown(self):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' and self.ttsx_engine:
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)'  or self.engine_type=='eSpeak' and self.ttsx_engine:
             self.ttsx_engine.stop()
 
     def load_voices_from_service(self, engine_name):
@@ -197,7 +203,7 @@ class ConfigManager():
     def load_credentials(self):
         # Load credentials from a JSON file
         try:
-            with open("credentials.json", "r") as file:
+            with open("settings.json", "r") as file:
                 return json.load(file)
         except FileNotFoundError:
             return {}  # Return an empty dict if the file does not exist
@@ -229,7 +235,7 @@ class SettingsDialog(QDialog):
     def initUI(self):
         layout = QVBoxLayout()
         self.engineCombo = QComboBox()
-        self.engineCombo.addItems(['System Voice (SAPI)', 'Polly', 'Google', 'Azure', 'Watson'])
+        self.engineCombo.addItems(['System Voice (SAPI)', 'eSpeak', 'Polly', 'Google', 'Azure', 'Watson'])
         self.engineCombo.currentIndexChanged.connect(self.on_engine_change)
         layout.addWidget(QLabel("Select TTS Engine:"))
         layout.addWidget(self.engineCombo)
