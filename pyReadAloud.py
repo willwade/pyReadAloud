@@ -3,7 +3,7 @@ import sys
 import logging
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
-from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject, QLoggingCategory
+from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject
 from PyQt5.QtGui import QFont
 import pyttsx3
 from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS, ElevenLabsClient, ElevenLabsTTS, WatsonClient, WatsonTTS
@@ -11,9 +11,15 @@ import wave
 import pyaudio
 import json
 
-logging.basicConfig(level=logging.DEBUG,format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("out.log"),
+        logging.StreamHandler()
+    ]
+)
 
-        
 class VoiceManager(QObject):
     wordSpoken = pyqtSignal(int, int)  # Emit the start and end indices of the spoken word
     speakCompleted = pyqtSignal(str) 
@@ -44,22 +50,21 @@ class VoiceManager(QObject):
         else:
             logging.error(f"[on_word] Invalid word parameters: location={location}, length={length}")
 
-    def speak_threaded(self, word):
-        logging.debug(f"[speak_threaded] speak called  {word} with {self.engine_type}")
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
-            logging.debug(f"[speak_threaded with system] speaking {word}")
-            self.ttsx_engine.say(word)
+    def speak_threaded(self, text):
+        logging.debug(f"[speak_threaded] speak called with text: {text} and engine type: {self.engine_type}")
+        if self.engine_type in ['system', 'System Voice (SAPI)', 'eSpeak']:
+            self.ttsx_engine.say(text)
             self.ttsx_engine.runAndWait()
-            self.speakCompleted.emit(word)  # Emit after speaking
+            self.speakCompleted.emit(text)  # Emit after speaking
         else:
             try:
-                logging.debug(f"[speak with wrapper] speaking with timing {word}")
-                ssml_text = self.tts.ssml.add(word)
-                self.tts.speak(ssml_text)
-                self.speakCompleted.emit(word)
+                ssml_text = self.tts.ssml.add(text)
+                self.speak(ssml_text)
+                self.speakCompleted.emit(text)
             except Exception as e:
                 logging.error(f"Error in synthesizing or playing audio: {e}")
-                self.speakCompleted.emit(word)  # Still emit to continue the process
+                self.speakCompleted.emit(text)  # Emit to continue the process
+            
 
     def speak_with_timing(self, text):
         words = text.split()
@@ -235,7 +240,7 @@ class SettingsDialog(QDialog):
     def initUI(self):
         layout = QVBoxLayout()
         self.engineCombo = QComboBox()
-        self.engineCombo.addItems(['System Voice (SAPI)', 'eSpeak', 'Polly', 'Google', 'Azure', 'Watson'])
+        self.engineCombo.addItems(['System Voice (SAPI)', 'Polly', 'Google', 'Azure', 'Watson'])
         self.engineCombo.currentIndexChanged.connect(self.on_engine_change)
         layout.addWidget(QLabel("Select TTS Engine:"))
         layout.addWidget(self.engineCombo)
@@ -450,11 +455,8 @@ class TextToSpeechApp(QMainWindow):
         end = min((text.find(s, pos) for s in separators if s in text), default=len(text))
         return text[start:end].strip()
 
-
     def start_speech(self, text):
-        logging.debug(f"[start_speech] called.. here we go..")
-        #self.voiceManager.speak(text)
-        self.textEdit.setPlainText(text)
+        logging.debug(f"[start_speech] called with text: {text}")
         self.thread = SpeechThread(text, self.voiceManager)
         self.thread.finished.connect(self.reset_highlight)
         self.thread.start()
@@ -500,12 +502,12 @@ class TextToSpeechApp(QMainWindow):
             logging.debug(f"Settings after reopening settings dialog: {self.settings}")
             self.apply_settings(self.settings)
             self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'))
-            #self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'), self.settings)
 
 
 def main():
-
+    logging.info("Starting the application")
     configManager = ConfigManager()
+    logging.info("Loaded config Manager")
     app = QApplication(sys.argv)
     # Set font substitutions
     QFont.insertSubstitution("MS Shell Dlg 2", "Segoe UI")
@@ -513,7 +515,9 @@ def main():
     QFont.insertSubstitution("SimSun", "Microsoft YaHei")
     # Optionally set a default font
     ex = TextToSpeechApp(configManager)
+    logging.info("Finishing the application")
     sys.exit(app.exec_())
+    
 
 if __name__ == '__main__':
     main()
