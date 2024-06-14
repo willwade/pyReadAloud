@@ -1,24 +1,25 @@
 import os
-import sys
 import logging
+import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
 from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject
 from PyQt5.QtGui import QFont
 import pyttsx3
 from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS, ElevenLabsClient, ElevenLabsTTS, WatsonClient, WatsonTTS
+import json
 import wave
 import pyaudio
-import json
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("out.log"),
-        logging.StreamHandler()
-    ]
-)
+def setup_logging():
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler("out.log"),
+            logging.StreamHandler()
+        ]
+    )
 
 class VoiceManager(QObject):
     wordSpoken = pyqtSignal(int, int)  # Emit the start and end indices of the spoken word
@@ -99,13 +100,13 @@ class VoiceManager(QObject):
             self.engine.setProperty('voice', voice_name)
             self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
         elif engine_type == 'Google':
-            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['google']['creds_path']), lang=lang, voice=voice_name)
+            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']), lang=lang, voice=voice_name)
         elif engine_type == 'Polly':
-            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['polly']['region'], self.configManager.credentials['polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
+            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
         elif engine_type == 'Microsoft':
-            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['microsoft']['token'], region=self.configManager.credentials['microsoft']['region']), voice=voice_name, lang=lang)
+            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['token'], region=self.configManager.credentials['Microsoft']['region']), voice=voice_name, lang=lang)
         elif engine_type == 'Watson':
-            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['watson']['api_key'], self.configManager.credentials['watson']['api_url'],self.configManager.credentials['watson']['instance_id'])), voice=voice_name, lang=lang)
+            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['api_key'], self.configManager.credentials['Watson']['api_url'],self.configManager.credentials['Watson']['instance_id'])), voice=voice_name, lang=lang)
         else:
             logging.debug(f"Unsupported TTS engine type: {engine_type}")
 
@@ -164,24 +165,9 @@ class VoiceManager(QObject):
             # Using TTS-Wrapper
             try:    
                 logging.debug(f"speaking now.. {text}")
-                audio_bytes = self.engine.synth_to_bytes(self.engine.ssml.add(text), format='wav')
-                self.play_audio(audio_bytes)
+                self.engine.speak(text)
             except Exception as e:
                 logging.debug(f"Error synthesizing or playing audio: {e}")
-
-
-    def play_audio(self, audio_bytes):
-        # Play audio from bytes
-        p = pyaudio.PyAudio()
-        stream = p.open(format=pyaudio.paInt16,  # Assumes 16-bit audio
-                        channels=1,  # Mono
-                        rate=22050,  # Sample rate
-                        output=True)
-        stream.write(audio_bytes)
-        stream.stop_stream()
-        stream.close()
-        p.terminate()
-
 
     def shutdown(self):
         if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)'  or self.engine_type=='eSpeak' and self.ttsx_engine:
@@ -208,7 +194,7 @@ class ConfigManager():
     def load_credentials(self):
         # Load credentials from a JSON file
         try:
-            with open("settings.json", "r") as file:
+            with open("credentials.json", "r") as file:
                 return json.load(file)
         except FileNotFoundError:
             return {}  # Return an empty dict if the file does not exist
@@ -518,7 +504,8 @@ def main():
     logging.info("Finishing the application")
     sys.exit(app.exec_())
     
-
 if __name__ == '__main__':
+    # Setup logging initially
+    setup_logging()
     main()
     
