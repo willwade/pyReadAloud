@@ -1,15 +1,24 @@
 import os
 import logging
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton, QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel, QHBoxLayout, QLineEdit, QColorDialog
-from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QTextEdit, QPushButton, QRadioButton,
+    QVBoxLayout, QWidget, QDialog, QComboBox, QSlider, QLabel,
+    QHBoxLayout, QLineEdit, QColorDialog
+)
+from PyQt5.QtGui import QTextCursor, QTextCharFormat, QColor, QPalette, QFont
 from PyQt5.QtCore import Qt, QThread, QTimer, pyqtSignal, QObject
-from PyQt5.QtGui import QFont
 import pyttsx3
-from tts_wrapper import PollyClient, PollyTTS, GoogleClient, GoogleTTS, MicrosoftClient, MicrosoftTTS, ElevenLabsClient, ElevenLabsTTS, WatsonClient, WatsonTTS
+from tts_wrapper import (
+    PollyClient, PollyTTS, 
+    GoogleClient, GoogleTTS, 
+    MicrosoftClient, MicrosoftTTS, 
+    ElevenLabsClient, ElevenLabsTTS
+)
 import json
 import wave
 import pyaudio
+import difflib
 
 def setup_logging():
     logging.basicConfig(
@@ -24,66 +33,160 @@ def setup_logging():
 class VoiceManager(QObject):
     wordSpoken = pyqtSignal(int, int)  # Emit the start and end indices of the spoken word
     speakCompleted = pyqtSignal(str) 
+    speechStarted = pyqtSignal()
     
     def __init__(self, configManager):
         super(VoiceManager, self).__init__()
         self.configManager = configManager
-        self.engine = None
+        self.engine_client = self.engine_tts = None
         self.engine_type = 'system'  # Default engine type
-        self.initialize_ttsx_engine()
+        self.ttsx_engine = None
+        self.current_text = ""
+        self.initialize_system_engine()
 
-    def initialize_ttsx_engine(self, engine_type=None):
-        if engine_type == 'eSpeak':
-            self.ttsx_engine = pyttsx3.init(driverName='espeak')
-        else:
-            self.ttsx_engine = pyttsx3.init()
-        self.connect_events()
+    def word_boundary_handler(self, word, start_pos, end_pos):
+        """Handle word timing events from TTS engines"""
+        logging.debug(f"Word boundary event: word='{word}', start={start_pos}, end={end_pos}")
+        try:
+            if self.wordSpoken:
+                # Convert positions to integers if they're not already
+                start = int(float(start_pos) * 1000) if isinstance(start_pos, (str, float)) else start_pos
+                end = int(float(end_pos) * 1000) if isinstance(end_pos, (str, float)) else end_pos
+                
+                # Ensure positions are within text bounds
+                text_length = len(self.current_text)
+                start = max(0, min(start, text_length))
+                end = max(0, min(end, text_length))
+                
+                logging.info(f"Highlighting text from {start} to {end}")
+                self.wordSpoken.emit(start, end)
+        except Exception as e:
+            logging.error(f"Error in word boundary handler: {e}", exc_info=True)
+
+    def word_callback(self, start_char, end_char, word):
+        """Handle word timing events from TTS engines"""
+        logging.info(f"Word callback: {word} ({start_char:.3f}s - {end_char:.3f}s)")
+        try:
+            # Find the word position in the current text
+            text = self.current_text.lower()
+            word = word.lower().strip('.,!?')
+            
+            logging.debug(f"Looking for word '{word}' in text: '{text}'")
+            pos = text.find(word)
+            
+            if pos >= 0:
+                logging.info(f"Found word '{word}' at position {pos}")
+                self.wordSpoken.emit(pos, pos + len(word))
+            else:
+                logging.error(f"Could not find word '{word}' in text")
+                
+        except Exception as e:
+            logging.error(f"Error in word callback: {e}")
+
+    def on_speech_start(self):
+        """Handle speech start event"""
+        logging.debug("Speech started")
+        self.speechStarted.emit()
+
+    def on_speech_end(self):
+        """Handle speech end event"""
+        logging.debug("Speech ended")
+        self.speakCompleted.emit(self.current_text)
 
     def connect_events(self):
-        # Connecting to the started-word event
-        self.ttsx_engine.connect('started-word', self.on_word)
-        logging.debug("Connected to pyttsx3 started-word event.")
-        
-    def on_word(self, name, location, length):
-        logging.debug(f"[on_word] Word started: {name} at {location} with length {length}")
-        if location >= 0 and length > 0:
-            self.wordSpoken.emit(location, location + length)
-        else:
-            logging.error(f"[on_word] Invalid word parameters: location={location}, length={length}")
+        """Connect to TTS engine events"""
+        if self.engine_tts:
+            try:
+                # Connect word timing callback
+                self.engine_tts.connect('onWord', self.word_callback)
+                # Connect start/end events
+                self.engine_tts.connect('onStart', self.on_speech_start)
+                self.engine_tts.connect('onEnd', self.on_speech_end)
+                logging.debug("Connected to TTS engine events")
+            except Exception as e:
+                logging.error(f"Error connecting to TTS events: {e}")
 
     def speak_threaded(self, text):
-        logging.debug(f"[speak_threaded] speak called with text: {text} and engine type: {self.engine_type}")
-        if self.engine_type in ['system', 'System Voice (SAPI)', 'eSpeak']:
-            self.ttsx_engine.say(text)
-            self.ttsx_engine.runAndWait()
-            self.speakCompleted.emit(text)  # Emit after speaking
-        else:
-            try:
-                ssml_text = self.tts.ssml.add(text)
-                self.speak(ssml_text)
-                self.speakCompleted.emit(text)
-            except Exception as e:
-                logging.error(f"Error in synthesizing or playing audio: {e}")
-                self.speakCompleted.emit(text)  # Emit to continue the process
-            
+        logging.info("Starting threaded speech")
+        try:
+            if not self.engine_tts:
+                logging.warning("No TTS engine selected, using default system voice")
+                self.init_engine('system')
 
-    def speak_with_timing(self, text):
-        words = text.split()
-        durations = [len(word) / 5.0 for word in words]
-    
-        def speak_next_word(index=0):
-            if index < len(words):
-                word = words[index]
-                duration = durations[index]
-                start = sum(len(w) + 1 for w in words[:index])
-                end = start + len(word)
-                ssml_text = self.tts.ssml.add(word)
-                self.tts.start_playback_with_callbacks(ssml_text, callback=self.my_callback)
-                QTimer.singleShot(int(duration * 1000), lambda: speak_next_word(index + 1))
+            if not text.strip():
+                logging.warning("Empty text provided to speak_threaded")
+                return
 
-        speak_next_word()  # Start the recursive timing
-    
+            logging.debug(f"Speaking with engine: {self.engine_type}")
             
+            def word_callback(start_char, end_char, word):
+                logging.debug(f"Word callback received: word={word}, start={start_char}, end={end_char}")
+                info = {
+                    'word': word,
+                    'start_pos': start_char,
+                    'end_pos': end_char
+                }
+                if self.wordSpoken:
+                    self.wordSpoken.emit(info['start_pos'], info['end_pos'])
+
+            ssml_text = self.engine_tts.ssml.add(text)
+            logging.debug(f"Starting playback with SSML: {ssml_text}")
+            self.engine_tts.start_playback_with_callbacks(ssml_text, callback=word_callback)
+            logging.info("Speech completed successfully")
+        except Exception as e:
+            logging.error(f"Error in speak_threaded: {e}", exc_info=True)
+            raise
+
+    def init_tts_wrapper(self, engine_type):
+        """Initialize the selected TTS engine"""
+        print(f"{engine_type} being set")
+        voice_details = self.configManager.settings.get('voice_details', {})
+        voice_name = voice_details.get('id')
+        lang = voice_details.get('lang')
+        
+        try:
+            if engine_type == 'Google':
+                self.engine_client = GoogleClient(credentials=self.configManager.credentials['Google']['creds_path'])
+                self.engine_tts = GoogleTTS(client=self.engine_client)
+            elif engine_type == 'Polly':
+                self.engine_client = PollyClient(credentials=(
+                    self.configManager.credentials['Polly']['region'],
+                    self.configManager.credentials['Polly']['aws_key_id'],
+                    self.configManager.credentials['Polly']['aws_access_key']
+                ))
+                self.engine_tts = PollyTTS(client=self.engine_client)
+            elif engine_type == 'Azure':
+                self.engine_client = MicrosoftClient(credentials=(
+                    self.configManager.credentials['Microsoft']['token'],
+                    self.configManager.credentials['Microsoft']['region']
+                ))
+                self.engine_tts = MicrosoftTTS(client=self.engine_client)
+            elif engine_type == 'ElevenLabs':
+                self.engine_client = ElevenLabsClient(credentials=self.configManager.credentials['ElevenLabs']['api_key'])
+                self.engine_tts = ElevenLabsTTS(client=self.engine_client)
+            else:
+                logging.error(f"Unsupported TTS engine type: {engine_type}")
+                return
+
+            # Set voice and language if provided
+            if voice_name:
+                self.engine_tts.set_voice(voice_name, lang_code=lang)
+            
+            # Connect word timing events
+            self.connect_events()
+            
+        except Exception as e:
+            logging.error(f"Error initializing {engine_type} engine: {e}")
+
+    def initialize_system_engine(self):
+        """Initialize the system TTS engine using pyttsx3"""
+        try:
+            self.ttsx_engine = pyttsx3.init()
+            logging.debug("Initialized system TTS engine")
+        except Exception as e:
+            logging.error(f"Error initializing system TTS engine: {e}")
+            self.ttsx_engine = None
+
     def init_engine(self, engine_type='system'):
         self.engine_type = engine_type
         voice_details = self.configManager.settings.get('voice_details', {})
@@ -95,24 +198,12 @@ class VoiceManager(QObject):
             self.engine = self.ttsx_engine
             self.engine.setProperty('voice', voice_name)
             self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
-        elif engine_type == 'eSpeak':
-            self.ttsx_engine = pyttsx3.init(driverName='espeak')
-            self.engine.setProperty('voice', voice_name)
-            self.engine.setProperty('rate', self.configManager.settings.get('speech_rate', 200))            
-        elif engine_type == 'Google':
-            self.engine = GoogleTTS(client=GoogleClient(credentials=self.configManager.credentials['Google']['creds_path']), lang=lang, voice=voice_name)
-        elif engine_type == 'Polly':
-            self.engine = PollyTTS(client=PollyClient(credentials=(self.configManager.credentials['Polly']['region'], self.configManager.credentials['Polly']['aws_key_id'], self.configManager.credentials['Polly']['aws_access_key'])), voice=voice_name, lang=lang)
-        elif engine_type == 'Microsoft':
-            self.engine = MicrosoftTTS(client=MicrosoftClient(credentials=self.configManager.credentials['Microsoft']['token'], region=self.configManager.credentials['Microsoft']['region']), voice=voice_name, lang=lang)
-        elif engine_type == 'Watson':
-            self.engine = WatsonTTS(client=WatsonClient(credentials=(self.configManager.credentials['Watson']['api_key'], self.configManager.credentials['Watson']['api_url'],self.configManager.credentials['Watson']['instance_id'])), voice=voice_name, lang=lang)
         else:
-            logging.debug(f"Unsupported TTS engine type: {engine_type}")
+            self.init_tts_wrapper(engine_type)
 
         
     def get_voices(self, engine_type):
-        if engine_type == 'system' or engine_type == 'System Voice (SAPI)' or engine_type == 'eSpeak':
+        if engine_type == 'system' or engine_type == 'System Voice (SAPI)':
             voices = self.ttsx_engine.getProperty('voices')
             enhanced_voices = []
             for voice in voices:
@@ -138,7 +229,7 @@ class VoiceManager(QObject):
             return self.load_voices_from_service(engine_type)
 
     def get_lang_for_voice_id(self, engine_type, voice_id):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             # For SAPI, language code is not directly available; you might infer or return a default
             voices = self.ttsx_engine.getProperty('voices')
             for voice in voices:
@@ -157,7 +248,7 @@ class VoiceManager(QObject):
             
     def speak(self, text):
         logging.debug(f"[speak] calling speak speak - the final one.. {text} with {self.engine_type}")
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' or self.engine_type == 'eSpeak':
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)':
             # Using pyttsx3
             self.engine.say(text)
             self.engine.runAndWait()
@@ -165,12 +256,13 @@ class VoiceManager(QObject):
             # Using TTS-Wrapper
             try:    
                 logging.debug(f"speaking now.. {text}")
-                self.engine.speak(text)
+                ssml_text = self.engine_tts.ssml.add(text)
+                self.engine_tts.speak(ssml_text)
             except Exception as e:
                 logging.debug(f"Error synthesizing or playing audio: {e}")
 
     def shutdown(self):
-        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)'  or self.engine_type=='eSpeak' and self.ttsx_engine:
+        if self.engine_type == 'system' or self.engine_type == 'System Voice (SAPI)' and self.ttsx_engine:
             self.ttsx_engine.stop()
 
     def load_voices_from_service(self, engine_name):
@@ -184,6 +276,32 @@ class VoiceManager(QObject):
             logging.debug(f"{engine_name}_voices.json couldnt be found")
             return []
 
+    def on_word_boundary(self, word_info):
+        logging.debug(f"Word boundary event received: {word_info}")
+        if not word_info or 'word' not in word_info:
+            logging.warning("Invalid word_info received in on_word_boundary")
+            return
+
+        try:
+            word = word_info['word']
+            start_pos = word_info.get('start_pos', -1)
+            end_pos = word_info.get('end_pos', -1)
+            
+            if start_pos >= 0 and end_pos >= 0:
+                logging.debug(f"Highlighting word: {word} at positions {start_pos}-{end_pos}")
+                self.wordSpoken.emit(start_pos, end_pos)
+            else:
+                # Try fuzzy search if positions are not provided
+                text = self.textEdit.toPlainText()
+                matches = find_word_positions(text, word)
+                if matches:
+                    pos = matches[0]  # Use the first match
+                    logging.debug(f"Found word '{word}' using fuzzy search at position {pos}")
+                    self.wordSpoken.emit(pos, pos + len(word))
+                else:
+                    logging.warning(f"Could not find word '{word}' in text")
+        except Exception as e:
+            logging.error(f"Error processing word boundary: {e}", exc_info=True)
 
 
 class ConfigManager():
@@ -226,7 +344,7 @@ class SettingsDialog(QDialog):
     def initUI(self):
         layout = QVBoxLayout()
         self.engineCombo = QComboBox()
-        self.engineCombo.addItems(['System Voice (SAPI)', 'Polly', 'Google', 'Azure', 'Watson'])
+        self.engineCombo.addItems(['System Voice (SAPI)', 'Polly', 'Google', 'Azure', 'ElevenLabs'])
         self.engineCombo.currentIndexChanged.connect(self.on_engine_change)
         layout.addWidget(QLabel("Select TTS Engine:"))
         layout.addWidget(self.engineCombo)
@@ -338,22 +456,131 @@ class SpeechThread(QThread):
         self.voiceManager = voiceManager
 
     def run(self):
-        logging.debug(f"[speachthread run] called {self.text}")
-        self.voiceManager.speak_threaded(self.text)
-        self.finished.emit()  # Signal that the speech has finished
+        try:
+            logging.info(f"Speech thread starting with text: {self.text[:100]}...")
+            self.voiceManager.speak_threaded(self.text)
+            logging.info("Speech thread completed")
+        except Exception as e:
+            logging.error(f"Error in speech thread: {e}", exc_info=True)
+        finally:
+            self.finished.emit()  # Signal that the speech has finished
+
 
 class TextToSpeechApp(QMainWindow):
     def __init__(self, configManager=None):
         super().__init__()
-        self.configManager = configManager
-        self.settings = self.configManager.load_settings_from_file()
-        self.highlight_color = QColor(self.settings.get('highlight_color', '#FFFF00'))
-        self.voiceManager = VoiceManager(configManager)
-        self.voiceManager.init_engine(self.settings.get('tts_engine', 'system'))
-        self.voiceManager.wordSpoken.connect(self.highlight_text)
-        self.voiceManager.speakCompleted.connect(self.on_speak_completed)
         self.initUI()
-        self.apply_settings(self.settings)
+        self.voiceManager = VoiceManager()
+        self.voiceManager.wordSpoken.connect(self.highlight_text)
+        self.configManager = configManager or ConfigManager()
+        self.load_config()
+
+    def highlight_text(self, start, end):
+        """Highlight the specified text range"""
+        try:
+            cursor = self.textEdit.textCursor()
+            cursor.setPosition(start)
+            cursor.setPosition(end, QTextCursor.KeepAnchor)
+            format = cursor.charFormat()
+            format.setBackground(QColor(255, 255, 0))  # Yellow highlight
+            cursor.mergeCharFormat(format)
+            self.textEdit.setTextCursor(cursor)
+            logging.info("Successfully highlighted text")
+        except Exception as e:
+            logging.error(f"Error highlighting text: {e}", exc_info=True)
+
+    def read_text(self):
+        """Read the selected text or all text"""
+        cursor = self.textEdit.textCursor()
+        if cursor.hasSelection():
+            text = cursor.selectedText()
+        else:
+            text = self.textEdit.toPlainText()
+            
+        if text.strip():
+            logging.info(f"Starting to read text: {text[:100]}...")
+            self.start_speech(text)
+        else:
+            logging.warning("No text to read")
+
+    def start_speech(self, text):
+        """Start the speech synthesis"""
+        try:
+            # Create a new thread for speech
+            self.speech_thread = SpeechThread(text, self.voiceManager)
+            self.speech_thread.finished.connect(self.speech_thread.deleteLater)
+            self.speech_thread.start()
+            logging.info("Speech thread started")
+        except Exception as e:
+            logging.error(f"Error starting speech: {e}", exc_info=True)
+
+    def extract_sentence(self, text, pos):
+        # Find the nearest sentence around the cursor position
+        start = text.rfind('.', 0, pos) + 1
+        if start < 0: start = 0
+        end = text.find('.', pos)
+        if end < 0: end = len(text)
+        return text[start:end].strip()
+    
+    def extract_paragraph(self, text, pos):
+        # Find the nearest paragraph around the cursor position
+        start = text.rfind('\n', 0, pos) + 1
+        if start < 0: start = 0
+        end = text.find('\n', pos)
+        if end < 0: end = len(text)
+        return text[start:end].strip()
+    
+    def extract_word(self, text, pos):
+        # Find the nearest word around the cursor position
+        separators = ' ,.;:\n'
+        start = max(text.rfind(s, 0, pos + 1) for s in separators if s in text) + 1
+        end = min((text.find(s, pos) for s in separators if s in text), default=len(text))
+        return text[start:end].strip()
+
+    def apply_settings(self, settings):
+        # Set the engine type
+        engine_type = settings.get("tts_engine", "System Voice (SAPI)")
+        self.voiceManager.init_engine(engine_type)
+        self.highlight_color = QColor(settings.get('highlight_color', '#FFFF00'))
+
+            
+    def on_speech_started(self):
+        """Handle speech start event"""
+        logging.debug("Speech started in UI")
+        # Clear any previous highlighting
+        cursor = self.textEdit.textCursor()
+        cursor.select(QTextCursor.Document)
+        format = cursor.charFormat()
+        format.setBackground(QColor("transparent"))
+        cursor.mergeCharFormat(format)
+
+    def on_speak_completed(self, text):
+        """Handle speech completion"""
+        logging.debug("Speech completed in UI")
+        # Clear highlighting
+        cursor = self.textEdit.textCursor()
+        cursor.select(QTextCursor.Document)
+        format = cursor.charFormat()
+        format.setBackground(QColor("transparent"))
+        cursor.mergeCharFormat(format)
+            
+    def closeEvent(self, event):
+        self.voiceManager.shutdown()
+        event.accept()
+
+    def reset_highlight(self):
+        cursor = self.textEdit.textCursor()
+        cursor.setCharFormat(QTextCharFormat())  # Reset format
+        cursor.clearSelection()
+        self.textEdit.setTextCursor(cursor)
+
+    def open_settings(self):
+        dialog = SettingsDialog(self, self.voiceManager)
+        if dialog.exec_():
+            self.settings = self.voiceManager.configManager.load_settings_from_file()
+            logging.debug(f"Settings after reopening settings dialog: {self.settings}")
+            self.apply_settings(self.settings)
+            self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'))
 
     def initUI(self):
         self.setWindowTitle('Text-to-Speech App')
@@ -394,101 +621,12 @@ class TextToSpeechApp(QMainWindow):
 
         self.show()
 
-    def apply_settings(self, settings):
-        self.highlight_color = QColor(settings.get('highlight_color', '#FFFF00'))
-
-            
-    def read_text(self):
-        cursor = self.textEdit.textCursor()
-        text = self.textEdit.toPlainText()
-        
-        # Get the current position of the cursor in the text
-        cursor_position = cursor.position()
-    
-        # Determine the text to read based on the selected radio button
-        selected_text = ""
-        if self.radio_sentence.isChecked():
-            selected_text = self.extract_sentence(text, cursor_position)
-        elif self.radio_paragraph.isChecked():
-            selected_text = self.extract_paragraph(text, cursor_position)
-        elif self.radio_word.isChecked():
-            selected_text = self.extract_word(text, cursor_position)
-        elif self.radio_all.isChecked():
-            selected_text = text  # Read all text
-    
-        self.start_speech(selected_text)
-    
-    def extract_sentence(self, text, pos):
-        # Find the nearest sentence around the cursor position
-        start = text.rfind('.', 0, pos) + 1
-        if start < 0: start = 0
-        end = text.find('.', pos)
-        if end < 0: end = len(text)
-        return text[start:end].strip()
-    
-    def extract_paragraph(self, text, pos):
-        # Find the nearest paragraph around the cursor position
-        start = text.rfind('\n', 0, pos) + 1
-        if start < 0: start = 0
-        end = text.find('\n', pos)
-        if end < 0: end = len(text)
-        return text[start:end].strip()
-    
-    def extract_word(self, text, pos):
-        # Find the nearest word around the cursor position
-        separators = ' ,.;:\n'
-        start = max(text.rfind(s, 0, pos + 1) for s in separators if s in text) + 1
-        end = min((text.find(s, pos) for s in separators if s in text), default=len(text))
-        return text[start:end].strip()
-
-    def start_speech(self, text):
-        logging.debug(f"[start_speech] called with text: {text}")
-        self.thread = SpeechThread(text, self.voiceManager)
-        self.thread.finished.connect(self.reset_highlight)
-        self.thread.start()
-
-        
-    def highlight_text(self, start, end):
-        logging.debug(f"[highlight_text] Highlighting text from {start} to {end}")
-        try:
-            if end > start and start >= 0:
-                cursor = self.textEdit.textCursor()
-                cursor.setPosition(start)
-                cursor.movePosition(QTextCursor.Right, QTextCursor.KeepAnchor, end - start)
-                format = QTextCharFormat()
-                format.setBackground(QColor(self.settings.get('highlight_color', '#FFFF00')))
-                cursor.setCharFormat(format)
-                self.textEdit.setTextCursor(cursor)
-            else:
-                logging.error(f"Invalid indices for highlighting: start={start}, end={end}")
-        except Exception as e:
-            logging.debug(f"Error highlighting text: {e}")
-
-    def on_speak_completed(self, word):
-        logging.debug(f"[on speak completed] Finished speaking: {word}")
-        # Logic to decide the next word to speak
-        # next_word = self.get_next_word()
-#         if next_word:
-#             self.voiceManager.speak(next_word)
-            
-    def closeEvent(self, event):
-        self.voiceManager.shutdown()
-        event.accept()
-
-    def reset_highlight(self):
-        cursor = self.textEdit.textCursor()
-        cursor.setCharFormat(QTextCharFormat())  # Reset format
-        cursor.clearSelection()
-        self.textEdit.setTextCursor(cursor)
-
-    def open_settings(self):
-        dialog = SettingsDialog(self, self.voiceManager)
-        if dialog.exec_():
-            self.settings = self.voiceManager.configManager.load_settings_from_file()
-            logging.debug(f"Settings after reopening settings dialog: {self.settings}")
-            self.apply_settings(self.settings)
-            self.voiceManager.init_engine(self.settings.get('tts_engine', 'System Voice (SAPI)'))
-
+def find_word_positions(text, word):
+    matches = []
+    for i in range(len(text)):
+        if text[i:i+len(word)] == word:
+            matches.append(i)
+    return matches
 
 def main():
     logging.info("Starting the application")
@@ -508,4 +646,3 @@ if __name__ == '__main__':
     # Setup logging initially
     setup_logging()
     main()
-    
